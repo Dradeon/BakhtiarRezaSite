@@ -1,0 +1,91 @@
+@import 'colorscheme';
+/** NAVIGATION BAR **/
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f3f3f3;
+
+    height: 75px;
+    .HomeButton{
+        color: #0984e3;
+        margin-left: .5rem;
+        cursor: pointer;
+    }
+
+    .Links{
+        list-style-type: none;
+        display: flex;
+        li{
+            padding: 0 1rem 0 1rem;
+        }
+        & a:hover{
+            color: #5fa4d1;
+            text-decoration: underline;
+            transition: all .1s ease-in;
+        }
+    }
+}
+
+.DarkModeButton{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/** SKILL CARD COMPONENT FOR HOME PAGE **/
+
+.SkillCardWrapper{
+    margin: 0 2rem 0 2rem;
+    border-radius: .75rem;
+    display: flex;
+    flex-direction: column;
+    background: $grey;
+    transition: all .3s;
+
+
+    .TextContainer{
+        background: $darker-grey;
+        border-radius: 0 0 .75rem .75rem;
+        width: 100%;
+        margin-top: 0rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+
+    &:hover{
+        transform: scale(1.1);
+        border: 8px solid grey;
+    }
+
+}
+
+/** FOOTER COMPONENT **/
+
+.FooterWrapper{
+
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    overflow: auto;
+    
+    .FooterBar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background:#f3f3f3;
+        
+        .FooterContainer{
+            p{
+                color:#0984e3;
+                font-weight: bold;
+                text-align: center;
+                font-size: .8rem;
+            }
+        }
+    }  
+}

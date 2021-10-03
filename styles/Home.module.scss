@@ -1,0 +1,181 @@
+
+.FrontPiece{
+    background-image: url(../public/PrettyMountainBackground.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    height: 640px;
+    .FrontBigText{
+        color: white;
+        font-size: 5rem;
+    }
+
+    
+    
+}
+
+
+.AboutMeSection{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1440px;
+
+    .aboutMeIntro{
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0 0 30px 0;
+
+        .PictureContainer{
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            margin-bottom: 3rem;
+            align-self: center;
+            > div{
+                position: unset;
+            }
+            
+            .myPfp{
+                object-fit: contain;
+                width: 100%;
+                position: relative;
+                height: unset;
+            }
+        }
+    
+        .aboutMeIntroText{
+            text-align: center;
+            align-self: center;
+    
+            h2{
+                margin: 0 2rem 1rem 1rem;
+                font-size: 3vw;
+            }
+    
+            p{
+                margin: 0 2rem 0 1rem;
+                font-weight: 300;
+                font-size: 1.25rem;
+            }
+        }
+
+        hr{
+            border-top: 5px solid black;
+        }
+    }
+
+    .aboutMeSkills{
+        text-align: center;
+        margin-bottom: 100px;
+        h2{
+            margin: 0 2rem 1rem 1rem;
+            font-size: 2.5vw;
+        }
+
+        h3{
+            font-size: 1rem;
+            margin: 0 1rem 0 1rem;
+            font-weight: 350;
+        }
+
+        p{
+            margin: 0 2rem 0 1rem;
+            font-weight: 300;
+            font-size: 1.25rem;
+        }
+    }
+
+}
+
+.SkillSection{
+    display: block;
+    text-align: center;
+    margin-bottom: 4rem;
+    
+
+    h2{
+        font-size: 3rem;
+    }
+
+    .SkillContainer{
+        margin: 0 auto;
+        max-width: 1024px;
+        .SkillWrapper{
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(3,1fr);
+            
+        }
+    }
+    
+}
+
+.PitchSection{
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1024px;
+
+    h1{
+        font-size: 3rem;
+        margin: 0 2rem 0 2rem;
+    }
+
+    h3{
+        text-decoration: underline;
+        font-size: 2rem;
+    }
+
+
+
+    .ContactInfoWrapper{
+        display: flex;
+        justify-content: center;
+        margin: 0 1rem 1rem 1rem;
+        .ContactInfoContainer{
+            display: flex;
+            flex-direction: row;
+            p{
+                margin: 0 1rem 0 1rem;
+                font-size: 1.5rem;
+            }
+        }
+        
+    }
+}
+
+// Responsive Section
+
+@media screen and (max-width: 640px) {
+    .FrontPiece{
+        .FrontBigText{
+            font-size: 3rem;
+        }
+    }
+
+    .AboutMeSection{
+        .AboutMeText{
+            h2{
+                font-size: 2rem;
+            }
+            p{
+                font-size: 80%;
+            }
+        }
+    }
+
+    .SkillSection{
+        h2{
+            font-size: 2rem;
+        }
+    }
+
+    .PitchSection{
+        h1{
+            font-size: 2rem;
+        }
+    }
+}

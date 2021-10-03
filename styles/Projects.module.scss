@@ -1,0 +1,20 @@
+@import 'colorscheme';
+
+.ProjectContainer{
+    .ProjectsPageTitle{
+        margin-left: 1rem;
+    }
+}
+
+.ProjectItem{
+    background: #f3f3f3;
+    margin: 1rem;
+    border-radius: 10px;
+    h1{
+        margin-bottom: -1rem;
+    }
+
+    h3{
+        font-weight: 400;
+    }
+}
