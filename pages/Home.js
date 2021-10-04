@@ -10,16 +10,16 @@ const Home = () => {
     return (
         <div>
             <div className = {styles.FrontPiece}>
-                <h1 className = {styles.FrontBigText}>Selfless Visionary</h1>
+                <h1 className = {styles.FrontBigText}>Hi I'm Bakhtiar</h1>
+                <p>And I Want to be a Software Engineer</p>
             </div>
             
             <div className = {styles.AboutMeSection}>
                 <hr/>
                 <div className = {styles.aboutMeIntro}>
                     <div className = {styles.aboutMeIntroText}>
-                        <h2>Hi, the name's Bakhtiar...</h2>
-                        
-                        <p>I'm currently a Sophomore studying in Computer Science. I attend Pennsylvania State University. I'm a proactive leader in taking on tasks and being proactive to code our world for tomorrow!</p>
+                        <h2>A Brief Overview:</h2>
+                        <p>I'm currently a Sophomore attending Penn State University. My plan is to major in Computer and get a minor in Information Science and Technology. I'm currently on the outlook for internships to gain more experience in the Software Engineering field. I am always up to solving challenging problems, and I'm always up to learn something new! </p>
                     </div>
                     <div className = {styles.PictureContainer}>
                         <Image src = {Pfp} layout = 'responsive' className = 'myPfp'/>
@@ -32,19 +32,17 @@ const Home = () => {
                     <br/>
                     <h3>Fun Fact: This website was built using the React Framework! (You can use the React Developers Tools Extension to check!)</h3>
                 </div>
-
-
             </div>
 
             <div className = {styles.SkillSection}>
-                <h2>Major Skills include..</h2>
+                <h2>Languages and Frameworks include..</h2>
                 <div className = {styles.SkillContainer}>
                     <div className = {styles.SkillWrapper}>
                         <div className = {styles.griditem}><SkillCard Language = "Javascript"></SkillCard></div>
                         <div className = {styles.griditem}><SkillCard Language = "React"></SkillCard></div>
                         <div className = {styles.griditem}><SkillCard Language = "Python"></SkillCard></div>
+                        <div className = {styles.griditem}><SkillCard Language = "Sass"/></div>
                     </div>
-                <h3>And much more..</h3>
                 </div>
                 
             </div>

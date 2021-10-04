@@ -1,16 +1,22 @@
 
+
 .FrontPiece{
     background-image: url(../public/PrettyMountainBackground.jpg);
     background-position: center;
     background-size: cover;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
     height: 640px;
-    .FrontBigText{
-        color: white;
-        font-size: 5rem;
+    color: white;
+    h1{
+        font-size: 6rem;
+        margin-bottom: -3rem;
+    }
+    p{
+        font-size: 2rem;
     }
 
     
@@ -26,15 +32,14 @@
 
     .aboutMeIntro{
         display: flex;
-        flex-direction: column-reverse;
-        margin: 0 0 30px 0;
-
+        flex-direction: row;
+        margin-bottom: 1rem;
         .PictureContainer{
             width: 100%;
-            max-width: 300px;
+            max-width: 360px;
             border-radius: 10px;
-            margin-bottom: 3rem;
             align-self: center;
+            margin-right: 3rem;
             > div{
                 position: unset;
             }
@@ -48,13 +53,13 @@
         }
     
         .aboutMeIntroText{
-            text-align: center;
-            align-self: center;
-    
+            text-align: left;
+            max-width: 60%;
             h2{
-                margin: 0 2rem 1rem 1rem;
-                font-size: 3vw;
+                margin: 0 2rem 0rem 1rem;
+                font-size: 2.75rem;
             }
+
     
             p{
                 margin: 0 2rem 0 1rem;
@@ -63,20 +68,19 @@
             }
         }
 
-        hr{
-            border-top: 5px solid black;
-        }
     }
 
     .aboutMeSkills{
-        text-align: center;
+        text-align: left;
         margin-bottom: 100px;
         h2{
-            margin: 0 2rem 1rem 1rem;
-            font-size: 2.5vw;
+            margin: 0 2rem 0 1rem;
+            font-size: 2.75rem;
         }
 
+
         h3{
+            text-align: center;
             font-size: 1rem;
             margin: 0 1rem 0 1rem;
             font-weight: 350;
@@ -103,11 +107,11 @@
 
     .SkillContainer{
         margin: 0 auto;
-        max-width: 1024px;
+        max-width: 1440px;
         .SkillWrapper{
             display: grid;
             gap: 10px;
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(4,1fr);
             
         }
     }
@@ -176,6 +180,19 @@
     .PitchSection{
         h1{
             font-size: 2rem;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1280px){
+    .SkillSection{
+        .SkillContainer{
+            .SkillWrapper{
+                display: grid;
+                gap: 10px;
+                grid-template-columns: repeat(2,1fr);
+            }
         }
     }
 }
