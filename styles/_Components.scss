@@ -39,7 +39,7 @@ nav{
 /** SKILL CARD COMPONENT FOR HOME PAGE **/
 
 .SkillCardWrapper{
-    margin: 0 2rem 0 2rem;
+    margin: 1rem;
     border-radius: .75rem;
     display: flex;
     flex-direction: column;
@@ -48,12 +48,10 @@ nav{
 
 
     .TextContainer{
-        background: $darker-grey;
-        border-radius: 0 0 .75rem .75rem;
         width: 100%;
-        margin-top: 0rem;
-        font-size: 1.25rem;
-        font-weight: 600;
+        margin-top: -3.5rem;
+        font-size: 2rem;
+        font-weight: 400;
     }
 
 

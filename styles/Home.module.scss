@@ -1,4 +1,5 @@
-
+@import 'colorscheme';
+@import 'mixins';
 
 .FrontPiece{
     background-image: url(../public/PrettyMountainBackground.jpg);
@@ -17,6 +18,11 @@
     }
     p{
         font-size: 2rem;
+    }
+    button{
+        width: 180px;
+        height: 60px;
+        @include button1;
     }
 
     
@@ -106,7 +112,7 @@
     }
 
     .SkillContainer{
-        margin: 0 auto;
+        margin: 0 2rem;
         max-width: 1440px;
         .SkillWrapper{
             display: grid;

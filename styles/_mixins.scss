@@ -1,0 +1,15 @@
+@import 'colorscheme';
+@mixin button1{
+    border-radius: 10px;
+    background: $light-blue;
+    color: white;
+    
+    p{
+        margin: 0 auto;
+        font-size: 1.25rem;
+    }
+
+    &:hover{
+        cursor: pointer;
+    }
+}

@@ -11,7 +11,8 @@ const Home = () => {
         <div>
             <div className = {styles.FrontPiece}>
                 <h1 className = {styles.FrontBigText}>Hi I'm Bakhtiar</h1>
-                <p>And I Want to be a Software Engineer</p>
+                <p>And I'm your next hire</p>
+                <button><p>Learn More</p></button>
             </div>
             
             <div className = {styles.AboutMeSection}>
