@@ -1,11 +1,12 @@
 @import 'colorscheme';
 @mixin button1{
-    border-radius: 10px;
+    border-radius: 12px;
     background: $light-blue;
-    color: white;
+    border: none;
     
     p{
         margin: 0 auto;
+        color: white;
         font-size: 1.25rem;
     }
 

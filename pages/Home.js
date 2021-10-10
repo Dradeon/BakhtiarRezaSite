@@ -1,3 +1,7 @@
+import {motion, useViewportScroll, useAnimation} from 'framer-motion'
+import {useInView} from 'react-intersection-observer'
+import { useEffect } from 'react'
+
 import Image from 'next/image'
 import Pfp from '../public/ProfilePicture.png'
 import styles from '../styles/Home.module.scss'
@@ -6,6 +10,31 @@ import Footer from './Components/Footer'
 
 /** OK so this is just I can do it separately in another file instead of having to do it all in index.js. Makes it more organized this way :) **/
 const Home = () => {
+
+    const {scrollYProgress} = useViewportScroll()
+    const animation = useAnimation();
+    const {ref,inView} = useInView(
+        {
+            threshold: 0
+        }
+    );
+
+    useEffect(() => {
+        if(inView){
+            animation.start({
+                y:0,
+                transition:{
+                    ease: "easeIn",duration: .5
+                },
+                opacity: 1
+            })
+        }
+        else{
+            animation.start({y:'10vh',opacity:0})
+        }
+        console.log('Use effect hook, inview = ',inView);
+    })
+
 
     return (
         <div>
@@ -34,19 +63,20 @@ const Home = () => {
                     <h3>Fun Fact: This website was built using the React Framework! (You can use the React Developers Tools Extension to check!)</h3>
                 </div>
             </div>
-
-            <div className = {styles.SkillSection}>
-                <h2>Languages and Frameworks include..</h2>
-                <div className = {styles.SkillContainer}>
-                    <div className = {styles.SkillWrapper}>
-                        <div className = {styles.griditem}><SkillCard Language = "Javascript"></SkillCard></div>
-                        <div className = {styles.griditem}><SkillCard Language = "React"></SkillCard></div>
-                        <div className = {styles.griditem}><SkillCard Language = "Python"></SkillCard></div>
-                        <div className = {styles.griditem}><SkillCard Language = "Sass"/></div>
+            <motion.div animate = {animation}>
+                <div className = {styles.SkillSection} ref = {ref}>
+                    <h2>Languages and Frameworks include..</h2>
+                    <div className = {styles.SkillContainer}>
+                        <div className = {styles.SkillWrapper}>
+                            <div className = {styles.griditem}><SkillCard Language = "Javascript"></SkillCard></div>
+                            <div className = {styles.griditem}><SkillCard Language = "React"></SkillCard></div>
+                            <div className = {styles.griditem}><SkillCard Language = "Python"></SkillCard></div>
+                            <div className = {styles.griditem}><SkillCard Language = "Sass"/></div>
+                        </div>
                     </div>
+                    
                 </div>
-                
-            </div>
+            </motion.div>
 
             <div className = {styles.PitchSection}>
                 <h1>So Are You Ready to Hire Me?</h1> 
