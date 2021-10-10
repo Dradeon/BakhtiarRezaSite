@@ -1,3 +1,7 @@
+import {motion, useViewportScroll, useAnimation} from 'framer-motion'
+import {useInView} from 'react-intersection-observer'
+import { useEffect } from 'react'
+
 import Image from 'next/image'
 import Pfp from '../public/ProfilePicture.png'
 import styles from '../styles/Home.module.scss'
@@ -7,19 +11,45 @@ import Footer from './Components/Footer'
 /** OK so this is just I can do it separately in another file instead of having to do it all in index.js. Makes it more organized this way :) **/
 const Home = () => {
 
+    const {scrollYProgress} = useViewportScroll()
+    const animation = useAnimation();
+    const {ref,inView} = useInView(
+        {
+            threshold: 0
+        }
+    );
+
+    useEffect(() => {
+        if(inView){
+            animation.start({
+                y:0,
+                transition:{
+                    ease: "easeIn",duration: .5
+                },
+                opacity: 1
+            })
+        }
+        else{
+            animation.start({y:'10vh',opacity:0})
+        }
+        console.log('Use effect hook, inview = ',inView);
+    })
+
+
     return (
         <div>
             <div className = {styles.FrontPiece}>
-                <h1 className = {styles.FrontBigText}>Selfless Visionary</h1>
+                <h1 className = {styles.FrontBigText}>Hi I'm Bakhtiar</h1>
+                <p>And I'm your next hire</p>
+                <button><p>Learn More</p></button>
             </div>
             
             <div className = {styles.AboutMeSection}>
                 <hr/>
                 <div className = {styles.aboutMeIntro}>
                     <div className = {styles.aboutMeIntroText}>
-                        <h2>Hi, the name's Bakhtiar...</h2>
-                        
-                        <p>I'm currently a Sophomore studying in Computer Science. I attend Pennsylvania State University. I'm a proactive leader in taking on tasks and being proactive to code our world for tomorrow!</p>
+                        <h2>A Brief Overview:</h2>
+                        <p>I'm currently a Sophomore attending Penn State University. My plan is to major in Computer and get a minor in Information Science and Technology. I'm currently on the outlook for internships to gain more experience in the Software Engineering field. I am always up to solving challenging problems, and I'm always up to learn something new! </p>
                     </div>
                     <div className = {styles.PictureContainer}>
                         <Image src = {Pfp} layout = 'responsive' className = 'myPfp'/>
@@ -32,22 +62,21 @@ const Home = () => {
                     <br/>
                     <h3>Fun Fact: This website was built using the React Framework! (You can use the React Developers Tools Extension to check!)</h3>
                 </div>
-
-
             </div>
-
-            <div className = {styles.SkillSection}>
-                <h2>Major Skills include..</h2>
-                <div className = {styles.SkillContainer}>
-                    <div className = {styles.SkillWrapper}>
-                        <div className = {styles.griditem}><SkillCard Language = "Javascript"></SkillCard></div>
-                        <div className = {styles.griditem}><SkillCard Language = "React"></SkillCard></div>
-                        <div className = {styles.griditem}><SkillCard Language = "Python"></SkillCard></div>
+            <motion.div animate = {animation}>
+                <div className = {styles.SkillSection} ref = {ref}>
+                    <h2>Languages and Frameworks include..</h2>
+                    <div className = {styles.SkillContainer}>
+                        <div className = {styles.SkillWrapper}>
+                            <div className = {styles.griditem}><SkillCard Language = "Javascript"></SkillCard></div>
+                            <div className = {styles.griditem}><SkillCard Language = "React"></SkillCard></div>
+                            <div className = {styles.griditem}><SkillCard Language = "Python"></SkillCard></div>
+                            <div className = {styles.griditem}><SkillCard Language = "Sass"/></div>
+                        </div>
                     </div>
-                <h3>And much more..</h3>
+                    
                 </div>
-                
-            </div>
+            </motion.div>
 
             <div className = {styles.PitchSection}>
                 <h1>So Are You Ready to Hire Me?</h1> 
