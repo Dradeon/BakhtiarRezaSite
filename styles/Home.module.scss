@@ -112,9 +112,10 @@
     }
 
     .SkillContainer{
-        margin: 0 2rem;
-        max-width: 1440px;
+        display: flex;
+        justify-content: center;
         .SkillWrapper{
+            max-width: 1440px;
             display: grid;
             gap: 10px;
             grid-template-columns: repeat(4,1fr);
