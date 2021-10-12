@@ -1,6 +1,6 @@
 import {motion, useViewportScroll, useAnimation} from 'framer-motion'
 import {useInView} from 'react-intersection-observer'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 import Image from 'next/image'
 import Pfp from '../public/ProfilePicture.png'
@@ -11,6 +11,7 @@ import Footer from './Components/Footer'
 /** OK so this is just I can do it separately in another file instead of having to do it all in index.js. Makes it more organized this way :) **/
 const Home = () => {
 
+    const {showCopied,setShowCopied} = useState(false)
     const {scrollYProgress} = useViewportScroll()
     const animation = useAnimation();
     const {ref,inView} = useInView(
@@ -74,17 +75,23 @@ const Home = () => {
                             <div className = {styles.griditem}><SkillCard Language = "Sass"/></div>
                         </div>
                     </div>
-                    
                 </div>
             </motion.div>
 
             <div className = {styles.PitchSection}>
-                <h1>So Are You Ready to Hire Me?</h1> 
+                <h1>Get in Touch With Me!</h1>
+                <h2>I'm sure we'll get along!</h2> 
                 <h3>Contact Information</h3>
                 <div className = {styles.ContactInfoWrapper}>
                     <div className = {styles.ContactInfoContainer}>
                         <p><a href = "http://www.linkedin.com/in/bakhtiar-reza-058a73212" target = "_blank">LinkedIn</a></p>
-                        <p><a onClick ={console.log('Copied')} href='Contact'>Email</a></p>
+                        <p>
+                            <a onClick ={()=>{
+                                navigator.clipboard.writeText('reza.bakhtiar.m@gmail.com')
+                                alert('Copied')
+                                }}>Email</a>
+                            {showCopied ? <h3>Copied!</h3>:null}
+                        </p>
                     </div>
                 </div>
             </div>
