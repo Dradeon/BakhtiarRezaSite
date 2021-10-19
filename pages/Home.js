@@ -37,12 +37,13 @@ const Home = () => {
     })
 
 
+
     return (
         <div>
             <div className = {styles.FrontPiece}>
                 <h1 className = {styles.FrontBigText}>Hi I'm Bakhtiar</h1>
-                <p>And I'm your next hire</p>
-                <button><p>Learn More</p></button>
+                <p>Nice to Meet You!</p>
+                <button><a href="/About"><p>Learn More About Me</p></a></button>
             </div>
             
             <div className = {styles.AboutMeSection}>
@@ -50,7 +51,7 @@ const Home = () => {
                 <div className = {styles.aboutMeIntro}>
                     <div className = {styles.aboutMeIntroText}>
                         <h2>A Brief Overview:</h2>
-                        <p>I'm currently a Sophomore attending Penn State University. My plan is to major in Computer and get a minor in Information Science and Technology. I'm currently on the outlook for internships to gain more experience in the Software Engineering field. I am always up to solving challenging problems, and I'm always up to learn something new! </p>
+                        <p>I'm currently a sophomore attending Penn State University. My plan is to major in Computer and get a minor in Information Science and Technology. I'm <strong>currently on the look</strong> for internships to gain more experience in the Software Engineering field. I am always up to solving challenging problems, and I'm always up to learn something new! </p>
                     </div>
                     <div className = {styles.PictureContainer}>
                         <Image src = {Pfp} layout = 'responsive' className = 'myPfp'/>
@@ -84,9 +85,9 @@ const Home = () => {
                 <h3>Contact Information</h3>
                 <div className = {styles.ContactInfoWrapper}>
                     <div className = {styles.ContactInfoContainer}>
-                        <p><a href = "http://www.linkedin.com/in/bakhtiar-reza-058a73212" target = "_blank">LinkedIn</a></p>
+                        <p><a title = 'My Linkedin' href = "http://www.linkedin.com/in/bakhtiar-reza-058a73212" target = "_blank">LinkedIn</a></p>
                         <p>
-                            <a onClick ={()=>{
+                            <a title = "Click to copy my email." onClick ={()=>{
                                 navigator.clipboard.writeText('reza.bakhtiar.m@gmail.com')
                                 alert('Copied')
                                 }}>Email</a>

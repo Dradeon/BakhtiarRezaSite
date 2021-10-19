@@ -1,3 +1,5 @@
+@import 'colorscheme';
+
 .AboutMeContent{
     margin-left: 2rem;
     margin-bottom: 5rem;
@@ -5,7 +7,8 @@
     width: 90%;
 
     h1{
-        font-size: 4rem;
+        font-size: 2.75rem;
+        color: $light-blue;
     }
 
     .ArticleBox{
@@ -13,6 +16,66 @@
             margin-left: 2rem;
             p{
                 margin-left: .5rem;
+            }
+        }
+    }
+}
+
+// Responsive Section
+
+
+@media screen and (min-width: 640px) {
+    .AboutMeContent{
+        h1{
+            font-size: 2.5rem;
+        }
+        .ArticleBox{
+            .Textbox{
+                margin-left: 1.25rem;
+                p{
+                    margin-left: .25rem;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1080px) {
+    .AboutMeContent{
+        h1{
+            font-size: 2.75rem;
+        }
+        .ArticleBox{
+            .Textbox{
+                margin-left: 1.5rem;
+                h3{
+                    font-size: 1.25rem;
+                }
+                p{
+                    font-size: 1rem;
+                    margin-left: .25rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .AboutMeContent{
+        h1{
+            font-size: 3.5rem;
+        }
+    }
+    .ArticleBox{
+        .Textbox{
+            margin-left: 2.5rem;
+            h3{
+                font-size: 1.5rem;
+            }
+            p{
+                font-size: 1.25rem;
+                margin-left: 1rem;
             }
         }
     }

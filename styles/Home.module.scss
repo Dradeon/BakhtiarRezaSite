@@ -20,7 +20,7 @@
         font-size: 2rem;
     }
     button{
-        width: 180px;
+        width: 200px;
         height: 60px;
         @include button1;
     }
@@ -40,6 +40,7 @@
         display: flex;
         flex-direction: row;
         margin-bottom: 1rem;
+
         .PictureContainer{
             width: 100%;
             max-width: 360px;
@@ -73,7 +74,7 @@
     
             p{
                 margin: 0 2rem 0 1rem;
-                font-weight: 300;
+                font-weight: 400;
                 font-size: 1.25rem;
             }
         }
@@ -114,6 +115,7 @@
     
 
     h2{
+        color: $light-blue;
         font-size: 3rem;
     }
 
@@ -139,10 +141,12 @@
     h1{
         font-size: 3rem;
         margin: 0 2rem -2rem 2rem;
+        color: $light-blue;
     }
 
     h2{
-        color: $turqouise;
+        font-size: 1.5rem;
+        font-weight: 400;
     }
 
     h3{
@@ -161,6 +165,9 @@
             p{
                 margin: 0 1rem 0 1rem;
                 font-size: 1.5rem;
+            }
+            a{
+                cursor:pointer;
             }
         }
         
