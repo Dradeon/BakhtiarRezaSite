@@ -55,6 +55,7 @@ const Home = () => {
                     </div>
                     <div className = {styles.PictureContainer}>
                         <Image src = {Pfp} layout = 'responsive' className = 'myPfp'/>
+                        <p>That's me! Hello!</p>
                     </div>
                 </div>
                 
