@@ -2,7 +2,7 @@ import Header from "./Components/Header"
 import Navigation from "./Components/Navigation"
 import Footer from "./Components/Footer"
 import styles from '../styles/Projects.module.scss'
-import projectData from './ProjectData'
+import projectData from '../Data/ProjectData'
 import {FaGithub} from 'react-icons'
 
 var projectList = projectData.Projects
