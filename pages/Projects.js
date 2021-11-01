@@ -2,29 +2,32 @@ import Header from "./Components/Header"
 import Navigation from "./Components/Navigation"
 import Footer from "./Components/Footer"
 import styles from '../styles/Projects.module.scss'
+import projectData from './ProjectData'
+import {FaGithub} from 'react-icons'
 
-let ProjectData = [{"Title":"CSI DNA Database Project",
-"Description":"A program that take data from various CSVs and analyzes the DNA of suspect with DNA found at the crime scene to match the criminal with their respective crimes.",
-"Date":"December 2020"},
-{"Title":'Simple Calculator',
-"Description":'A calculator that can perform simple arithmetic operations with PEMDAS. Built using the Stack Data Structure.',
-"Date":'March 2021'}]
+var projectList = projectData.Projects
 
 const Projects = () => {
+    
+    const handleClick = (Link) => {
+        
+    }
+
     return (
         <div className = {styles.ProjectContainer}>
             <Header title = "Bakhtiar Reza | Projects" description = "Projects Made By Bakhtiar" index = "noindex, nofollow" />
             <Navigation/>
             <h1 className = {styles.ProjectsPageTitle}>My Projects</h1>
-            {ProjectData.map((data) => {
-                return (
-                    <div className = {styles.ProjectItem} key = {data.Title}>
-                        <h1>{data['Title']}</h1>
-                        <p>{data['Date']}</p>
-                        <h3>{data['Description']}</h3>
+            {projectList.map(project => {
+                 return (<div key = {project.name}>
+                    <div>
+                        <h1>{project.Name}</h1>
+                        <p>{project.Date}</p>
                     </div>
-                )
-            })}
+                    <p>{project.Desc}</p>
+                    <button><a target= '_blank' href = {project.Github}>Source Code</a></button>
+                </div>
+            )})}
             <Footer/>
         </div>
     )

@@ -1,6 +1,7 @@
 import {motion, useViewportScroll, useAnimation} from 'framer-motion'
 import {useInView} from 'react-intersection-observer'
 import { useEffect, useState } from 'react'
+import {FaGithub, FaEnvelope,FaLinkedin} from 'react-icons/fa'
 
 import Image from 'next/image'
 import Pfp from '../public/ProfilePicture.png'
@@ -95,6 +96,10 @@ const Home = () => {
                             {showCopied ? <h3>Copied!</h3>:null}
                         </p>
                     </div>
+                    
+                </div>
+                <div className='ListofIcons'>
+                        
                 </div>
             </div>
             
