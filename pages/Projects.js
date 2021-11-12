@@ -14,18 +14,29 @@ const Projects = () => {
     }
 
     return (
-        <div className = {styles.ProjectContainer}>
+        <div className = {styles.ProjectPageContainer}>
             <Header title = "Bakhtiar Reza | Projects" description = "Projects Made By Bakhtiar" index = "noindex, nofollow" />
             <Navigation/>
             <h1 className = {styles.ProjectsPageTitle}>My Projects</h1>
             {projectList.map(project => {
-                 return (<div key = {project.name}>
-                    <div>
-                        <h1>{project.Name}</h1>
+                 return (<div key = {project.name} className = {styles.ProjectContainer}>
+                    <div className = {styles.NameDate}>
+                        <h1>{project.Name}:</h1>
                         <p>{project.Date}</p>
                     </div>
-                    <p>{project.Desc}</p>
-                    <button><a target= '_blank' href = {project.Github}>Source Code</a></button>
+                    <div className = {styles.ProjectDescription}>
+                        <p>{project.Desc}</p>
+                    </div>
+                    <div className = {styles.ProjectSkills}>
+                        <h3>Skills:</h3>
+                        {project.Skills.map(skill => {
+                            return (<p>{skill}</p>)
+                        })}
+                    </div>
+                    <div className = {styles.btnWrapper}>
+                        <a target= '_blank' className = {styles.customBtn} href = {project.Github}>Source Code</a>
+                    </div>
+                    <hr/>
                 </div>
             )})}
             <Footer/>
