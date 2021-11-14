@@ -1,17 +1,19 @@
 @import 'colorscheme';
 
 .ProjectPageContainer{
+    margin-bottom: 3rem;
     .ProjectsPageTitle{
         margin-left: 1rem;
+        margin-bottom: -1rem;
     }
 }
 
 
 .ProjectContainer{
     margin: 1.25rem;
+    margin-bottom: 0;
     padding: 1px;
-
-
+    max-width: 1024px;
     .NameDate{
         margin-left: 1rem;
 
