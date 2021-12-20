@@ -18,7 +18,24 @@ var projectData =
             'Skills': ["VueJS","Python"],
             'Img' : [],
             'Github' : "https://github.com/Dradeon/devpsu-fall21-project-2-starter"
+        },
+        {
+            'Name':'Course Scheduler Application',
+            'Desc':'A Java Application that schedule courses for students. It stores information about courses, students, and the students\' schedule in a local database. An Admin can add a new course, student, and semester while a student can schedule for these courses, see their schedule, and courses currently available to schedule.',
+            'Date':'November 2021',
+            'Skills': ['Java','SQL','Objected Oriented Programming'],
+            'Img':[],
+            'Github': null
+        },
+        {
+            'Name':'Cryptocurrency Desktop Notifier',
+            'Desc': "Simple Program that fetches the latest prices on Bitcoin, Ethereum, and DogeCoin.",
+            'Date': "January 2021",
+            'Skills':['Python'],
+            'Img':[],
+            'Github':null
         }
+
     ]
 }
 

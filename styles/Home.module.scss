@@ -1,5 +1,6 @@
 @import 'colorscheme';
 @import 'mixins';
+@import 'Responsive';
 
 .FrontPiece{
     background-image: url(../public/PrettyMountainBackground.jpg);
@@ -42,6 +43,7 @@
         justify-content: space-between;
 
         .PictureContainer{
+            align-self: center;
             width: 100%;
             margin: 2rem 2rem 0 0rem;
             p{
@@ -61,18 +63,49 @@
             text-align: left;
             max-width: 55%;
             margin: 0 2rem 0 2rem;
+            font-size: 2.75rem;
             h2{
                 margin-bottom: -1rem;
                 color: $light-blue;
-                font-size: 2.75rem;
                 text-decoration: underline;
 
+                @include breakpoint(sm,max){
+                    font-size: 2rem;
+                }
+
+                @include breakpoint(sm,min){
+                    font-size: 2rem;
+                }
+
+                @include breakpoint(md,min){
+                    font-size: 2.75rem;
+                }
+
+                @include breakpoint(lg,min){
+                    font-size: 3.25rem;
+                }
             }
 
     
             p{
                 font-weight: 400;
                 font-size: 1.25rem;
+
+                @include breakpoint(sm,max){
+                    font-size: .75rem;
+                }
+
+                @include breakpoint(sm,min){
+                    font-size: .75rem;
+                }
+
+                @include breakpoint(md,min){
+                    font-size: 1rem;
+                }
+
+                @include breakpoint(lg,min){
+                    font-size: 1.25rem;
+                }
             }
         }
 
@@ -134,36 +167,7 @@
 
 // Responsive Section
 
-@media screen and (max-width: 640px) {
-    .FrontPiece{
-        .FrontBigText{
-            font-size: 3rem;
-        }
-    }
 
-    .AboutMeSection{
-        .AboutMeText{
-            h2{
-                font-size: 2rem;
-            }
-            p{
-                font-size: 80%;
-            }
-        }
-    }
-
-    .SkillSection{
-        h2{
-            font-size: 2rem;
-        }
-    }
-
-    .PitchSection{
-        h1{
-            font-size: 2rem;
-        }
-    }
-}
 
 
 @media screen and (max-width: 1280px){

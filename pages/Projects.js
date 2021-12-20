@@ -33,9 +33,9 @@ const Projects = () => {
                             return (<p>{skill}</p>)
                         })}
                     </div>
-                    <div className = {styles.btnWrapper}>
+                    {project.Github ? <div className = {styles.btnWrapper}>
                         <a target= '_blank' className = {styles.customBtn} href = {project.Github}>Source Code</a>
-                    </div>
+                    </div>: <></>}
                     <hr/>
                 </div>
             )})}
