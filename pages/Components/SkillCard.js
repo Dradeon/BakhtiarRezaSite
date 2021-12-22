@@ -8,10 +8,10 @@ import Sass from '../../public/SassIcon.png'
 
 let imageDatabase = {"Javascript":Javascript,"Python":Python,"React":React,'Sass':Sass}
 
-let descDatabase = {"Javascript":"I started to learn Javascript via Web Frameworks",
-"Python":"I have 2 years worth of Experience in Python",
-"React":"I have 6 months of it using the NextJS Framework",
-'Sass':"6 months of experience"}
+let descDatabase = {"Javascript":"I started to learn Javascript when I started to learn about Web Frameworks. I'm now interested in using it to create backends using NodeJS.",
+"Python":"I have 2 years worth of Experience in Python. Started learning it from my first Computer Science courses. Built some projects and learned data structures and algorithms in the language",
+"React":"I have 6 months using this Web Framework ever since I started learning about it during the 2021 summer.",
+'Sass':"I learned this technology as an easier and faster way to do my CSS. It has made styling websites 2x faster."}
 
 const SkillCard = ({Language}) => {
     return (

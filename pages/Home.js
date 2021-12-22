@@ -66,7 +66,7 @@ const Home = () => {
                 </div>
                 
                 <div className = {styles.aboutMeSkills}>
-                    <h2>My Qualifications?</h2>
+                    <h2>My Skills </h2>
                     <p>I have experience with backend langauges such Python and Java to build systems using object oreinted programming. I also have experience developing using frontend UIs with Javascript and several Web Frameworks such as React, SASS, and NextJS.</p>
                     <br/>
                     <h3>Fun Fact: This website was built using the React Framework! (You can use the React Developers Tools Extension to check!)</h3>
