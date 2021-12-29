@@ -14,15 +14,15 @@ const ContactsPage = () => {
                 <h2>Talk to Me!</h2>
                 <p>Whether it be an internship opportunity or a program
                     I could participate at a company, you can contact me via
-                    the links below.
+                    email or the links below.
                 </p>
                 <div className = {styles.ContactInfo}>
                     <h3>Bakhtiar Reza</h3>
-                    <p>reza.bakhtiar.m@gmail.com</p>
+                    <p>bmr5782@psu.edu</p>
                     <p>215.733.9951</p>
                     <div className={styles.Socials}>
                         <h3>My Socials</h3>
-                        <FaLinkedin style = {{fontSize:'50px',color:'#0984e3',cursor: 'pointer',marginLeft:'1.5rem'}}
+                        <FaLinkedin style = {{fontSize:'50px',color:'#0984e3',cursor: 'pointer',justifySelf:'center'}}
                             onClick={function() {
                                 window.open("https://www.linkedin.com/in/bakhtiar-reza",'_blank')
                             }}
