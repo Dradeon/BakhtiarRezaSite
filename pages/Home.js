@@ -60,7 +60,7 @@ const Home = () => {
                         <p>I'm <strong>currently on the look</strong> for internships to gain more experience in the Software Engineering field. You can look at my <a href = "http://www.linkedin.com/in/bakhtiar-reza-058a73212">Linkedin</a>. If you want to contact me about any opportunities feel free to <a onClick = {handleClick}>Email</a> me! </p>
                     </div>
                     <div className = {styles.PictureContainer}>
-                        <Image src = {Pfp} layout = 'responsive' className = 'myPfp'/>
+                        <Image src = {Pfp} layout = 'responsive' className = 'myPfp' styles={{maxwidth:'720px'}}/>
                         <p>That's me! Hello!</p>
                     </div>
                 </div>

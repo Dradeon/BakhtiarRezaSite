@@ -43,6 +43,9 @@
         justify-content: space-between;
 
         .PictureContainer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-self: center;
             width: 100%;
             margin: 2rem 2rem 0 0rem;
@@ -59,6 +62,9 @@
         }
     
         .aboutMeIntroText{
+            display: flex;
+            flex-direction: column;
+            align-content: center;
             color: $black;
             text-align: left;
             max-width: 55%;
@@ -78,11 +84,11 @@
                 }
 
                 @include breakpoint(md,min){
-                    font-size: 2.75rem;
+                    font-size: 2.5rem;
                 }
 
                 @include breakpoint(lg,min){
-                    font-size: 3.25rem;
+                    font-size: 3rem;
                 }
             }
 
@@ -104,7 +110,7 @@
                 }
 
                 @include breakpoint(lg,min){
-                    font-size: 1.25rem;
+                    font-size: 1.1rem;
                 }
             }
         }
@@ -119,12 +125,29 @@
             font-size: 2.75rem;
             color: $light-blue;
             text-decoration: underline;
+
+            @include breakpoint(sm,max){
+                font-size: 2rem;
+            }
+
+            @include breakpoint(sm,min){
+                font-size: 2rem;
+            }
+
+            @include breakpoint(md,min){
+                font-size: 2.5rem;
+            }
+
+            @include breakpoint(lg,min){
+                font-size: 3rem;
+            }
+
         }
 
 
         h3{
-            text-align: left;
-            font-size: 1rem;
+            text-align: center;
+            font-size: .75rem;
             margin: 0 1rem 0 2rem;
             font-weight: 400;
         }
@@ -133,6 +156,22 @@
             margin: 0 2rem 0 2rem;
             font-weight: 400;
             font-size: 1.25rem;
+
+            @include breakpoint(sm,max){
+                font-size: .75rem;
+            }
+
+            @include breakpoint(sm,min){
+                font-size: .75rem;
+            }
+
+            @include breakpoint(md,min){
+                font-size: 1rem;
+            }
+
+            @include breakpoint(lg,min){
+                font-size: 1.1rem;
+            }
         }
     }
 
@@ -147,6 +186,23 @@
     h2{
         color: $light-blue;
         font-size: 3rem;
+
+        @include breakpoint(sm,max){
+            font-size: 2rem;
+        }
+
+        @include breakpoint(sm,min){
+            font-size: 2rem;
+        }
+
+        @include breakpoint(md,min){
+            font-size: 2.5rem;
+        }
+
+        @include breakpoint(lg,min){
+            font-size: 3rem;
+        }
+
     }
 
     .SkillContainer{
