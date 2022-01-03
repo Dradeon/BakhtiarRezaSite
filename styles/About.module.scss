@@ -1,7 +1,8 @@
 @import 'colorscheme';
+@import 'mixins';
 
 .AboutMeContent{
-    margin-left: 2rem;
+    margin: 2rem auto;
     margin-bottom: 5rem;
     text-align: justify;
     width: 90%;
@@ -9,74 +10,33 @@
     h1{
         font-size: 2.75rem;
         color: $light-blue;
-    }
-
-    .ArticleBox{
-        .Textbox{
-            margin-left: 2rem;
-            p{
-                margin-left: .5rem;
-            }
+        max-lines: 1;
+        @include breakpoint(sm,max){
+            font-size: 1.5rem;
         }
-    }
-}
 
-// Responsive Section
+        @include breakpoint(sm,min){
+            font-size: 1.5rem;
+        }
 
+        @include breakpoint(md,min){
+            font-size: 2rem;
+        }
 
-@media screen and (min-width: 640px) {
-    .AboutMeContent{
-        h1{
+        @include breakpoint(lg,min){
             font-size: 2.5rem;
         }
-        .ArticleBox{
-            .Textbox{
-                margin-left: 1.25rem;
-                p{
-                    margin-left: .25rem;
-                }
-            }
-        }
     }
-}
 
-
-@media screen and (min-width: 1080px) {
-    .AboutMeContent{
-        h1{
-            font-size: 2.75rem;
-        }
-        .ArticleBox{
-            .Textbox{
-                margin-left: 1.5rem;
-                h3{
-                    font-size: 1.25rem;
-                }
-                p{
-                    font-size: 1rem;
-                    margin-left: .25rem;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    .AboutMeContent{
-        h1{
-            font-size: 3.5rem;
-        }
-    }
     .ArticleBox{
-        .Textbox{
-            margin-left: 2.5rem;
-            h3{
-                font-size: 1.5rem;
-            }
-            p{
-                font-size: 1.25rem;
-                margin-left: 1rem;
-            }
+        
+        margin-left: 1rem;
+        p{
+            margin-left: .5rem;
         }
     }
 }
+
+
+
+

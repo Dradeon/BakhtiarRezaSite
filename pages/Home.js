@@ -57,7 +57,7 @@ const Home = () => {
                     <div className = {styles.aboutMeIntroText}>
                         <h2>A Brief Overview:</h2>
                         <p>I'm currently a sophomore attending Penn State University. My plan is to major in Computer and get a minor in Information Science and Technology. I am always up to solving challenging problems, and I'm always up to learn something new! I want to learn new languages and concepts that aids in my goal of mastering the two areas of programming I want to work on. These two areas would involve the front-end and backend of an application. </p>
-                        <p>I'm <strong>currently on the look</strong> for internships to gain more experience in the Software Engineering field. You can look at my <a href = "http://www.linkedin.com/in/bakhtiar-reza-058a73212">Linkedin</a>. If you want to contact me about any opportunities feel free to <a onClick = {handleClick}>Email</a> me! </p>
+                        <p>I'm <strong>currently on the look</strong> for internships to gain more experience in the Software Engineering field. If you would like to learn more about me then navigate to my About Page. If you want to contact me about any opportunities feel free to <a onClick = {handleClick}>Email</a> me! </p>
                     </div>
                     <div className = {styles.PictureContainer}>
                         <Image src = {Pfp} layout = 'responsive' className = 'myPfp' styles={{maxwidth:'720px'}}/>
