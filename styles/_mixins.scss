@@ -1,23 +1,6 @@
 @import 'colorscheme';
 
 
-@mixin button1{
-    border-radius: 12px;
-    background: $light-blue;
-    border: none;
-    
-    p{
-        margin: 0 auto;
-        color: white;
-        font-size: 1rem;
-    }
-
-    &:hover{
-        cursor: pointer;
-    }
-}
-
-
 $breakpoints: (
     sm: (
         min: 576px,
@@ -77,4 +60,54 @@ $breakpoints: (
             }
         }
     }
+}
+
+@mixin button1{
+    width: 200px;
+    height: 60px;
+
+    border-radius: 12px;
+    background: $light-blue;
+    border: none;
+    
+    p{
+        margin: 0 auto;
+        color: white;
+        font-size: 1rem;
+    }
+
+    &:hover{
+        cursor: pointer;
+    }
+
+    @include breakpoint(sm,max){
+        width: 130px;
+        height: 45px;
+        p{
+            font-size: .5rem;
+        }
+    }
+
+    @include breakpoint(sm,min){
+        width: 175px;
+        height: 60px;
+        p{
+            font-size: .75rem;
+        }
+    }
+
+    @include breakpoint(md,min){
+        width:200px;
+        p{
+            font-size: 1rem;
+        }
+    }
+
+    @include breakpoint(lg,min){
+        p{
+            font-size: 1rem;
+        }
+    }
+
+    
 }

@@ -13,16 +13,53 @@
     margin-bottom: 2rem;
     height: 640px;
     color: white;
+
     h1{
         font-size: 6rem;
         margin-bottom: -3rem;
+
+        @include breakpoint(sm,max){
+            font-size: 2.5rem;
+            margin-bottom: -1rem;
+        }
+
+        @include breakpoint(sm,min){
+            font-size: 3rem;
+            margin-bottom: -1rem;
+        }
+
+        @include breakpoint(md,min){
+            font-size: 4rem;
+            margin-bottom: -3rem;
+        }
+
+        @include breakpoint(lg,min){
+            font-size: 6rem;
+        }
+
     }
     p{
         font-size: 2rem;
+
+        @include breakpoint(sm,max){
+            font-size: .8rem;
+        }
+
+        @include breakpoint(sm,min){
+            font-size: 1rem;
+        }
+
+        @include breakpoint(md,min){
+            font-size: 1.5rem;
+        }
+
+        @include breakpoint(lg,min){
+            font-size: 2rem;
+        }
+
+        
     }
     button{
-        width: 200px;
-        height: 60px;
         @include button1;
     }
 
@@ -64,19 +101,20 @@
         .aboutMeIntroText{
             display: flex;
             flex-direction: column;
-            align-content: center;
+            align-content: left;
             color: $black;
             text-align: left;
             max-width: 55%;
             margin: 0 2rem 0 2rem;
-            font-size: 2.75rem;
+
+
             h2{
                 margin-bottom: -1rem;
                 color: $light-blue;
                 text-decoration: underline;
 
                 @include breakpoint(sm,max){
-                    font-size: 2rem;
+                    font-size: 1.5rem;
                 }
 
                 @include breakpoint(sm,min){
@@ -127,7 +165,7 @@
             text-decoration: underline;
 
             @include breakpoint(sm,max){
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
 
             @include breakpoint(sm,min){
@@ -211,9 +249,16 @@
         .SkillWrapper{
             max-width: 1440px;
             display: grid;
-            gap: 10px;
+            gap: 30px;
             grid-template-columns: repeat(4,1fr);
-            
+        }
+
+        @include breakpoint(lg,max){
+            .SkillWrapper{
+                display: grid;
+                gap: 30px;
+                grid-template-columns: repeat(2,1fr);
+            }
         }
     }
     
@@ -223,17 +268,3 @@
 
 // Responsive Section
 
-
-
-
-@media screen and (max-width: 1280px){
-    .SkillSection{
-        .SkillContainer{
-            .SkillWrapper{
-                display: grid;
-                gap: 10px;
-                grid-template-columns: repeat(2,1fr);
-            }
-        }
-    }
-}

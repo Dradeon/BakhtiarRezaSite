@@ -22,11 +22,7 @@ const ContactsPage = () => {
                     <p>215.733.9951</p>
                     <div className={styles.Socials}>
                         <h3>My Socials</h3>
-                        <FaLinkedin style = {{fontSize:'50px',color:'#0984e3',cursor: 'pointer',justifySelf:'center'}}
-                            onClick={function() {
-                                window.open("https://www.linkedin.com/in/bakhtiar-reza",'_blank')
-                            }}
-                        ></FaLinkedin>
+                        <a href = 'https://www.linkedin.com/in/bakhtiar-reza' target = "_blank" rel='noopener'><FaLinkedin style = {{fontSize:'50px',color:'#0984e3',cursor: 'pointer',justifySelf:'center'}}/></a>
                     </div>
                 </div>
             </div>

@@ -28,6 +28,14 @@ var projectData =
             'Github': null
         },
         {
+            'Name':'Login/Signup Form',
+            'Desc':'Web Application that can take a user and then log them in via session token',
+            'Date': 'January 2022',
+            'Skills': ['Javascript','NodeJS','Express'],
+            'Img':[],
+            'Github':null
+        },
+        {
             'Name':'Cryptocurrency Desktop Notifier',
             'Desc': "Simple Program that fetches the latest prices on Bitcoin, Ethereum, and DogeCoin.",
             'Date': "January 2021",
