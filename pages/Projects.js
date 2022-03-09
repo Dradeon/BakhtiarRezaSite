@@ -3,7 +3,9 @@ import Navigation from "./Components/Navigation"
 import Footer from "./Components/Footer"
 import styles from '../styles/Projects.module.scss'
 import projectData from '../Data/ProjectData'
-import {FaGithub} from 'react-icons'
+import Image from "next/image"
+import gif from '../public/login.gif'
+
 
 var projectList = projectData.Projects
 
@@ -33,6 +35,7 @@ const Projects = () => {
                             return (<p>{skill}</p>)
                         })}
                     </div>
+                    {project.Img ? <Image src ={project.Img} width = "1280" height = "720" /> :<></>}
                     {project.Github ? <div className = {styles.btnWrapper}>
                         <a target= '_blank' className = {styles.customBtn} href = {project.Github}>Source Code</a>
                     </div>: <></>}

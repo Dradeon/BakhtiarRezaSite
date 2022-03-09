@@ -3,7 +3,7 @@
 
 
 .FrontPiece{
-    background-image: url(../public/PrettyMountainBackground.jpg);
+    background-image: url(../public/LinkedInBanner.png);
     background-position: center;
     background-size: cover;
     display: flex;
@@ -16,7 +16,8 @@
 
     h1{
         font-size: 6rem;
-        margin-bottom: -3rem;
+        margin-bottom: 1rem;
+        text-shadow: 1px 1px 10px black;
 
         @include breakpoint(sm,max){
             font-size: 2.5rem;
@@ -40,6 +41,7 @@
     }
     p{
         font-size: 2rem;
+        text-shadow: 1px 1px 10px black;
 
         @include breakpoint(sm,max){
             font-size: .8rem;
@@ -71,45 +73,31 @@
 .AboutMeSection{
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 0 auto;
     max-width: 1440px;
 
-    .aboutMeIntro{
+    .PictureContainer{
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-        .PictureContainer{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-self: center;
-            width: 100%;
-            margin: 2rem 2rem 0 0rem;
-            p{
-                color: $light-blue;
-                margin-top: 0rem;
-                font-weight: 600;
-                padding: .5rem 0 .5rem 0;
-                text-align: center;
-                font-size: 1rem;
-            }
-            
-
+        flex-direction: column;
+        align-items: center;
+        max-width: 420px;
+        p{
+            font-size: 1.1rem;
+            color: $light-blue;
         }
-    
+    }
+
+    .aboutMeIntro{       
         .aboutMeIntroText{
             display: flex;
             flex-direction: column;
-            align-content: left;
             color: $black;
-            text-align: left;
-            max-width: 55%;
+            text-align: center;
             margin: 0 2rem 0 2rem;
 
-
             h2{
-                margin-bottom: -1rem;
+                margin-bottom: -.5rem;
                 color: $light-blue;
                 text-decoration: underline;
 
@@ -132,8 +120,10 @@
 
     
             p{
+                
                 font-weight: 400;
                 font-size: 1.25rem;
+                line-height: 2;
 
                 @include breakpoint(sm,max){
                     font-size: .75rem;
@@ -150,14 +140,21 @@
                 @include breakpoint(lg,min){
                     font-size: 1.1rem;
                 }
+                a{
+                    cursor: pointer;
+                }
             }
         }
 
     }
 
     .aboutMeSkills{
-        text-align: left;
-        margin-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 50px;
+
         h2{
             margin: 0 2rem 0 2rem;
             font-size: 2.75rem;
@@ -183,17 +180,11 @@
         }
 
 
-        h3{
-            text-align: center;
-            font-size: .75rem;
-            margin: 0 1rem 0 2rem;
-            font-weight: 400;
-        }
-
         p{
             margin: 0 2rem 0 2rem;
             font-weight: 400;
             font-size: 1.25rem;
+            line-height: 2;
 
             @include breakpoint(sm,max){
                 font-size: .75rem;
@@ -211,6 +202,44 @@
                 font-size: 1.1rem;
             }
         }
+
+        .ListofButtons{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            
+            button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                margin: 3rem 1rem 0 0;
+                padding: 1rem;
+    
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                
+                border: none;
+                transition: all .25s;
+    
+                .icon{
+                    margin-left: .5rem;
+                }
+    
+                p{
+                    margin: 0 0 0 .5rem;
+                    text-align: center;
+                    align-self: center;
+                    color: white;
+                }
+    
+    
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
     }
 
 }
@@ -218,7 +247,7 @@
 .SkillSection{
     display: block;
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 200px;
     
 
     h2{

@@ -9,7 +9,7 @@ import styles from '../styles/Home.module.scss'
 import SkillCard from './Components/SkillCard'
 import Footer from './Components/Footer'
 
-/** OK so this is just I can do it separately in another file instead of having to do it all in index.js. Makes it more organized this way :) **/
+/** OK so this is just here so I can do it separately in another file instead of having to do it all in index.js. Makes it more organized this way :) **/
 const Home = () => {
 
     const {showCopied,setShowCopied} = useState(false)
@@ -34,42 +34,62 @@ const Home = () => {
         else{
             animation.start({y:'10vh',opacity:0})
         }
-        console.log('Use effect hook, inview = ',inView);
+        // console.log('Use effect hook, inview = ',inView);
     })
 
     const handleClick = ()=>{
         navigator.clipboard.writeText('reza.bakhtiar.m@gmail.com')
-        alert('Copied')
+        alert('Email copied to your clipboard!')
+    }
+
+    const goToLinkedIn = () => {
+        window.open("https://www.linkedin.com/in/bakhtiar-reza/","_blank")
+        console.log(`Went to LinkedIn`);
+        return false;
+    }
+
+    const goToGithub = () => {
+        window.open("https://github.com/Dradeon","_blank")
+        console.log("Went to Github")
     }
 
 
+
     return (
-        <div>
+        <>
             <div className = {styles.FrontPiece}>
                 <h1 className = {styles.FrontBigText}>Hi I'm Bakhtiar</h1>
                 <p>Nice to Meet You!</p>
-                <button><a href="/About"><p>Learn More About Me</p></a></button>
             </div>
-            
+
             <div className = {styles.AboutMeSection}>
                 <hr/>
+                <div className={styles.PictureContainer}>
+                    <Image src={Pfp} layout='intrinsic' objectFit='cover'></Image>
+                    <p>There's me! Hello!</p>
+                </div>
                 <div className = {styles.aboutMeIntro}>
                     <div className = {styles.aboutMeIntroText}>
-                        <h2>A Brief Overview:</h2>
+                        <h2>A Brief Intro</h2>
                         <p>I'm currently a sophomore attending Penn State University. My plan is to major in Computer and get a minor in Information Science and Technology. I am always up to solving challenging problems, and I'm always up to learn something new! I want to learn new languages and concepts that aids in my goal of mastering the two areas of programming I want to work on. These two areas would involve the front-end and backend of an application. </p>
-                        <p>I'm <strong>currently on the look</strong> for internships to gain more experience in the Software Engineering field. If you would like to learn more about me then navigate to my About Page. If you want to contact me about any opportunities feel free to <a title='Click on me to copy my email  to your dashboard.' onClick = {handleClick}>Email</a> me! </p>
-                    </div>
-                    <div className = {styles.PictureContainer}>
-                        <Image src = {Pfp} layout = 'responsive' className = 'myPfp' styles={{maxwidth:'720px'}}/>
-                        <p>That's me! Hello!</p>
+                        <p>I'm <strong> not currently looking</strong> for any internships at the moment as I look forward to my internship this upcoming summer. Though, if you want to contact me about any opportunities for the 2023 Summer feel free to <a title='Click me to copy my email  to your dashboard.' onClick = {handleClick}>email</a> me! </p>
                     </div>
                 </div>
                 
                 <div className = {styles.aboutMeSkills}>
                     <h2>My Skills </h2>
-                    <p>I have experience with backend langauges such Python and Java to build systems using object oreinted programming. I also have experience developing using frontend UIs with Javascript and several Web Frameworks such as React, SASS, and NextJS.</p>
-                    <br/>
-                    <h3>Fun Fact: This website was built using the React Framework! (You can use the React Developers Tools Extension to check!)</h3>
+                    <p>I experience in the Python and Java through University coursework. I mainly was to use them for creating algorithms and data structures. Aside from backend languages I also have experience using frontend languages. I mainly use Javascript alongside a web framework like React to create the frontend of my website.</p>
+                    <p>For a detailed summary about my education and experience you can visit my LinkedIn Profile using the button below.</p>
+                    <div className={styles.ListofButtons}>
+                        <button type = 'button' onClick={goToLinkedIn} style = {{backgroundColor:'#0984e3'}}>
+                            <FaLinkedin className='icon' color={'white'} size={'40px'}/>
+                            <p>LinkedIn</p>
+                        </button>
+                        <button type = 'button' onClick={goToGithub} style = {{backgroundColor:'black'}}>
+                            <FaGithub className='icon' color={'white'} size={'40px'}/>
+                            <p>Github</p>
+                        </button>
+                    </div>
                 </div>
             </div>
             <motion.div animate = {animation}>
@@ -89,7 +109,7 @@ const Home = () => {
             
             <Footer/>
 
-        </div>
+        </>
         
     )
 }
