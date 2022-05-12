@@ -1,27 +1,24 @@
 import Image from 'next/image'
+import thumbnail1 from '../../public/PythonThumbnail.jpg'
+import {FaPython} from 'react-icons/fa'
+import {IoMdMicrophone} from 'react-icons/io'
+import {AiFillAppstore} from 'react-icons/ai'
 
-import Javascript from '../../public/JSIcon.png'
-import Python from '../../public/PythonIcon.png'
-import React from '../../public/Reacticon.png'
-import Sass from '../../public/SassIcon.png'
+const skillsDatabase = {
+    "Frontend/Backend Knowledge":{"desc":"I have excellent knowledge of Javascript, Python, and Java.","img":<FaPython color='#0984e3' size={'200px'}/>},
+    "Great Communicator and Explainer":{"desc":"I know how to communicate what needs to be done and my code does.","img":<IoMdMicrophone color='#0984e3' size={'200px'}/>},
+    "My Experience in Projects":{"desc":"I have attained a lot of experience from the projects I've attempted.","img":<AiFillAppstore color='#0984e3' size={'200px'}/>}
+  }
 
-
-let imageDatabase = {"Javascript":Javascript,"Python":Python,"React":React,'Sass':Sass}
-
-let descDatabase = {"Javascript":"I started to learn Javascript when I started to learn about Web Frameworks. I'm now interested in using it to create backends using NodeJS.",
-"Python":"I have 2 years worth of Experience in Python. Started learning it from my first Computer Science courses. Built some projects and learned data structures and algorithms in the language",
-"React":"I have 6 months using this Web Framework ever since I started learning about it during the 2021 summer.",
-'Sass':"I learned this technology as an easier and faster way to do my CSS. It has made styling websites 2x faster."}
-
-const SkillCard = ({Language}) => {
+const SkillCard = ({skillName}) => {
     return (
-        <div className = "SkillCardWrapper">
-            <div className = "ImageContainer">
-                    <Image src = {imageDatabase[Language]} width = '360' height = '360'/>
+        <div className = "skillCard">
+            <div className = "imageContainer">
+                    {skillsDatabase[skillName]["img"]}
             </div>
-            <div className = "Overlay">
-                <h2>{Language}</h2>
-                <p>{descDatabase[Language]}</p>
+            <div className = "textSection">
+                <h3 className = "header">{skillName}</h3>
+                <p className = "content">{skillsDatabase[skillName]["desc"]}</p>
             </div>
             
         </div>

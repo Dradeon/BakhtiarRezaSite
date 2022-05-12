@@ -1,35 +1,25 @@
 import Link from 'next/link'
 const Navigation = () => {
     return (
-        <div>
-            <nav>
+        <div id = "navbar">
+            <nav className ="navContainer">
                 <Link href = '/'>
-                    <h2 className = "HomeButton">Bakhtiar Reza</h2>
+                    <h2 className = "home">Bakhtiar Reza</h2>
                 </Link>
-                <ul className = 'Links'>
-                <li>
+                <div className = "links">
                     <Link href = '/About'>
-                    <a>About</a>
+                        <a>About</a>
                     </Link>
-                </li>
-                <li>
                     <Link href = '/Career'>
-                    <a>Career</a>
+                        <a>Career</a>
                     </Link>
-                </li>
-                <li>
                     <Link href = '/Projects'>
-                    <a>Projects</a>
+                        <a>Projects</a>
                     </Link>
-                </li>
-                <li>
-                    <Link href = '/Contact'>
-                    <a>Contact</a>
-                    </Link>
-                </li>
-                </ul>
+                </div>
             </nav>
         </div>
+        
     )
 }
 

@@ -1,73 +1,56 @@
 @import 'colorscheme';
 @import 'mixins';
 
-
-.FrontPiece{
+.Headline{
     background-image: url(../public/LinkedInBanner.png);
     background-position: center;
     background-size: cover;
+
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap-reverse;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2rem;
-    height: 640px;
-    color: white;
 
-    h1{
-        font-size: 6rem;
-        margin-bottom: 1rem;
-        text-shadow: 1px 1px 10px black;
+    width: 100%;
+    height: 100%;
 
-        @include breakpoint(sm,max){
-            font-size: 2.5rem;
-            margin-bottom: -1rem;
-        }
+    padding: 5rem 0;
+    margin-bottom: 3rem;
 
-        @include breakpoint(sm,min){
+    gap: 10rem;
+
+    .Headers{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: flex-start;
+        color: white;
+        
+        
+
+        h1{
             font-size: 3rem;
-            margin-bottom: -1rem;
+            margin-bottom: -2rem;
         }
-
-        @include breakpoint(md,min){
-            font-size: 4rem;
-            margin-bottom: -3rem;
-        }
-
-        @include breakpoint(lg,min){
-            font-size: 6rem;
-        }
-
-    }
-    p{
-        font-size: 2rem;
-        text-shadow: 1px 1px 10px black;
-
-        @include breakpoint(sm,max){
-            font-size: .8rem;
-        }
-
-        @include breakpoint(sm,min){
-            font-size: 1rem;
-        }
-
-        @include breakpoint(md,min){
+        p{
             font-size: 1.5rem;
         }
 
-        @include breakpoint(lg,min){
-            font-size: 2rem;
+        @media (orientation: portrait){
+            align-items: center;
         }
 
-        
-    }
-    button{
-        @include button1;
     }
 
+    .coverPicture{
+        border-radius: 50%;
+    }
     
-    
+    @media (orientation: portrait) {
+        gap: 0rem;
+    }
+
 }
+
 
 
 .AboutMeSection{
@@ -75,91 +58,18 @@
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    max-width: 1440px;
-
-    .PictureContainer{
+    max-width: 72rem;    
+         
+    .aboutMeText{
         display: flex;
         flex-direction: column;
-        align-items: center;
-        max-width: 420px;
-        p{
-            font-size: 1.1rem;
-            color: $light-blue;
-        }
-    }
-
-    .aboutMeIntro{       
-        .aboutMeIntroText{
-            display: flex;
-            flex-direction: column;
-            color: $black;
-            text-align: center;
-            margin: 0 2rem 0 2rem;
-
-            h2{
-                margin-bottom: -.5rem;
-                color: $light-blue;
-                text-decoration: underline;
-
-                @include breakpoint(sm,max){
-                    font-size: 1.5rem;
-                }
-
-                @include breakpoint(sm,min){
-                    font-size: 2rem;
-                }
-
-                @include breakpoint(md,min){
-                    font-size: 2.5rem;
-                }
-
-                @include breakpoint(lg,min){
-                    font-size: 3rem;
-                }
-            }
-
-    
-            p{
-                
-                font-weight: 400;
-                font-size: 1.25rem;
-                line-height: 2;
-
-                @include breakpoint(sm,max){
-                    font-size: .75rem;
-                }
-
-                @include breakpoint(sm,min){
-                    font-size: .75rem;
-                }
-
-                @include breakpoint(md,min){
-                    font-size: 1rem;
-                }
-
-                @include breakpoint(lg,min){
-                    font-size: 1.1rem;
-                }
-                a{
-                    cursor: pointer;
-                }
-            }
-        }
-
-    }
-
-    .aboutMeSkills{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        margin-bottom: 50px;
+        color: $black;
+        text-align: left;
+        margin: 0 2rem 0 2rem;
 
         h2{
-            margin: 0 2rem 0 2rem;
-            font-size: 2.75rem;
+            margin-bottom: -.5rem;
             color: $light-blue;
-            text-decoration: underline;
 
             @include breakpoint(sm,max){
                 font-size: 1.5rem;
@@ -176,12 +86,14 @@
             @include breakpoint(lg,min){
                 font-size: 3rem;
             }
-
+            @include breakpoint(xxl,min){
+                font-size: 3rem;
+            }
         }
 
 
         p{
-            margin: 0 2rem 0 2rem;
+            
             font-weight: 400;
             font-size: 1.25rem;
             line-height: 2;
@@ -201,53 +113,23 @@
             @include breakpoint(lg,min){
                 font-size: 1.1rem;
             }
-        }
+            @include breakpoint(xxl,min){
+                font-size: 1.3rem;
+            }
 
-        .ListofButtons{
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            
-            button{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                
-                margin: 3rem 1rem 0 0;
-                padding: 1rem;
-    
-                width: 100%;
-                height: 100%;
-                border-radius: 10px;
-                
-                border: none;
-                transition: all .25s;
-    
-                .icon{
-                    margin-left: .5rem;
-                }
-    
-                p{
-                    margin: 0 0 0 .5rem;
-                    text-align: center;
-                    align-self: center;
-                    color: white;
-                }
-    
-    
-                &:hover{
-                    cursor: pointer;
-                }
+            a{
+                cursor: pointer;
             }
         }
     }
+
 
 }
 
 .SkillSection{
     display: block;
     text-align: center;
-    margin-bottom: 200px;
+    margin-bottom: 3rem;
     
 
     h2{
@@ -274,26 +156,17 @@
 
     .SkillContainer{
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         .SkillWrapper{
-            max-width: 1440px;
-            display: grid;
-            gap: 30px;
-            grid-template-columns: repeat(4,1fr);
-        }
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
 
-        @include breakpoint(lg,max){
-            .SkillWrapper{
-                display: grid;
-                gap: 30px;
-                grid-template-columns: repeat(2,1fr);
-            }
+            gap: 50px;
         }
     }
     
 }
 
 
-
-// Responsive Section
 
