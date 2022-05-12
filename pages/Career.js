@@ -1,6 +1,6 @@
-import Header from "./Components/Header"
-import Navigation from "./Components/Navigation"
-import Footer from "./Components/Footer"
+import Header from "../Components/Header"
+import Navigation from "../Components/Navigation"
+import Footer from "../Components/Footer"
 import styles from '../styles/Career.module.scss'
 
 const ProjectsPage = () => {

@@ -1,13 +1,12 @@
 import {motion, useViewportScroll, useAnimation} from 'framer-motion'
 import {useInView} from 'react-intersection-observer'
 import { useEffect, useState } from 'react'
-import {FaGithub, FaEnvelope,FaLinkedin} from 'react-icons/fa'
 
 import Image from 'next/image'
 import Pfp from '../public/ProfilePicture.png'
 import styles from '../styles/Home.module.scss'
-import SkillCard from './Components/SkillCard'
-import Footer from './Components/Footer'
+import SkillCard from '../Components/SkillCard'
+import Footer from '../Components/Footer'
 import ContactsPage from './Contact'
 
 /** OK so this is just here so I can do it separately in another file instead of having to do it all in index.js. Makes it more organized this way :) **/

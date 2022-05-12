@@ -1,7 +1,7 @@
-import Header from './Components/Header'
-import DarkModeButton from './Components/DarkModeButton'
+import Header from '../Components/Header'
 
-import Navigation from './Components/Navigation'
+
+import Navigation from '../Components/Navigation'
 import Home from './Home'
 
 export default function Landing() {

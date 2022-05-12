@@ -1,6 +1,3 @@
-import Header from "./Components/Header"
-import Navigation from "./Components/Navigation"
-import Footer from "./Components/Footer"
 import styles from '../styles/Contact.module.scss'
 
 import {FaLinkedinIn,FaGithub} from 'react-icons/fa'
