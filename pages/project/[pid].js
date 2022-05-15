@@ -37,6 +37,8 @@ const Post = () => {
     <Header/>
     <Navigation/>
     <main className = {styles.ProjMain}>
+      {
+      project ?
       <div className = {styles.ProjWrapper}>
           {project['Thumbnail'] ? <Image className = {styles.Thumbnail} src = {project['Thumbnail']} width='1920' height ='1080'/>: <Image className = {styles.Thumbnail} src = {placeholder} width='1080' height ='1080'/>}
           <hr className = {styles.divider}/>
@@ -55,6 +57,9 @@ const Post = () => {
                   </div>
           </div>
       </div>
+      : <div className = {styles.errorPage}>
+          <p>Oops! This page doesn't exist!</p>
+        </div>}
     </main>
     <Footer/>
   </>
