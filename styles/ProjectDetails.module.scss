@@ -1,0 +1,74 @@
+@import 'colorscheme';
+
+
+
+.ProjMain{
+    margin: 1rem auto;
+    display: flex;
+    flex-flow: row wrap;
+
+    max-width: 1440px;
+
+    .ProjWrapper{
+        display: flex;
+        flex-flow: column wrap;
+
+        padding: 3rem;
+        justify-content: center;
+
+        .Thumbnail{
+            box-shadow: 0px 8px 20px darkgreen;
+        }
+
+        .divider{
+            width: 100%;
+            border-top: 2px solid #bdc3c7;
+            margin: 3rem auto;
+        }
+
+        .ProjectInfo{
+            display: flex;
+            flex-flow: column nowrap;
+
+            h1{
+                font-size: 2.5rem;
+            }
+
+            p{
+                line-height: 3rem;
+                font-size: 1.2rem;
+            }
+
+            .ProjName{
+                margin-bottom: 0rem;
+            }
+
+        }
+        .Skills{
+            display: flex;
+            flex-flow: row nowrap;
+            
+            .Skill{
+                display: flex;
+                flex-flow: row nowrap;
+
+                justify-content: center;
+                align-items: center;
+                gap: .5rem;
+
+                width: auto;
+
+                background: $light-blue;
+                margin: 1rem;
+                padding: 0rem 2rem;
+                border-radius: 3rem;
+
+                color: white;
+                font-size: 1.25rem;
+                font-weight: 500;
+                text-align: center;
+            }
+        }
+
+    }
+}

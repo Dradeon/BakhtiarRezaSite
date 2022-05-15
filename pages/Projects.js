@@ -3,8 +3,7 @@ import Navigation from "../Components/Navigation"
 import Footer from "../Components/Footer"
 import styles from '../styles/Projects.module.scss'
 import projectData from '../Data/ProjectData'
-import Image from "next/image"
-import gif from '../public/login.gif'
+import { ProjectCard } from "../Components/ProjectCard"
 
 
 var projectList = projectData.Projects
@@ -16,34 +15,17 @@ const Projects = () => {
     }
 
     return (
-        <div className = {styles.ProjectPageContainer}>
+        <>
             <Header title = "Bakhtiar Reza | Projects" description = "Projects Made By Bakhtiar" index = "noindex, nofollow" />
             <Navigation/>
             <h1 className = {styles.ProjectsPageTitle}>My Projects</h1>
-            {projectList.map(project => {
-                 return (<div key = {project.name} className = {styles.ProjectContainer}>
-                    <div className = {styles.NameDate}>
-                        <h1>{project.Name}:</h1>
-                        <p>{project.Date}</p>
-                    </div>
-                    <div className = {styles.ProjectDescription}>
-                        <p>{project.Desc}</p>
-                    </div>
-                    <div className = {styles.ProjectSkills}>
-                        <h3>Skills:</h3>
-                        {project.Skills.map(skill => {
-                            return (<p>{skill}</p>)
-                        })}
-                    </div>
-                    {project.Img ? <Image src ={project.Img} width = "1280" height = "720" /> :<></>}
-                    {project.Github ? <div className = {styles.btnWrapper}>
-                        <a target= '_blank' className = {styles.customBtn} href = {project.Github}>Source Code</a>
-                    </div>: <></>}
-                    <hr/>
+            <div className = {styles.projectWrapper}>
+                <div className = {styles.projectGrid}>
+                    {projectList.map(project => {return (<ProjectCard Project={project} key = {project['id']}/>)})}
                 </div>
-            )})}
+            </div>
             <Footer/>
-        </div>
+        </>
     )
 }
 

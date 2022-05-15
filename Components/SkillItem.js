@@ -13,7 +13,7 @@ const skillsDatabase = {
     'My Experience in Projects':{'desc':'I have attained a lot of experience from the projects I\'ve attempted.','img':appStoreIcon}
   }
 
-const SkillCard = ({skillName}) => {
+const SkillItem = ({skillName}) => {
     return (
         <div className = "skillCard">
             <div className = "imageContainer">
@@ -28,4 +28,4 @@ const SkillCard = ({skillName}) => {
     )
 }
 
-export default SkillCard
+export default SkillItem

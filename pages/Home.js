@@ -5,9 +5,9 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Pfp from '../public/ProfilePicture.png'
 import styles from '../styles/Home.module.scss'
-import SkillCard from '../Components/SkillCard'
 import Footer from '../Components/Footer'
-import ContactsPage from './Contact'
+import ContactsPage from '../Components/Contact'
+import SkillItem from '../Components/SkillItem'
 
 /** OK so this is just here so I can do it separately in another file instead of having to do it all in index.js. Makes it more organized this way :) **/
 const Home = () => {
@@ -17,7 +17,7 @@ const Home = () => {
     const animation = useAnimation();
     const {ref,inView} = useInView(
         {
-            threshold: .75
+            threshold: .65
         }
     );
 
@@ -67,9 +67,9 @@ const Home = () => {
                     <motion.div animate = {animation}>
                         <div className = {styles.SkillContainer} ref = {ref}>
                             <div className = {styles.SkillWrapper}>
-                                <SkillCard skillName={"Frontend/Backend Knowledge"}/>
-                                <SkillCard skillName={"Great Communicator and Explainer"}/>
-                                <SkillCard skillName={"My Experience in Projects"}/>
+                                <SkillItem skillName={"Frontend/Backend Knowledge"}/>
+                                <SkillItem skillName={"Great Communicator and Explainer"}/>
+                                <SkillItem skillName={"My Experience in Projects"}/>
                             </div>
                         </div>
                     </motion.div>

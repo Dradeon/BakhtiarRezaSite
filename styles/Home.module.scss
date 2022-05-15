@@ -35,10 +35,6 @@
             font-size: 1.5rem;
         }
 
-        @media (orientation: portrait){
-            align-items: center;
-        }
-
     }
 
     .coverPicture{
@@ -47,6 +43,10 @@
     
     @media (orientation: portrait) {
         gap: 0rem;
+        .Headers{
+            text-align: center;
+            align-items: center;
+        }
     }
 
 }
