@@ -1,5 +1,1 @@
 User-agent: *
-Disallow: /Projects
-Disallow: /Career
-Disallow: /Contact
-Disallow: /About
