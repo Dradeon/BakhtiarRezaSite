@@ -57,7 +57,7 @@ const Home = () => {
                 <div className = {styles.aboutMeText}>
                     <h2>My Skills </h2>
                     <p>I experience in the Python and Java through University coursework. I mainly was to use them for creating algorithms and data structures. Aside from backend languages I also have experience using frontend languages. I mainly use Javascript alongside a web framework like React to create the frontend of my website.</p>
-                    <p>You can learn more about me in the Abouts Page.</p>
+                    <p>You can learn more about me in the About Page or via my <a href="https://docs.google.com/document/d/1xrzYRh88AQ7zkuq3CKKo8Dp9O2yU8l3QRcS3nuU0lyI/edit?usp=sharing" target="_blank">resume</a>.</p>
                 </div>
             </div>
             
