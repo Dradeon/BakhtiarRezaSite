@@ -6,10 +6,10 @@ import Image from 'next/image'
 import Pfp from '../public/ProfilePicture.png'
 import styles from '../styles/Home.module.scss'
 import Footer from '../Components/Footer'
-import ContactsPage from '../Components/Contact'
+import Contact from '../Components/Contact'
 import SkillItem from '../Components/SkillItem'
 
-/** OK so this is just here so I can do it separately in another file instead of having to do it all in index.js. Makes it more organized this way :) **/
+
 const Home = () => {
 
     const {showCopied,setShowCopied} = useState(false)
@@ -17,7 +17,7 @@ const Home = () => {
     const animation = useAnimation();
     const {ref,inView} = useInView(
         {
-            threshold: .65
+            threshold: .55
         }
     );
 
@@ -39,12 +39,14 @@ const Home = () => {
 
     return (
         <>
-            <div className = {styles.Headline}>
-                <div className = {styles.Headers}>
+            <div className = {styles.HeroSection}>
+                <div className="ImageWrapper">
+                    <Image className = {styles.coverPicture} src={Pfp} width='360' height='360' alt = "Picture of Bakhtiar Reza"></Image>
+                </div>
+                <div className = {styles.Hero}>
                     <h1>Hi I'm Bakhtiar and I study CS</h1>
                     <p>I'm looking to start a career in Software Engineering</p>
                 </div>
-                <Image className = {styles.coverPicture} src={Pfp} width='360' height='360'></Image>
             </div>
             
             <div className = {styles.AboutMeSection}>
@@ -76,7 +78,7 @@ const Home = () => {
                 </div>
             
 
-            <ContactsPage/>
+            <Contact/>
 
             <Footer/>
 

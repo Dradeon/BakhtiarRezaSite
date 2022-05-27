@@ -65,8 +65,8 @@
     flex-flow: column nowrap;
     align-items: center;
 
-    width: 400px;
-    height: 400px;
+    max-width: 400px;
+    height: auto;
 
     border-radius: 10px;
 
@@ -79,15 +79,50 @@
         .content{
             font-size: 1rem;
         }
+        
     }
 
-    .ImgContainer{
+    .imageContainer{
         display: block;
-        width: 200px;
-        
-        .svgPath{
-            stroke: $light-blue;
+        height: auto;
+    }
+
+    @include breakpoint(sm,max){
+
+        .textSection{
+            .header{
+                font-size: 1.25rem;
+            }
+            .content{
+                font-size: .75rem;
+            }
         }
+
+        .imageContainer{
+            max-width: 100px;
+        }   
+    }
+    
+    @include breakpoint(sm,min){
+        .imageContainer{
+            max-width: 100px;
+        }   
+    }
+
+    @include breakpoint(md,min){
+        
+        .textSection{
+            .header{
+                font-size: 1.5rem;
+            }
+            .content{
+                font-size: 1rem;
+            }
+        }
+
+        .imageContainer{
+            max-width: 200px;
+        }   
     }
 
 }
@@ -100,7 +135,7 @@
     display: flex;
     flex-flow: column nowrap;
 
-    width: 480px;
+    max-width: 480px;
     height: max-content;
 
     border: 1px solid lightgrey;
@@ -158,6 +193,129 @@
     }
 
     
+}
+
+/** Contact Me **/
+
+.ContactInfoWrapper{
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    text-align: center;
+
+    max-width: 1440px;
+
+    h1{
+        font-size: 2.75rem;
+        color: $light-blue;
+        margin-bottom: .5rem;
+
+        @include breakpoint(sm,max){
+            font-size: 2rem;
+        }
+        
+        @include breakpoint(sm,min){
+            font-size: 2rem;
+        }
+
+        @include breakpoint(md,min){
+            font-size: 2.75rem;
+        }
+    }
+
+    h2{
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin-bottom: 0rem;
+    }
+
+    p{
+        margin: 0 auto;
+        font-size: 1rem;
+        max-width: 640px;
+        font-weight: 600;
+
+        @include breakpoint(sm,max){
+            margin: 0 1rem;
+            font-size: .75rem;
+        }
+        
+        @include breakpoint(sm,min){
+            margin: 0 1rem;
+            font-size: .75rem;
+        }
+
+        @include breakpoint(md,min){
+            margin: 0 auto;
+            font-size: 1rem;
+        }
+
+       
+        
+    }
+
+    .ContactInfo{
+        display: flex;
+        flex-direction: column;
+        p{
+            max-width: none;
+            font-size: 1rem;
+            font-weight: 400;
+            margin: .25rem 0rem .25rem 0rem;
+        }
+    }
+
+    .Socials{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        
+        button{
+            display: flex;
+            place-items: center;
+
+            background-color: #0984e3;
+            
+            margin: 1rem;
+            padding: 1rem;
+
+            
+            border-radius: 50%;
+            
+            border: none;
+
+            .icon{
+               max-width: 40px;
+               height: auto;
+
+               @include breakpoint(sm,max){
+                    max-width: 20px;
+                }
+            
+                @include breakpoint(sm,min){
+                    max-width: 20px;
+                }
+    
+                @include breakpoint(md,min){
+                    max-width: 40px;
+                }
+            }
+
+            p{
+                margin: 0 0 0 .5rem;
+                text-align: center;
+                align-self: center;
+                color: white;
+            }
+
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+
+
+    }
 }
 
 /** FOOTER COMPONENT **/

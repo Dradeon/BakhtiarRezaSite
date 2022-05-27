@@ -1,4 +1,4 @@
-@import 'Responsive';
+@import "mixins";
 @import 'Components';
 
 html,
@@ -17,5 +17,21 @@ body {
 a {
   color: #0070f3;
   text-decoration: none;
+}
+
+.ImageWrapper{
+  max-width: 360px;
+
+  @include breakpoint(sm,max){
+    max-width: 180px;
+  }
+
+  @include breakpoint(sm,min){
+    max-width: 180px;
+  }
+
+  @include breakpoint(md,min){
+    max-width: 360px;
+  }
 }
 

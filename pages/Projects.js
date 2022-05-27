@@ -18,12 +18,16 @@ const Projects = () => {
         <>
             <Header title = "Bakhtiar Reza | Projects" description = "Projects Made By Bakhtiar" index = "noindex, nofollow" />
             <Navigation/>
-            <h1 className = {styles.ProjectsPageTitle}>My Projects</h1>
-            <div className = {styles.projectWrapper}>
-                <div className = {styles.projectGrid}>
+            <h1 className = {styles.ProjectsPageTitle}>My Projects:</h1>
+            
+            <div className={styles.ProjectWrapper}>
+                <div className = {styles.ProjectGrid}>
                     {projectList.map(project => {return (<ProjectCard Project={project} key = {project['id']}/>)})}
                 </div>
             </div>
+
+            
+            
             <Footer/>
         </>
     )

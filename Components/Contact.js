@@ -1,7 +1,8 @@
-import styles from '../styles/Contact.module.scss'
+
 
 import {FaLinkedinIn,FaGithub} from 'react-icons/fa'
 import {AiFillMail} from 'react-icons/ai'
+import { IconContext } from 'react-icons/lib'
 
 const goToLinkedIn = () => {
     window.open("https://www.linkedin.com/in/bakhtiar-reza/","_blank")
@@ -18,26 +19,31 @@ const goToGithub = () => {
     console.log("Went to Github")
 }
 
-const ContactsPage = () => {
+const Contact = () => {
     return (
         <div>
-            <div className = {styles.ContactInfoWrapper}>
-                <h2>Let's Chat!</h2>
+            <div className = "ContactInfoWrapper">
+                <h1>Let's Chat!</h1>
                 <p>Whether it be an internship opportunity or a program
-                    I could participate at a company, you can contact me via
-                    email or the links below.
+                    I could participate at a company, you can contact me via links below.
                 </p>
-                <div className = {styles.ContactInfo}>
-                    <h3>Socials</h3>
-                    <div className={styles.Socials}>
-                        <button type = 'button' onClick={goToLinkedIn} style = {{backgroundColor:'#0984e3'}}>
-                            <FaLinkedinIn className='icon' color={'white'} size={'40px'}/>
+                <div className = "ContactInfo">
+                    <h2>Socials</h2>
+                    <div className="Socials">
+                        <button type = 'button' onClick={goToLinkedIn}>
+                            <IconContext.Provider value={{className:'icon'}}>
+                                <FaLinkedinIn color={'white'} size={'40px'}/>
+                            </IconContext.Provider>
                         </button>
-                        <button type = 'button' onClick={goToGithub} style = {{backgroundColor:'#0984e3'}}>
-                            <FaGithub className='icon' color={'white'} size={'40px'}/>
+                        <button type = 'button' onClick={goToGithub}>
+                            <IconContext.Provider value={{className:'icon'}}>
+                                <FaGithub color={'white'} size={'40px'}/>
+                            </IconContext.Provider>
                         </button>
-                        <button type = 'button' onClick = {copyEmail} style = {{backgroundColor:'#0984e3'}}>
-                            <AiFillMail className='icon' color = {'white'} size={'40px'}/>
+                        <button type = 'button' onClick = {copyEmail}>
+                            <IconContext.Provider value={{className:'icon'}}>
+                                <AiFillMail color = {'white'} size={'40px'}/>
+                            </IconContext.Provider>
                         </button>
                     </div>
                 </div>
@@ -46,4 +52,4 @@ const ContactsPage = () => {
     )
 }
 
-export default ContactsPage
+export default Contact

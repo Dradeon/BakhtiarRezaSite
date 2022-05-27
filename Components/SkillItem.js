@@ -2,6 +2,7 @@ import Image from 'next/image'
 import {FaPython} from 'react-icons/fa'
 import {IoMdMicrophone} from 'react-icons/io'
 import {AiFillAppstore} from 'react-icons/ai'
+import { IconContext } from 'react-icons/lib';
 
 const pythonIcon = <FaPython color='#0984e3' size={'200px'}/>;
 const micIcon = <IoMdMicrophone color='#0984e3' size={'200px'}/>;
@@ -16,8 +17,10 @@ const skillsDatabase = {
 const SkillItem = ({skillName}) => {
     return (
         <div className = "skillCard">
-            <div className = "imageContainer">
+            <div className = "">
+                <IconContext.Provider value={{className:'imageContainer'}}>
                     {skillsDatabase[skillName]["img"]}
+                </IconContext.Provider>
             </div>
             <div className = "textSection">
                 <h3 className = "header">{skillName}</h3>

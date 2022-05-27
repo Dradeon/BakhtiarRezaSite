@@ -2,29 +2,20 @@
 
 
 .ProjectsPageTitle{
-    text-align: center;
-    margin-left: 1rem;
-    margin-bottom: 0rem;
+    margin-left: 4.5rem;
+    font-size: 2.75rem;
+    text-align: left;
 }
 
-.projectWrapper{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 90rem;
-
-    margin: 2rem auto;
-    margin-bottom: 5rem;
-    padding: 1rem;
-
-    .projectGrid{
+.ProjectWrapper{
+    margin: 1rem 0 3rem 0;
+    .ProjectGrid{
+        margin:  4rem;
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(auto-fit,minmax(150px,480px));
         gap: 5rem;
-        
-        @media(orientation: portrait){
-            gap: 2rem;
-            grid-template-columns: 1fr;
-        }
+        grid-auto-flow: row;
     }
 }
+
+
