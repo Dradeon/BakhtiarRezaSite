@@ -40,14 +40,17 @@
             }
 
             .ProjName{
-                margin-bottom: 0rem;
+                margin-bottom: -.5rem;
+            }
+
+            .ProjDate{
+                font-weight: 400;
             }
 
         }
         .Skills{
             display: flex;
-            flex-flow: row nowrap;
-            
+            flex-flow: row wrap;
             .Skill{
                 display: flex;
                 flex-flow: row nowrap;
@@ -59,7 +62,7 @@
                 width: auto;
 
                 background: $light-blue;
-                margin: 1rem;
+                margin: 0 1rem;
                 padding: 0rem 2rem;
                 border-radius: 3rem;
 
@@ -68,8 +71,70 @@
                 font-weight: 500;
                 text-align: center;
             }
+
+        }
+
+        .GithubButton{
+            margin-left: 1rem;
+            padding: .5rem 1rem;
+
+            border: none;
+            border-radius: 3rem;
+            background-color: #000;
+
+            a{
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+
+                gap: .5rem;
+
+                p{
+                    font-size: .8rem;
+                    font-weight: 700;
+                    
+                    color: white;
+                }
+            }
         }
         
+        @media (max-width: 430px) {
+            text-align: center;
+            
+            .Skills{
+                flex-flow: column;
+                align-items: center;
+                gap: 1rem;
+                .Skill{
+                    width: max-content;
+                }
+            }
+        }
+
+        @media(min-width: 450px){
+            text-align: center;
+            
+            .Skills{
+                flex-flow: column;
+                align-items: center;
+                gap: 1rem;
+                .Skill{
+                    width: max-content;
+                }
+            }
+        }
+
+        @media(min-width: 720px){
+            text-align: left;
+            .Skills{
+                flex-flow: row nowrap;
+                gap: 0rem;
+                .Skill{
+                    width: max-content;
+                }
+            }
+        }
 
     }
 

@@ -6,23 +6,23 @@ import Footer from '../../Components/Footer'
 import styles from '../../styles/ProjectDetails.module.scss'
 import placeholder from '../../public/ProjectPreviewNotAvailable.png'
 import projectData from '../../Data/ProjectData'
-import {FaReact, FaHtml5, FaVuejs, FaPython, FaJava, FaNode} from 'react-icons/fa'
+import {FaReact, FaHtml5, FaVuejs, FaPython, FaJava, FaNode, FaGithub} from 'react-icons/fa'
 import {SiNextdotjs, SiSass, SiJavascript, SiExpress} from 'react-icons/si'
 import {AiOutlineConsoleSql} from 'react-icons/ai'
 
+const iconSize = '30px'
 const icons = {
-  'React':<FaReact size='40px'/>,
-  'NextJS':<SiNextdotjs size='40px'/>,
-  'Sass': <SiSass size='40px'/>,
-  'HTML': <FaHtml5 size='40px'/>,
-  'VueJS': <FaHtml5 size='40px'/>,
-  'Python': <FaPython size='40px'/>,
-  'Java': <FaJava size='40px'/>,
+  'React':<FaReact size={iconSize}/>,
+  'NextJS':<SiNextdotjs size={iconSize}/>,
+  'Sass': <SiSass size={iconSize}/>,
+  'HTML': <FaHtml5 size={iconSize}/>,
+  'VueJS': <FaHtml5 size={iconSize}/>,
+  'Python': <FaPython size={iconSize}/>,
+  'Java': <FaJava size={iconSize}/>,
   'Javascript':<SiJavascript size = '30px'/>,
-  'SQL': <AiOutlineConsoleSql size = '40px'/>,
-  'NodeJS': <FaNode size = '40px'/>,
-  'Express': <SiExpress size = '40px'/>
-
+  'SQL': <AiOutlineConsoleSql size={iconSize}/>,
+  'NodeJS': <FaNode size={iconSize}/>,
+  'Express': <SiExpress size={iconSize}/>
 }
 
 const projectList = projectData.Projects
@@ -46,7 +46,7 @@ const Post = () => {
               <h1 className = {styles.ProjName}>{project['Name']}</h1>
               <h2 className = {styles.ProjDate}>{project['Date']}</h2>
               <p className = {styles.ProjDesc}>{project['Desc']}</p>
-              <h2 className = {styles.ProjSkillTitle}>Applied Skills:</h2>
+              <h2 className = {styles.ProjSkillTitle}>Applied Skills</h2>
               <div className = {styles.Skills}> 
                   {project['Skills'].map((skill) =>{
                     return <div className = {styles.Skill} key={skill}>
@@ -54,8 +54,17 @@ const Post = () => {
                         <p>{skill}</p>
                     </div>
                   })}
-                  </div>
+              </div>
           </div>
+          {project['Github'] ? 
+          <div>
+            <h2>Github</h2>
+            <button className={styles.GithubButton}><a href={project['Github']} target='_blank'>
+              <FaGithub size={'30px'} style={{'color':'white'}}/>
+              <p>View Code</p>
+              </a></button>
+          </div>
+          : {}}
       </div>
       : <div className = {styles.errorPage}>
           <p>Oops! This page doesn't exist!</p>

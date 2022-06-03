@@ -36,17 +36,17 @@ var projectData =
         {
             'id': 4,
             'Name':'Login/Signup Form',
-            'Desc':'Web Application that can take a user and then log them in via session token',
+            'Desc':'NodeJS Application that can take a user and then log them in via session token.',
             'Date': 'January 2022',
             'Skills': ['Javascript','NodeJS','Express'],
             'Thumbnail': null,
             'AnimatedPreview':"http://g.recordit.co/FQbkOtquum.gif",
-            'Github':null
+            'Github':"https://github.com/Dradeon/JavascriptAuthentication"
         },
         {
             'id': 5,
             'Name':'Cryptocurrency Desktop Notifier',
-            'Desc': "Simple Program that fetches the latest prices on Bitcoin, Ethereum, and DogeCoin.",
+            'Desc': "A Simple Python program that fetches the latest prices on Bitcoin, Ethereum, and DogeCoin via a REST API.",
             'Date': "January 2021",
             'Skills':['Python'],
             'Thumbnail':null,

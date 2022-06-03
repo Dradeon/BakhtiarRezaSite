@@ -136,7 +136,7 @@
     flex-flow: column nowrap;
 
     max-width: 480px;
-    height: max-content;
+    height: min-content;
 
     border: 1px solid lightgrey;
     border-radius: $borderradius;
@@ -164,6 +164,7 @@
 
         .ProjectDesc{
             line-height: 1.5rem;
+            min-height: 4.5rem;
             max-height: 4.5rem;
             font-size: 1.2rem;
 
@@ -183,10 +184,10 @@
         &:hover{
             border-bottom: 5px solid lightgrey;
             cursor: pointer;
-            height: 100%;
+
             .CardContent{
                 .ProjectDesc{
-                    max-height: 100%;
+                    max-height: max-content;
                 }
             }
         }
