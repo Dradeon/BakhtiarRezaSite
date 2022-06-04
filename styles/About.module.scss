@@ -1,25 +1,30 @@
 @import 'colorscheme';
 @import 'mixins';
+@import 'Components';
 
 .AboutMeContent{
+
     margin: 2rem auto;
     margin-bottom: 5rem;
-    text-align: justify;
-    width: 90%;
+    width: 95%;
+    max-width: 72rem;
 
     h1{
         font-size: 2.75rem;
         color: $light-blue;
         max-lines: 1;
         @include breakpoint(sm,max){
-            font-size: 1.5rem;
+            text-align: center;
+            font-size: 1.3rem;
         }
 
         @include breakpoint(sm,min){
-            font-size: 1.5rem;
+            text-align: center;
+            font-size: 1.3rem;
         }
 
         @include breakpoint(md,min){
+            text-align: left;
             font-size: 2rem;
         }
 
@@ -29,10 +34,46 @@
     }
 
     .ArticleBox{
-        
-        margin-left: 1rem;
+        h2{
+            @include breakpoint(sm,max){
+                text-align: center;
+                font-size: 1.25rem;
+            }
+    
+            @include breakpoint(sm,min){
+                text-align: center;
+                font-size: 1.25rem;
+            }
+    
+            @include breakpoint(md,min){
+                text-align: left;
+                font-size: 1.75rem;
+            }
+    
+            @include breakpoint(lg,min){
+                font-size: 2rem;
+            }
+        }
         p{
             margin-left: .5rem;
+            text-align: justify;
+
+            @include breakpoint(sm,max){
+                font-size: 1rem;
+            }
+    
+            @include breakpoint(sm,min){
+                font-size: 1rem;
+            }
+    
+            @include breakpoint(md,min){
+                font-size: 1.25rem;
+            }
+    
+            @include breakpoint(lg,min){
+                font-size: 1.5rem;
+            }
+
         }
     }
 }

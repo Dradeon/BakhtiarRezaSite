@@ -285,6 +285,8 @@
             
             border: none;
 
+            transition: all .5s;
+
             .icon{
                max-width: 40px;
                height: auto;
@@ -312,7 +314,17 @@
 
             &:hover{
                 cursor: pointer;
+                animation: .5s ease-out bounce;
             }
+
+            @keyframes bounce {
+                0% {scale: 1}
+                25% {scale: 1.25}
+                50% {scale: 1.37}
+                75% {scale: 1.25}
+                100% {scale: 1}
+            }
+
         }
 
 
@@ -343,4 +355,138 @@
             }
         }
     }  
+}
+
+.JobTimeline{
+    display: flex;
+    flex-flow: column nowrap;
+    place-content: center;
+
+    max-width: 100%;
+    max-height: min-content;
+
+    .JobCard{
+        display: flex;
+        flex-flow: column nowrap;
+        place-items: flex-start;
+        gap: 50px;
+
+        margin-top: -1rem;
+    
+        .JobCard-Divider{
+            min-height: fit-content;
+
+            .JobCard-Divider-VertLine{
+                margin-top: -1.65rem;
+                max-width: 1px;
+                min-height: 100px;
+                background-color: $black;
+            }
+        }
+    
+        .JobCard-Content{
+            min-width: 100%;
+            display: flex;
+            flex-flow: column nowrap;
+            place-items: flex-start;
+    
+            .JobCard-Content-TitleDate{
+                min-width: inherit;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+    
+                .JobCard-Content-TitleDate-Title{
+                    font-size: 2rem;
+                }
+
+                .JobCard-Content-TitleDate-Date{
+                    font-weight: 400;
+                }
+
+                @include breakpoint(sm,max){
+                    flex-flow: column nowrap;
+                    align-items: flex-start;
+                    justify-content:center;
+
+                    .JobCard-Content-TitleDate-Date{
+                        margin-top: -2rem;
+                    }
+                }
+        
+                @include breakpoint(sm,min){
+                    flex-flow: column nowrap;
+                    align-items: flex-start;
+                    justify-content: center;
+
+                    .JobCard-Content-TitleDate-Date{
+                        margin-top: -2rem;
+                    }
+                }
+        
+                @include breakpoint(md,min){
+                    flex-flow: row nowrap;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .JobCard-Content-TitleDate-Date{
+                        margin-top: 0rem;
+                    }
+                }
+        
+
+            }
+
+            .JobCard-Content-Desc{
+                margin-top: -1rem;
+                font-size: 1.25rem;
+
+                @include breakpoint(sm,max){
+                    margin-top: 0rem;
+                }
+        
+                @include breakpoint(sm,min){
+                    margin-top: 0rem;
+                }
+        
+                @include breakpoint(md,min){
+                    margin-top: -1rem;
+                }
+            }
+            
+        }
+
+        hr{
+            margin-top: -2rem;
+            margin-bottom: 2rem;
+            width: 100%;
+            border: 2px solid $black;
+            
+        }
+    }
+}
+
+.SkillChips{
+    display: flex;
+    flex-flow: row wrap;
+    place-items: center;
+    gap: 1rem;
+
+    .SkillChips-Chip{
+        max-width: fit-content;
+        align-items: center;
+
+        padding: 0rem 1.5rem;
+
+        border-radius: 2rem;
+
+        .SkillChips-Chip-Name{
+            color: $black;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: default;
+        }
+
+    }
 }

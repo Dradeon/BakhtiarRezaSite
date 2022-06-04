@@ -10,7 +10,7 @@ const Navigation = () => {
                     <Link href = '/About'>
                         <a>About</a>
                     </Link>
-                    <Link href = '/Career'>
+                    <Link href = '/About#Experience'>
                         <a>Career</a>
                     </Link>
                     <Link href = '/Projects'>
