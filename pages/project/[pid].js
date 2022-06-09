@@ -35,7 +35,7 @@ const Post = ({Project}) => {
       {
       Project ?
       <div className = {styles.ProjWrapper}>
-          {Project['Thumbnail'] ? <Image className = {styles.Thumbnail} src = {project['Thumbnail']} width='1920' height ='1080'/>: <Image className = {styles.Thumbnail} src = {placeholder} width='1080' height ='1080'/>}
+          {Project['Thumbnail'] ? <Image className = {styles.Thumbnail} src = {Project['Thumbnail']} width='1920' height ='1080'/>: <Image className = {styles.Thumbnail} src = {placeholder} width='1080' height ='1080'/>}
           <hr className = {styles.divider}/>
           <div className = {styles.ProjectInfo}>
               <h1 className = {styles.ProjName}>{Project.Name}</h1>
@@ -54,7 +54,7 @@ const Post = ({Project}) => {
           {Project['Github'] ? 
           <div>
             <h2>Github</h2>
-            <button className={styles.GithubButton}><a href={project['Github']} target='_blank'>
+            <button className={styles.GithubButton}><a href={Project['Github']} target='_blank'>
               <FaGithub size={'30px'} style={{'color':'white'}}/>
               <p>View Code</p>
               </a></button>
