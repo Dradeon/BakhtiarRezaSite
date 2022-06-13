@@ -1,3 +1,16 @@
+/**
+ * Project Schema
+ * {
+ *      id: number,
+ *      Name: string,
+ *      Desc: string,
+ *      Data: string,
+ *      Skill: string[],
+ *      Thumbnail: string || null,
+ *      AnimatedPreview: string || null,
+ *      Github: string || null,
+ * }
+ */
 
 var projectData =
 {

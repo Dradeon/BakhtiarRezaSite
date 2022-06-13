@@ -1,9 +1,14 @@
+import Image from 'next/image'
+
 import Header from "../Components/Header"
 import Navigation from "../Components/Navigation"
 import Footer from "../Components/Footer"
 import styles from "../styles/About.module.scss"
-import ExpTimeline from "../Components/ExpTimeline"
-import SkillChips from "../Components/SkillChips"
+import expData from '../Data/ExperienceData'
+import projData from '../Data/SkillData'
+
+const experiences = expData.values;
+const skills = projData.values;
 
 
 const AboutPage = () => {
@@ -11,7 +16,7 @@ const AboutPage = () => {
         <div>
             <Header title = "Bakhtiar Reza | About" description = "Learn More About Me!" index = "noindex, nofollow" />
             <Navigation/>
-            <div className = {styles.AboutMeContent}>
+            <div className = {styles.About__ArticleContent}>
                 <div className = {styles.ArticleBox}>
                     <h1>My Passion for Programming</h1>
                     <p>&nbsp;&nbsp;
@@ -36,15 +41,32 @@ const AboutPage = () => {
                         <p>My current career goals for 2022 is to find an internship before the summer. Now that I have some experience in some programming languages I would like to apply these skills with real world projects at companies.</p>
 
                     </div>
-                
-                    <h1 id ="Experience">Experience:</h1>
-                    <ExpTimeline/>
+                </div>
 
-                    <h1>Skills:</h1>
-                    <SkillChips/>
-                    
+                <h1 id ="Experience">Experience:</h1>
+                <div className={styles.About__Experience}>
+                    {experiences.length > 0 ? experiences.map(job => {
+                        return <div className="JobCard" key = {job.title}>
+                        <div className="JobCard-Content">
+                            <div className="JobCard-Content-TitleDate">
+                            <h3 className="JobCard-Content-TitleDate-Title">{job.title}</h3>
+                            <h4 className="JobCard-Content-TitleDate-Date">{job.date}</h4>
+                            </div>
+                            <p className="JobCard-Content-Desc">{job.desc}</p>
+                        </div>
+                        <hr></hr>
+                        </div>
+                    }) : <></>}
+                </div>
 
-                    
+                <h1>Skills:</h1>
+                <div className={styles.About__SkillsGrid}>
+                    {skills.length > 0 ? skills.map(skill =>{
+                        return <div className={styles.About__Skill} key={skill.name}>
+                            <div className={styles.icon}><Image src={skill.image} width={'75px'} height={'75px'} /></div>
+                            <h2>{skill.name}</h2>
+                        </div>
+                    }): <></>}
                 </div>
             </div>
             <Footer className = {styles.FooterContainer}/>

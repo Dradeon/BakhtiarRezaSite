@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import Placeholder from '../public/ProjectPreviewNotAvailable.png'
+import Placeholder from '../public/project_thumbnails/ProjectPreviewNotAvailable.png'
 
 
 export const ProjectCard = ({Project}) => {
