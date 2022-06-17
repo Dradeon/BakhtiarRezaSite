@@ -1,20 +1,28 @@
 import {motion, useViewportScroll, useAnimation} from 'framer-motion'
 import {useInView} from 'react-intersection-observer'
-import { useEffect, useState } from 'react'
+import { useEffect, useId, useState } from 'react'
+
 
 import Image from 'next/image'
-import Pfp from '../public/ProfilePicture.png'
+import Header from '../Components/Header'
+import Navigation  from '../Components/Navigation'
 import styles from '../styles/Home.module.scss'
 import Footer from '../Components/Footer'
 import Contact from '../Components/Contact'
 import SkillItem from '../Components/SkillItem'
+import expData from '../Data/ExperienceData'
+import projData from '../Data/SkillData'
 
+const experiences = expData.values;
+const skills = projData.values;
 
 const Home = () => {
 
     const animation1 = useAnimation();
     const animation2 = useAnimation();
     const animation3 = useAnimation();
+    const id = useId();
+
     const {ref,inView} = useInView(
         {
             threshold: .55
@@ -61,49 +69,103 @@ const Home = () => {
 
     return (
         <>
-            <div className = {styles.HeroSection}>
-                <div className="ImageWrapper">
-                    <Image className = {styles.coverPicture} src={Pfp} width='360' height='360' alt = "Picture of Bakhtiar Reza"></Image>
-                </div>
-                <div className = {styles.Hero}>
-                    <h1>Hi I'm Bakhtiar and I study CS</h1>
-                    <p>I'm looking to start a career in Software Engineering</p>
-                </div>
-            </div>
+            <Header title = "Bakhtiar Reza | Home" description = "Home for Bakhtiar Reza Website" index = "index, follow"/>
             
-            <div className = {styles.AboutMeSection}>
+            <div className = {styles.Home__HeroSection}>
+                <Navigation/>
                 
-                <div className = {styles.aboutMeText}>
-                    <h2>A Brief Intro</h2>
-                    <p>I'm currently a sophomore attending Penn State University. My plan is to major in Computer and get a minor in Information Science and Technology. I am always up to solving challenging problems, and I'm always up to learn something new! I want to learn new languages and concepts that aids in my goal of mastering the two areas of programming I want to work on. These two areas would involve the front-end and backend of an application. </p>
+                <div className = {styles.Home__Hero}>
+
+                    <div className={styles.HeroText}>
+                        <h1>Bring a Great Frontend Experience.</h1>
+                        <h1>Alongside a Reliable Backend.</h1>
+                        <p>With Me, Bakhtiar Reza</p>
+                        <div className={styles.HeroButtons}>
+                            <a href='#'>My Projects</a>
+                            <a href='#'>Contact Me</a>
+                        </div>
+                    </div>
+
+                    <div className={styles.HeroPfp}>
+                        <Image src = '/HeroPicture.svg' layout = 'responsive' width={'800px'} height={'800px'}></Image>
+                    </div>
+
                 </div>
+
+            </div>
             
-                <div className = {styles.aboutMeText}>
-                    <h2>My Skills </h2>
-                    <p>I experience in the Python and Java through University coursework. I mainly was to use them for creating algorithms and data structures. Aside from backend languages I also have experience using frontend languages. I mainly use Javascript alongside a web framework like React to create the frontend of my website.</p>
-                    <p>You can learn more about me in the About Page or via my <a href="https://docs.google.com/document/d/1xrzYRh88AQ7zkuq3CKKo8Dp9O2yU8l3QRcS3nuU0lyI/edit?usp=sharing" target="_blank">resume</a>.</p>
+            <div className = {styles.Home__AboutMe}>
+
+                <article className = {styles.Home__AboutMeText}>
+                    <section>
+                        <h2>A Brief Intro</h2>
+                        <p>I'm currently a sophomore attending Penn State University. My plan is to major in Computer and get a minor in Information Science and Technology. I am always up to solving challenging problems, and I'm always up to learn something new! I want to learn new languages and concepts that aids in my goal of mastering the two areas of programming I want to work on. These two areas would involve the front-end and backend of an application. </p>
+                    </section>
+                
+                    <section>
+                        <h2>My Skills </h2>
+                        <p>I experience in the Python and Java through University coursework. I mainly was to use them for creating algorithms and data structures. Aside from backend languages I also have experience using frontend languages. I mainly use Javascript alongside a web framework like React to create the frontend of my website.</p>
+                        <p>You can learn more about me in the About Page or via my <a href="https://docs.google.com/document/d/1xrzYRh88AQ7zkuq3CKKo8Dp9O2yU8l3QRcS3nuU0lyI/edit?usp=sharing" target="_blank">resume</a>.</p>
+                    </section>
+                </article>
+                
+                <div className={styles.Profile}>
+                    <Image src={'/ProfilePicture.png'} width='800px' height='800px'/>
                 </div>
+                
             </div>
             
             
-                <div className = {styles.SkillSection}>
-                    <h2>My Outstanding Qualities</h2>
-                    
-                        <div className = {styles.SkillContainer} ref = {ref}>
-                            <div className = {styles.SkillWrapper}>
-                                <motion.div animate = {animation1}>
-                                    <SkillItem skillName={"Frontend/Backend Knowledge"} />
-                                </motion.div>
-                                <motion.div animate = {animation2}>
-                                    <SkillItem skillName={"Great Communicator and Explainer"}/>
-                                </motion.div>
-                                <motion.div animate = {animation3}>
-                                    <SkillItem skillName={"My Experience in Projects"}/>
-                                </motion.div>
-                            </div>
+            <div className = {styles.SkillSection}>
+                <h2>My Personal Strengths</h2>
+                
+                    <div className = {styles.SkillContainer} ref = {ref}>
+                        <div className = {styles.SkillWrapper}>
+                            <motion.div animate = {animation1}>
+                                <SkillItem skillName={"Frontend/Backend Knowledge"} />
+                            </motion.div>
+                            <motion.div animate = {animation2}>
+                                <SkillItem skillName={"Great Communicator and Explainer"}/>
+                            </motion.div>
+                            <motion.div animate = {animation3}>
+                                <SkillItem skillName={"My Experience in Projects"}/>
+                            </motion.div>
                         </div>
-                </div>
+                    </div>
+            </div>
             
+            <div className={styles.Home__SkillsAndExperience}>
+                {/**<h1 id ="Experience">Experience:</h1>
+                <div className={styles.Home__Experience}>
+                    {experiences.length > 0 ? experiences.map(job => {
+                        return <div className="JobCard" key = {job.Company}>
+                        <div className="JobCard-Content">
+                            <h2>{job.Company}</h2>
+                            <div className="JobCard-Content-TitleDate">
+                            <h3 className="JobCard-Content-TitleDate-Title">{job.Position}</h3>
+                            <h4 className="JobCard-Content-TitleDate-Date">{job.Date}</h4>
+                            </div>
+                            <ul>
+                            {job.Tasks.length > 0 ? job.Tasks.map(task => {
+                                return <li key={id}>{task}</li>
+                            }):<></>}
+                            </ul>
+                        </div>
+                        <hr></hr>
+                        </div>
+                    }) : <></>}
+                </div>**/}
+
+                <h1>Skills:</h1>
+                <div className={styles.Home__SkillsGrid}>
+                    {skills.length > 0 ? skills.map(skill =>{
+                        return <div className={styles.Home__Skill} key={skill.name}>
+                            <div className={styles.icon}><Image src={skill.image} width={'75px'} height={'75px'} /></div>
+                            <h2>{skill.name}</h2>
+                        </div>
+                    }): <></>}
+                </div>
+            </div>
 
             <Contact/>
 

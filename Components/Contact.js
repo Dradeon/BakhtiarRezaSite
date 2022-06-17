@@ -4,19 +4,11 @@ import {FaLinkedinIn,FaGithub} from 'react-icons/fa'
 import {AiFillMail} from 'react-icons/ai'
 import { IconContext } from 'react-icons/lib'
 
-const goToLinkedIn = () => {
-    window.open("https://www.linkedin.com/in/bakhtiar-reza/","_blank")
-    console.log(`Went to LinkedIn`);
-}
 
-const copyEmail = ()=>{
+const copyEmail = (e)=>{
+    e.preventDefault();
     navigator.clipboard.writeText('reza.bakhtiar.m@gmail.com')
     alert('Email copied to your clipboard!')
-}
-
-const goToGithub = () => {
-    window.open("https://github.com/Dradeon","_blank")
-    console.log("Went to Github")
 }
 
 const Contact = () => {
@@ -30,21 +22,21 @@ const Contact = () => {
                 <div className = "ContactInfo">
                     <h2>Socials</h2>
                     <div className="Socials">
-                        <button type = 'button' onClick={goToLinkedIn}>
+                        <a href="https://www.linkedin.com/in/bakhtiar-reza/" rel="noopener">
                             <IconContext.Provider value={{className:'icon'}}>
                                 <FaLinkedinIn color={'white'} size={'40px'}/>
                             </IconContext.Provider>
-                        </button>
-                        <button type = 'button' onClick={goToGithub}>
+                        </a>
+                        <a href="https://github.com/Dradeon" rel="noopener">
                             <IconContext.Provider value={{className:'icon'}}>
                                 <FaGithub color={'white'} size={'40px'}/>
                             </IconContext.Provider>
-                        </button>
-                        <button type = 'button' onClick = {copyEmail}>
+                        </a>
+                        <a href="" onClick = {copyEmail}>
                             <IconContext.Provider value={{className:'icon'}}>
                                 <AiFillMail color = {'white'} size={'40px'}/>
                             </IconContext.Provider>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

@@ -17,7 +17,7 @@ const Projects = () => {
     return (
         <>
             <Header title = "Bakhtiar Reza | Projects" description = "Projects Made By Bakhtiar" index = "noindex, nofollow" />
-            <Navigation/>
+            <Navigation dark={true}/>
             <h1 className = {styles.ProjectsPageTitle}>My Projects:</h1>
             
             <div className={styles.ProjectWrapper}>
