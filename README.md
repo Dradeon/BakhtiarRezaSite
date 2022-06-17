@@ -3,7 +3,7 @@
 This is a personal website that has information containing my personal projects, experience, etc.
 
 # Recent Update
-- Updated Skills in About Page to have their respective logo.
+- Updated Hero Section
 
 # Technologies Used
 - NextJS
@@ -11,5 +11,5 @@ This is a personal website that has information containing my personal projects,
 - Framer Motion
 
 # Future Plans
-- Redo Hero Section in Home Page
 - Redo some framer motion animations on home page
+- Add SVG Graphics
