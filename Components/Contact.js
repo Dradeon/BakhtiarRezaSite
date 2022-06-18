@@ -24,17 +24,17 @@ const Contact = () => {
                     <div className="Socials">
                         <a href="https://www.linkedin.com/in/bakhtiar-reza/" rel="noopener">
                             <IconContext.Provider value={{className:'icon'}}>
-                                <FaLinkedinIn color={'white'} size={'40px'}/>
+                                <FaLinkedinIn color={'white'} size={'80px'}/>
                             </IconContext.Provider>
                         </a>
                         <a href="https://github.com/Dradeon" rel="noopener">
                             <IconContext.Provider value={{className:'icon'}}>
-                                <FaGithub color={'white'} size={'40px'}/>
+                                <FaGithub color={'white'} size={'80px'}/>
                             </IconContext.Provider>
                         </a>
                         <a href="" onClick = {copyEmail}>
                             <IconContext.Provider value={{className:'icon'}}>
-                                <AiFillMail color = {'white'} size={'40px'}/>
+                                <AiFillMail color = {'white'} size={'80px'}/>
                             </IconContext.Provider>
                         </a>
                     </div>

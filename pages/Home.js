@@ -74,19 +74,19 @@ const Home = () => {
             <div className = {styles.Home__HeroSection}>
                 <Navigation/>
                 
-                <div className = {styles.Home__Hero}>
+                <div className = {styles.HeroSection__Hero}>
 
-                    <div className={styles.HeroText}>
+                    <div className={styles.Hero__HeroText}>
                         <h1>Bring a Great Frontend Experience.</h1>
                         <h1>Alongside a Reliable Backend.</h1>
                         <p>With Me, Bakhtiar Reza</p>
-                        <div className={styles.HeroButtons}>
+                        <div className={styles.HeroText__HeroButtons}>
                             <a href='#'>My Projects</a>
                             <a href='#'>Contact Me</a>
                         </div>
                     </div>
 
-                    <div className={styles.HeroPfp}>
+                    <div className={styles.Hero__HeroImage}>
                         <Image src = '/HeroPicture.svg' layout = 'responsive' width={'800px'} height={'800px'}></Image>
                     </div>
 
@@ -96,44 +96,58 @@ const Home = () => {
             
             <div className = {styles.Home__AboutMe}>
 
-                <article className = {styles.Home__AboutMeText}>
+                
+
+                <article className = {styles.AboutMe__ArticleSection}>
                     <section>
-                        <h2>A Brief Intro</h2>
+                        <h1>A Brief Intro</h1>
                         <p>I'm currently a sophomore attending Penn State University. My plan is to major in Computer and get a minor in Information Science and Technology. I am always up to solving challenging problems, and I'm always up to learn something new! I want to learn new languages and concepts that aids in my goal of mastering the two areas of programming I want to work on. These two areas would involve the front-end and backend of an application. </p>
                     </section>
                 
                     <section>
-                        <h2>My Skills </h2>
+                        <h1>My Skills </h1>
                         <p>I experience in the Python and Java through University coursework. I mainly was to use them for creating algorithms and data structures. Aside from backend languages I also have experience using frontend languages. I mainly use Javascript alongside a web framework like React to create the frontend of my website.</p>
                         <p>You can learn more about me in the About Page or via my <a href="https://docs.google.com/document/d/1xrzYRh88AQ7zkuq3CKKo8Dp9O2yU8l3QRcS3nuU0lyI/edit?usp=sharing" target="_blank">resume</a>.</p>
                     </section>
                 </article>
                 
-                <div className={styles.Profile}>
+                <div className={styles.AboutMe__Profile}>
                     <Image src={'/ProfilePicture.png'} width='800px' height='800px'/>
                 </div>
-                
+            </div>
+
+            
+
+            <div className={styles.Home__RelevantSkills}>
+                <h1>Relevant Skills</h1>
+                <div className={styles.RelevantSkills__SkillsGrid}>
+                    {skills.length > 0 ? skills.map(skill =>{
+                        return <div className={styles.SkillsGrid__Skill} key={skill.name}>
+                            <div className={styles.icon}><Image src={skill.image} width={'75px'} height={'75px'} /></div>
+                            <h2>{skill.name}</h2>
+                        </div>
+                    }): <></>}
+                </div>
             </div>
             
-            
-            <div className = {styles.SkillSection}>
-                <h2>My Personal Strengths</h2>
-                
-                    <div className = {styles.SkillContainer} ref = {ref}>
-                        <div className = {styles.SkillWrapper}>
+            <div className={styles.Home__Strengths}>
+                <div className = {styles.Strengths__StrengthContainer}>
+                    <h1>My Personal Strengths</h1>
+                    
+                    <div className = {styles.StrengthContainer__SkillRow} ref = {ref}>
                             <motion.div animate = {animation1}>
-                                <SkillItem skillName={"Frontend/Backend Knowledge"} />
+                                <SkillItem skillName={"Fullstack Knowledge"} />
                             </motion.div>
                             <motion.div animate = {animation2}>
-                                <SkillItem skillName={"Great Communicator and Explainer"}/>
+                                <SkillItem skillName={"Great Communicator"}/>
                             </motion.div>
                             <motion.div animate = {animation3}>
-                                <SkillItem skillName={"My Experience in Projects"}/>
+                                <SkillItem skillName={"Project Experience"}/>
                             </motion.div>
-                        </div>
                     </div>
+                </div>
             </div>
-            
+
             <div className={styles.Home__SkillsAndExperience}>
                 {/**<h1 id ="Experience">Experience:</h1>
                 <div className={styles.Home__Experience}>
@@ -156,15 +170,7 @@ const Home = () => {
                     }) : <></>}
                 </div>**/}
 
-                <h1>Skills:</h1>
-                <div className={styles.Home__SkillsGrid}>
-                    {skills.length > 0 ? skills.map(skill =>{
-                        return <div className={styles.Home__Skill} key={skill.name}>
-                            <div className={styles.icon}><Image src={skill.image} width={'75px'} height={'75px'} /></div>
-                            <h2>{skill.name}</h2>
-                        </div>
-                    }): <></>}
-                </div>
+                
             </div>
 
             <Contact/>

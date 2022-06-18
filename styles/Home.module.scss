@@ -19,7 +19,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    .Home__Hero{
+    .HeroSection__Hero{
         width: 100%;
         max-width: 84rem;
         height: inherit;
@@ -35,7 +35,7 @@
         margin: 0 auto;
         color: white;
         
-        .HeroText{  
+        .Hero__HeroText{  
             margin: 0 3rem;
             text-align: center;
             align-self: start;
@@ -53,17 +53,17 @@
                 margin: .5rem 0 1.5rem 0;
             }
            
-            .HeroButtons{
+            .HeroText__HeroButtons{
 
                a{
                 border: none;
-                border-radius: 1rem;
+                border-radius: 50vw;
     
-                background-color: $light-blue;
+                
                 color: white;
                 
                 font-weight: 600;
-                font-size: .75rem;
+                font-size: 1rem;
     
                 padding: .5rem 1rem;
     
@@ -71,9 +71,12 @@
                }
     
                 :first-child{
+                    background-color: $light-blue;
                     margin-right: 1rem;
                 }
                 :last-child{
+                    background-color: none;
+                    border: 3px solid white;
                     margin-left: 1rem;
                 }
 
@@ -119,21 +122,18 @@
                     }
                 }
             }
-
-
-
         }
 
-        .HeroPfp{
+        .Hero__HeroImage{
             display: block;
             width: 90%;
-            
-
             grid-column: 1 / 2;
 
             @include breakpoint(md,min){
                 max-width: 100%;
                 grid-column: 2 / 3;
+
+
             }
             
         }
@@ -162,22 +162,26 @@
 }
 
 .Home__AboutMe{
+    position: relative;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 30% 1fr;
     place-items: center;
 
     margin: 0 auto;
+    width: 90%;
     max-width: 80rem;    
-         
-    .Home__AboutMeText{
+
+    
+
+   
+    .AboutMe__ArticleSection{
         display: flex;
         flex-direction: column;
         color: $black;
         text-align: left;
-        margin: 0 1rem;
         max-width: 42rem;
 
-        h2{
+        h1{
             margin-bottom: -.5rem;
             color: $light-blue;
 
@@ -196,11 +200,9 @@
             }
 
             @include breakpoint(lg,min){
-                font-size: 3rem;
+                font-size: 2.75rem;
             }
-            @include breakpoint(xxl,min){
-                font-size: 3rem;
-            }
+            
 
         }
 
@@ -209,7 +211,7 @@
             
             font-weight: 400;
             font-size: 1.25rem;
-            line-height: 2;
+            line-height: 2.4;
 
             @include breakpoint(sm,max){
                 font-size: .75rem;
@@ -226,9 +228,7 @@
             @include breakpoint(lg,min){
                 font-size: 1.1rem;
             }
-            @include breakpoint(xxl,min){
-                font-size: 1.3rem;
-            }
+            
 
             a{
                 cursor: pointer;
@@ -240,71 +240,121 @@
        
     }
 
-    .Profile{
-        max-width: 95%;
+    .AboutMe__Profile{
+        position: relative;
+        max-width: 60%;
+        grid-row: 1/2;
+        
+
+        @include breakpoint(md,min){
+            max-width: 95%;
+            grid-column: 2/3;
+        }
     }
 
     @include breakpoint(md, min){
         grid-template-rows: 1fr;
-        grid-template-columns: 1fr .6fr;
+        grid-template-columns: 50% 50%;
+        gap: 50px;
+    }
+
+    @include breakpoint(lg, min){
+        grid-template-rows: 1fr;
+        grid-template-columns: 50% 40%;
         gap: 50px;
     }
 }
 
-.SkillSection{
-    display: block;
-    text-align: center;
-    margin-bottom: 3rem;
-    
+.Home__RelevantSkills{
+    width: 90%;
+    max-width: 80rem;
+    margin: 3rem auto;
 
-    h2{
+    h1{
+        font-size: 2.75rem;
         color: $light-blue;
-        font-size: 3rem;
-
-        @include breakpoint(sm,max){
-            font-size: 2rem;
-        }
-
-        @include breakpoint(sm,min){
-            font-size: 2rem;
-        }
-
-        @include breakpoint(md,min){
-            font-size: 2.5rem;
-        }
-
-        @include breakpoint(lg,min){
-            font-size: 3rem;
-        }
-
     }
 
-    .SkillContainer{
+    .RelevantSkills__SkillsGrid{
         display: flex;
-        justify-content: space-evenly;
-        .SkillWrapper{
+        flex-flow: row wrap;
+        gap: 75px;
+        
+        margin: 5rem 0;
+
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    
+        .SkillsGrid__Skill{
+            
+            .icon{
+                display: flex;
+                place-content: center;
+                place-items: center;
+    
+                width: 100px;
+                height: 100px;
+    
+                background-color: $grey;
+                border-radius: 50%;
+                
+            }
+        }
+    }
+}
+
+.Home__Strengths{
+    width: 100%;
+    height: auto;
+    
+
+    .Strengths__StrengthContainer{
+        width: 90% ;
+        max-width: 80rem;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+        
+        
+    
+        h1{
+            color: $light-blue;
+            font-size: 2.75rem;
+    
+            @include breakpoint(sm,max){
+                font-size: 2rem;
+            }
+    
+            @include breakpoint(sm,min){
+                font-size: 2rem;
+            }
+    
+            @include breakpoint(md,min){
+                font-size: 2.5rem;
+            }
+    
+            @include breakpoint(lg,min){
+                font-size: 2.75rem;
+            }
+    
+        }
+    
+        .StrengthContainer__SkillRow{
             display: flex;
             flex-flow: row wrap;
-            justify-content: center;
+            justify-content: space-evenly;
 
+            margin: 5rem 0;
             gap: 50px;
-
-            @include breakpoint(sm,max){
-                gap: 0px;
-            }
-
-            @include breakpoint(md,min){
-                gap: 50px;
-            }
         }
+        
     }
-    
 }
+
 
 .Home__SkillsAndExperience{
 
-    width: 90%;
-    max-width: 72rem;
+    max-width: 80rem;
     margin: 0 auto;
 
     h1{
@@ -420,35 +470,7 @@
                 
             }
         }
-    }
-    
-    .Home__SkillsGrid{
-        display: flex;
-        flex-flow: row wrap;
-        gap: 100px;
-        
-        
-
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    
-        .Home__Skill{
-            
-            .icon{
-                display: flex;
-                place-content: center;
-                place-items: center;
-    
-                width: 100px;
-                height: 100px;
-    
-                background-color: $grey;
-                border-radius: 50%;
-                
-            }
-        }
-    }
+    } 
 }
 
 

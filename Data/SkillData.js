@@ -27,10 +27,12 @@ const skills = {
             name: "React",
             image: "/skillicons/react.png",
         },
+        /**
         {
             name: "NodeJS",
             image: "/skillicons/node.png",
         },
+         
         {
             name: "Sass",
             image: "/skillicons/sass.png",
@@ -39,6 +41,7 @@ const skills = {
             name: "Git",
             image: "/skillicons/git.png",
         },
+        */
         {
             name: "Python",
             image: "/skillicons/python.png",
