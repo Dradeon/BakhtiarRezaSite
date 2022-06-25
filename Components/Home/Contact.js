@@ -5,10 +5,9 @@ import {AiFillMail} from 'react-icons/ai'
 import { IconContext } from 'react-icons/lib'
 
 
-const copyEmail = (e)=>{
+const sendEmail = (e)=>{
     e.preventDefault();
-    navigator.clipboard.writeText('reza.bakhtiar.m@gmail.com')
-    alert('Email copied to your clipboard!')
+    window.open('mailto:reza.bakhtiar.m@gmail.com');
 }
 
 const Contact = () => {
@@ -32,7 +31,7 @@ const Contact = () => {
                                 <FaGithub color={'white'} size={'80px'}/>
                             </IconContext.Provider>
                         </a>
-                        <a href="" onClick = {copyEmail}>
+                        <a onClick={sendEmail}>
                             <IconContext.Provider value={{className:'icon'}}>
                                 <AiFillMail color = {'white'} size={'80px'}/>
                             </IconContext.Provider>

@@ -13,3 +13,5 @@ This is a personal website that has information containing my personal projects,
 # Future Plans
 - Redo some framer motion animations on home page
 - Add SVG Graphics
+- Introduce API Routes into NextJS Project for data
+- Migrate from Javascript to Typescript

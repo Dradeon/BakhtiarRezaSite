@@ -11,7 +11,7 @@ export const ProjectCard = ({Project}) => {
   const switching = () => {
     if(preview == Project['Thumbnail']){
       if(Project['AnimatedPreview']){
-        setPreview(Project['AnimatedPreview'])
+        setPreview(Project['GIF'])
       }
     }
     else{

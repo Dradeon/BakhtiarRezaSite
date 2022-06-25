@@ -47,7 +47,7 @@
             
             a{
                 font-size: 1.25rem;
-                font-weight: 600;
+                font-weight: 400;
                 padding: 0 1rem 0 1rem;
                 color: white;
             }
@@ -246,8 +246,7 @@
     padding: 1rem 4rem;
     text-align: center;
 
-    width: fit-content;
-    max-width: 1440px;
+    width: min(90%, 800px);
     background: linear-gradient(0deg, rgba(0,58,127,1) 0%, rgba(9,132,227,1) 100%);
     
     border-radius: 4vw;
@@ -320,6 +319,7 @@
         flex-flow: row nowrap;
         align-items: center;
         justify-content: center;
+
         
         a{
             display: flex;
