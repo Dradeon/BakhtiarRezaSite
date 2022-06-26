@@ -1,17 +1,22 @@
-# Bakhtiar Reza's Website
-
-This is a personal website that has information containing my personal projects, experience, etc.
-
-# Recent Update
+## Recent Update
 - Updated Hero Section
 
-# Technologies Used
+# Personal Portfolio Site
+
+This is my personal portfolio that showcases my skills and features my built projects.
+
+## Technologies Used
 - NextJS
-- Sass (CSS Preprocessor)
+- Sass
 - Framer Motion
 
-# Future Plans
+## Challenges while building
+- Organizing the file structure of my project
+- Dynamic Routing
+
+## Future Plans
 - Redo some framer motion animations on home page
-- Add SVG Graphics
+- Add previous Employment after Relevant Skills
+- Add Featured Projects to Home
 - Introduce API Routes into NextJS Project for data
 - Migrate from Javascript to Typescript
