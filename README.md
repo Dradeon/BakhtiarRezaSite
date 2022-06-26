@@ -5,10 +5,15 @@
 
 This is my personal portfolio that showcases my skills and features my built projects.
 
-## Technologies Used
+## Technologies used and why I use them
 - NextJS
+  * Static Site Generation
+  * Optimized Images
+  * File-based Routing / Dynamic Routing
 - Sass
 - Framer Motion
+  * Declarative Syntax
+  * Simple to Configure Animations (Staggered Animation in HomePage)
 
 ## Challenges while building
 - Organizing the file structure of my project
