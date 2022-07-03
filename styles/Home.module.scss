@@ -350,6 +350,144 @@
     }
 }
 
+.FeaturedProjects{
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+
+    margin: 0 auto;
+    width: 95%;
+    max-width: 80rem;
+
+    h1{
+        color: $light-blue;
+        font-size: 2.75rem;
+
+        @include breakpoint(sm,max){
+            font-size: 2rem;
+        }
+
+        @include breakpoint(sm,min){
+            font-size: 2rem;
+        }
+
+        @include breakpoint(md,min){
+            font-size: 2.5rem;
+        }
+
+        @include breakpoint(lg,min){
+            font-size: 2.75rem;
+        }
+
+    }
+
+    .viewMoreProjects{
+        width: fit-content;
+        position: relative;
+        text-align: center;
+        margin: 2rem auto;
+
+        color: black;
+
+        span{
+            display: inline;
+            position: absolute;
+            left: calc(100% + 10px);
+            
+        }
+
+        
+    }
+
+    .projectGrid{
+        display: flex;
+        flex-flow: row wrap;
+    
+        justify-content: space-evenly;
+        align-items: center;
+    
+        gap: 25px;
+
+        .Card{
+            width: 400px;
+            height: 225px;
+            position: relative;
+
+            box-shadow: 0 0 .8rem 0rem rgba(0,0,0,.4);
+            
+            .Overlay{
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+
+
+                opacity: 0;
+                width: inherit;
+                height: inherit;
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                background-color: $card-background-overlay;
+            
+                .Desc{
+                    margin: 0 1rem;
+                    height: inherit;
+
+                    display: flex;
+                    flex-flow: column nowrap;
+
+                    justify-content: center;
+                    align-content: center;
+                    text-align: center;
+
+                    color: white;
+
+                    h2{
+                        margin: 0;
+                    }
+                }
+
+                .Buttons{
+                    width: fit-content;
+                    margin: 0 auto;
+
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: space-evenly;
+                    gap: 1rem;
+                    
+                    a{
+                        width: 100px;
+
+                        padding: 5px 3px;
+
+                        text-align: center;
+
+                        margin: 5px 8px;
+                        border: 1px solid white;
+
+                        color: white;
+
+                        &:hover{
+                            background-color: white;
+                            color: $light-blue;
+                        }
+                    }
+                    
+                    color: white;
+                }
+
+                transition: opacity .3s ease-in-out;
+                    
+                &:hover{
+                    opacity: 1;
+                }
+            }   
+        }     
+    }
+}
+
 
 .Home__SkillsAndExperience{
 

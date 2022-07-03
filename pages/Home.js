@@ -5,6 +5,7 @@ import SkillsAndExperience from '../Components/Home/SkillsAndExperience'
 import Features from '../Components/Home/Features'
 import Contact from '../Components/Home/Contact'
 import Footer from '../Components/Footer'
+import FeaturedProjects from '../Components/Home/FeaturedProjects'
 
 const Home = () => {
 
@@ -16,9 +17,11 @@ const Home = () => {
             
             <About/>
 
+            <Features/>
+
             <SkillsAndExperience/>
             
-            <Features/>
+            <FeaturedProjects ids = {[1,2,3]}/>
 
             <Contact/>
 
