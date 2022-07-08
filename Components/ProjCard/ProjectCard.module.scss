@@ -1,0 +1,66 @@
+.CardWrapper{
+    $borderradius: 1rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    max-width: 480px;
+    height: min-content;
+
+    border: 1px solid lightgrey;
+    border-radius: $borderradius;
+
+    transition: height .5s ease-in;
+
+    .CardThumbnail{
+        width: 100%;
+
+        border-top-left-radius: $borderradius;
+        border-top-right-radius: $borderradius;
+
+    }
+
+    .CardContent{
+        padding: .5rem;
+
+        .ProjectName{
+            font-size: 1.5rem;
+        }
+
+        .ProjectDate{
+            font-size: .9rem;
+        }
+
+        .ProjectDesc{
+            line-height: 1.5rem;
+            min-height: 4.5rem;
+            max-height: 4.5rem;
+            font-size: 1.2rem;
+
+            margin: .5rem auto;
+            
+            overflow:hidden;
+            white-space: normal;
+            text-overflow: ellipsis;   
+            
+            transition: max-height .5s ease-in;
+        }
+    }
+
+    
+
+    @media(hover: hover){
+        &:hover{
+            border-bottom: 5px solid lightgrey;
+            cursor: pointer;
+
+            .CardContent{
+                .ProjectDesc{
+                    max-height: max-content;
+                }
+            }
+        }
+    }
+
+    
+}

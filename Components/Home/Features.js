@@ -3,7 +3,7 @@ import {motion, useAnimation} from 'framer-motion';
 import {useInView} from 'react-intersection-observer';
 
 import styles from '../../styles/Home.module.scss';
-import SkillItem from '../SkillItem';
+import SkillItem from '../SkillItem/SkillItem';
 
 const Features = () => {
   const animation1 = useAnimation();

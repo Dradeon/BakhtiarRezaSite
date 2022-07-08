@@ -1,8 +1,8 @@
 import Image from 'next/image'
 
-import Header from "../Components/Header"
-import Navigation from "../Components/Navigation"
-import Footer from "../Components/Footer"
+import Header from "../Components/Header/Header"
+import Navigation from "../Components/Navigation/Navigation"
+import Footer from "../Components/Footer/Footer"
 import styles from "../styles/About.module.scss"
 
 

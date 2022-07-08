@@ -1,0 +1,70 @@
+@use '../../styles/mixins';
+
+.skillCard{
+    border-radius: .75rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    width: 100%;
+    max-width: 350px;
+    height: 100%;
+
+    background: linear-gradient(135deg, rgba(117,230,218,1) 0%, rgba(9,132,227,1) 100%);;
+
+    border-radius: 20px;
+    padding: 2rem 1rem;
+
+    box-shadow: 0 .35rem 1rem .05rem rgba(0, 0, 0, 0.411);
+
+    .textSection{
+        width: 80%;
+        text-align: center;
+        color: white;
+        
+    }
+
+    .imageContainer{
+        display: block;
+        height: auto;
+    }
+
+    @include mixins.breakpoint(sm,max){
+
+        .textSection{
+            .header{
+                font-size: 1.25rem;
+            }
+            .content{
+                font-size: .75rem;
+            }
+        }
+
+        .imageContainer{
+            max-width: 100px;
+        }   
+    }
+    
+    @include mixins.breakpoint(sm,min){
+        .imageContainer{
+            max-width: 100px;
+        }   
+    }
+
+    @include mixins.breakpoint(md,min){
+        
+        .textSection{
+            .header{
+                font-size: 1.2rem;
+            }
+            .content{
+                font-size: 1rem;
+            }
+        }
+
+        .imageContainer{
+            max-width: 200px;
+        }   
+    }
+
+}

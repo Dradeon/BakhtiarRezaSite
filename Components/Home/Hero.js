@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import Navigation from "../Navigation"
+import Navigation from "../Navigation/Navigation"
 import styles from '../../styles/Home.module.scss'
 
 const Hero = () => {

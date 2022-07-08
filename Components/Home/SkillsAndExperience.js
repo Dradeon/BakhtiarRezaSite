@@ -11,7 +11,7 @@ const skills = projData.values;
 const SkillsAndExperience = () => {
   return (
     <>
-        <div className={styles.Home__RelevantSkills}>
+        <div className={styles.Home__RelevantSkills} id="Experience">
             <h1>Relevant Skills</h1>
             <div className={styles.RelevantSkills__SkillsGrid}>
                 {skills.length > 0 ? skills.map(skill =>{

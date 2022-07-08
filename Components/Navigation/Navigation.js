@@ -1,23 +1,24 @@
 import Link from 'next/link'
-import Image from 'next/image'
+import styles from './Navigation.module.scss'
 
 const Navigation = ({dark}) => {
-    const darkMode = dark ? "__dark" : "";
+    const darkModeHome = dark ? styles.home__dark : styles.home;
+    const darkModeLink = dark ? styles.links__dark : styles.links;
     const darkHamburger = dark ? "#0984e3" : "white"
     return (
-        <div id = "navbar">
-            <nav className = "navContainer">
+        <div className={styles.navbar}>
+            <nav className = {styles.navContainer}>
                 <Link href = '/'>
-                    <h2 className = {"home" + darkMode}>Bakhtiar Reza</h2>
+                    <h2 className = {darkModeHome}>Bakhtiar Reza</h2>
                 </Link>
-                <div className={'links'+darkMode}>
+                <div className={darkModeLink}>
                     <Link href = '/'>
                         <a>Home</a>
                     </Link>
                     <Link href = '/About'>
                         <a>About</a>
                     </Link>
-                    <Link href = '#'>
+                    <Link href = '/#Experience'>
                         <a>Experience</a>
                     </Link>
                     <Link href = '/Projects'>
