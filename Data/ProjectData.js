@@ -23,7 +23,7 @@ var projectData =
             'Desc': 'This is the website that you\'re viewing right now! The website is built using NextJS web framework for the front-end. And you can navigate throughout my site to checkout what I made. This is the first live website I made after practicing learning HTML,CSS, and Javascript over the 2021 Summer. I learned many things from creating practice websites using React. I hope to improve this site from what it currently is as I get better at web development.',
             'Date': 'August 2021 - Present',
             'Skills': ['React','NextJS','HTML','Sass'],
-            'Thumbnail': '/project_thumbnails/WebsiteScreenShot.png',
+            'Thumbnail': '/project_thumbnails/PersonalPortfolio.png',
             'GIF' : null,
             'Github' : 'https://github.com/Dradeon/BakhtiarRezaSite',
             'LivePreview' : 'https://bakhtiar-reza-site.vercel.app/'
@@ -59,7 +59,7 @@ var projectData =
             'Desc': 'Built using NextJS, TailwindCSS, TypeScript, and LeafletJS.',
             'Date': 'June 2022',
             'Skills': [],
-            'Thumbnail': null,
+            'Thumbnail': '/project_thumbnails/IPTracker.png',
             'GIF': null,
             'Github': 'https://github.com/Dradeon/IP-Address-Tracker'
         },
@@ -88,6 +88,7 @@ var projectData =
         {
             'id': 7,
             'Name':'Cryptocurrency Desktop Notifier',
+            'ShortDesc': 'Built using python',
             'Desc': 'A Simple Python program that fetches the latest prices on Bitcoin, Ethereum, and DogeCoin via a REST API.',
             'Date': 'January 2021',
             'Skills':['Python'],

@@ -1,35 +1,25 @@
 import React, {useState} from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import Placeholder from '../../public/project_thumbnails/ProjectPreviewNotAvailable.png'
+import {AiOutlineGithub, AiOutlineLink} from 'react-icons/ai'
+
 
 import styles from './ProjectCard.module.scss'
 
-export const ProjectCard = ({Project}) => {
-  
-  const [preview,setPreview] = useState(Project['Thumbnail']);
-
-  const switching = () => {
-    if(preview == Project['Thumbnail']){
-      if(Project['AnimatedPreview']){
-        setPreview(Project['GIF'])
-      }
-    }
-    else{
-      setPreview(Project['Thumbnail'])
-    }
-  }
-
+export const ProjectCard = ({name,date,desc,thumbnail, github, link}) => {
+  const hidelinks = !(github || link) ? {'height':'0','margin':'0','padding':'0'} : {}
   return (
-    <Link href = {`/project/${Project["id"]}`}>
-      <div className = {styles.CardWrapper}>
-          {Project['Thumbnail'] ? <Image src={preview} onMouseEnter = {switching} onMouseLeave = {switching} className = {styles.CardThumbnail} width={480} height={360}/> : <Image src = {Placeholder} className = {styles.CardThumbnail} width={480} height={360}/>}
-          <div className = {styles.CardContent}>
-              <div className = {styles.ProjectName}>{Project['Name']}</div>
-              <div className = {styles.ProjectDate}>{Project['Date']}</div>
-              <div className = {styles.ProjectDesc}>{Project['Desc']}</div>
-          </div>
+      <div className={styles.CardProject}>
+        <div className={styles.ProjectThumbnail}>
+          <img src = {thumbnail} ></img>
+        </div>
+        <div className={styles.ProjectInfo}>
+            <h2 className={styles.ProjectName}>{name}</h2>
+            <p className={styles.ProjectDate}>{date}</p>
+            <p className={styles.ProjectDescription}>{desc}</p>
+            <div className={styles.ProjectLinks} style = {hidelinks}>
+              {github ? <a href={github}><AiOutlineGithub size={'100px'}/></a> : <a href="#" style={{'visibility':'hidden'}}><AiOutlineGithub size={'100px'}/></a>}
+              {link ? <a href={link}><AiOutlineLink size={'100px'}/></a> : <a href="#" style={{'visibility':'hidden'}}><AiOutlineLink size={'100px'}/></a>}
+            </div>
+        </div>
       </div>
-    </Link>
   )
 }

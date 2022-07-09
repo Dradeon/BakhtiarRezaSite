@@ -1,66 +1,102 @@
-.CardWrapper{
-    $borderradius: 1rem;
+.CardProject{
+    max-width: 1024px;
+    height: auto;
 
+    border-radius: 2vw;
+    background-color: white;
     display: flex;
     flex-flow: column nowrap;
-
-    max-width: 480px;
-    height: min-content;
-
-    border: 1px solid lightgrey;
-    border-radius: $borderradius;
-
-    transition: height .5s ease-in;
-
-    .CardThumbnail{
-        width: 100%;
-
-        border-top-left-radius: $borderradius;
-        border-top-right-radius: $borderradius;
-
-    }
-
-    .CardContent{
-        padding: .5rem;
-
-        .ProjectName{
-            font-size: 1.5rem;
-        }
-
-        .ProjectDate{
-            font-size: .9rem;
-        }
-
-        .ProjectDesc{
-            line-height: 1.5rem;
-            min-height: 4.5rem;
-            max-height: 4.5rem;
-            font-size: 1.2rem;
-
-            margin: .5rem auto;
-            
-            overflow:hidden;
-            white-space: normal;
-            text-overflow: ellipsis;   
-            
-            transition: max-height .5s ease-in;
-        }
-    }
-
     
 
-    @media(hover: hover){
-        &:hover{
-            border-bottom: 5px solid lightgrey;
-            cursor: pointer;
+    box-shadow: 0 .25rem .5rem .5rem rgba(203, 203, 203,.5);
 
-            .CardContent{
-                .ProjectDesc{
-                    max-height: max-content;
+    .ProjectThumbnail{
+        display: flex;
+        place-content: center;
+
+        
+
+        max-width: 100%;
+        max-height: auto;
+
+        img{
+            object-position: center;
+            object-fit: cover;
+            border-top-left-radius: 2vw;
+            border-top-right-radius: 2vw;
+            max-width: 100%;
+        }
+    }
+
+    .ProjectInfo{
+        padding: .5rem;
+        
+        .ProjectName{
+            font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+            margin-bottom: -.5rem;
+        }
+    
+        .ProjectDate{
+            font-size: clamp(.75rem, 1.5vw, 1.25rem);
+            font-weight: 300;
+        }
+    
+        .ProjectDesc{
+            font-size: clamp(.5rem, 1.75vw, 1rem);
+        }
+
+        .ProjectLinks{
+            display: flex;
+            flex-flow: row nowrap;
+            margin: .5rem .25rem;
+
+            gap: 30px;
+
+            a{
+                svg{
+                    max-width: 25px;
+                    max-height: 25px;
                 }
             }
         }
     }
 
-    
+    @media (min-width: 720px){
+        $container-width: 100%;
+        flex-flow: row-reverse nowrap;
+        justify-content: space-between;
+        
+        max-height: 300px;
+
+        .ProjectThumbnail{
+            max-width: clamp(300px, 45%,480px);
+            height: auto;
+
+            justify-content: end;
+
+            img{
+                border-top-left-radius: 0;
+                border-top-right-radius: 2vw;
+                border-bottom-right-radius: 2vw;
+            }
+        }
+
+        .ProjectInfo{
+            max-width: clamp(420px,55%,554px);
+            padding: 1rem;
+            padding-bottom: .5rem;
+
+            .ProjectLinks{
+                padding: .75rem .25rem;
+
+                a{
+                    svg{
+                        max-width: 35px;
+                        max-height: 35px;
+                    }
+                }
+            }
+        }
+    }
+
 }

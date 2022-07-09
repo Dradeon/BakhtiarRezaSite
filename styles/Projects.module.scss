@@ -11,7 +11,6 @@
     .ProjectGrid{
         margin:  4rem 4rem 8rem 4rem;
         display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(150px,480px));
         gap: 5rem;
         grid-auto-flow: row;
         place-content: center;

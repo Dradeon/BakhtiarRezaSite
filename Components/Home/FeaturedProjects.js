@@ -2,6 +2,7 @@ import Image from 'next/image'
 
 import styles from '../../styles/Home.module.scss'
 import projectInfo from '../../Data/ProjectData'
+import { ProjectCard } from '../ProjCard/ProjectCard'
 
 
 const FeaturedProjects = ({ids}) => {
@@ -20,18 +21,7 @@ const FeaturedProjects = ({ids}) => {
         <div className={styles.projectGrid}>
             {
                 featuredProjects.map(project => {
-                    return (<div className={styles.Card} key = {project.id}>
-                        <Image src = {project.Thumbnail} width='800px' height='450px'/>
-                        <div href='#' className={styles.Overlay}>
-                            <div>
-                                <div className={styles.Desc}><h2>{project.Name}</h2><p>{project.ShortDesc}</p></div>
-                                <div className={styles.Buttons}>
-                                    <a href={project.Github} target = '_blank' rel='noopener'>Github</a>
-                                    <a href={project.LivePreview} target = '_blank' rel='noopener'>Live Preview</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>)
+                    return (<ProjectCard name={project.Name} date={project.Date} desc = {project.ShortDesc} thumbnail = {project.Thumbnail} github = {project.Github} link = {project.LivePreview}/>)
                 })
             }
         </div>

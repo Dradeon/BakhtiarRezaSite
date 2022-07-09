@@ -272,6 +272,7 @@
     h1{
         font-size: 2.75rem;
         color: $light-blue;
+        text-align: center;
     }
 
     .RelevantSkills__SkillsGrid{
@@ -319,6 +320,7 @@
         h1{
             color: $light-blue;
             font-size: 2.75rem;
+            text-align: center;
     
             @include breakpoint(sm,max){
                 font-size: 2rem;
@@ -362,6 +364,7 @@
     h1{
         color: $light-blue;
         font-size: 2.75rem;
+        text-align: center;
 
         @include breakpoint(sm,max){
             font-size: 2rem;
