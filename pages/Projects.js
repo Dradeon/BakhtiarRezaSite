@@ -20,7 +20,7 @@ const Projects = () => {
             
             <div className={styles.ProjectWrapper}>
                 <div className = {styles.ProjectGrid}>
-                    {projectList.map(project => {return (<Link href = {`/project/${project['id']}`} key = {project['id']}><ProjectCard name = {project['Name']} date={project['Date']} desc={project['ShortDesc']} thumbnail={project['Thumbnail'] ? project['Thumbnail'] : '/project_thumbnails/DefaultImage.png'} github = {project.Github} link = {project.LivePreview}/></Link>)})}
+                    {projectList.map(project => {return (<ProjectCard name = {project['Name']} date={project['Date']} desc={project['ShortDesc']} thumbnail={project['Thumbnail'] ? project['Thumbnail'] : '/project_thumbnails/DefaultImage.png'} github = {project.Github} link = {project.LivePreview} id = {project.id} key = {project.id}/>)})}
                 </div>
             </div>
             <Footer/>
