@@ -21,7 +21,7 @@ const FeaturedProjects = ({ids}) => {
         <div className={styles.projectGrid}>
             {
                 featuredProjects.map(project => {
-                    return (<ProjectCard name={project.Name} date={project.Date} desc = {project.ShortDesc} thumbnail = {project.Thumbnail} github = {project.Github} link = {project.LivePreview}/>)
+                    return (<ProjectCard name={project.Name} date={project.Date} desc = {project.ShortDesc} thumbnail = {project.Thumbnail} github = {project.Github} link = {project.LivePreview} id={project.id}/>)
                 })
             }
         </div>

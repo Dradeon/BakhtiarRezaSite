@@ -1,3 +1,4 @@
+import {useRouter} from 'next/router'
 import React, {useState} from 'react'
 import {AiOutlineGithub, AiOutlineLink} from 'react-icons/ai'
 
@@ -5,9 +6,10 @@ import {AiOutlineGithub, AiOutlineLink} from 'react-icons/ai'
 import styles from './ProjectCard.module.scss'
 
 export const ProjectCard = ({name,date,desc,thumbnail, github, link, id}) => {
+  const router = useRouter()
   const hidelinks = !(github || link) ? {'height':'0','margin':'0','padding':'0'} : {}
   return (
-        <div className={styles.CardProject} onClick={() => {location.assign(`/project/${id}`)}}>
+        <div className={styles.CardProject} onClick={() => {router.push(`/project/${id}`)}}>
           <div className={styles.ProjectThumbnail}>
             <img src = {thumbnail} ></img>
           </div>
