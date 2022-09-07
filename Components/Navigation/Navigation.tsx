@@ -1,7 +1,12 @@
 import Link from 'next/link'
+import { FC } from 'react';
 import styles from './Navigation.module.scss'
 
-const Navigation = ({dark}) => {
+type navProps = {
+    dark : boolean,
+};
+
+const Navigation : FC<navProps> = ({dark}:navProps) => {
     const darkModeHome = dark ? styles.home__dark : styles.home;
     const darkModeLink = dark ? styles.links__dark : styles.links;
     const darkHamburger = dark ? "#0984e3" : "white"

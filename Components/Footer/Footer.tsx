@@ -1,7 +1,8 @@
 import React from 'react'
+import { FC } from 'react'
 import styles from './Footer.module.scss'
 
-const Footer = () => {
+const Footer : FC = () => {
     return (
         <div className = {styles.FooterWrapper}>
             <div className = {styles.FooterBar}>

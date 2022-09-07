@@ -1,11 +1,21 @@
 import {useRouter} from 'next/router'
-import React, {useState} from 'react'
+import React, {useState, FC} from 'react'
 import {AiOutlineGithub, AiOutlineLink} from 'react-icons/ai'
 
 
 import styles from './ProjectCard.module.scss'
 
-export const ProjectCard = ({name,date,desc,thumbnail, github, link, id}) => {
+type ProjectCardProps = {
+  name: string,
+  date: string,
+  desc: string,
+  thumbnail: string,
+  github: string | null,
+  link: string | null,
+  id: number
+}
+
+export const ProjectCard : FC<ProjectCardProps> = ({name,date,desc,thumbnail, github, link, id}) => {
   const router = useRouter()
   const hidelinks = !(github || link) ? {'height':'0','margin':'0','padding':'0'} : {}
   return (
