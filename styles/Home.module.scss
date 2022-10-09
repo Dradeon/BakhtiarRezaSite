@@ -162,9 +162,7 @@
 
 .Home__AboutMe{
     position: relative;
-    display: grid;
-    grid-template-rows: 30% 1fr;
-    place-items: center;
+    
 
     margin: 0 auto;
     width: 90%;
@@ -176,9 +174,15 @@
     .AboutMe__ArticleSection{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        max-width: 90%;
+        margin: 0 auto;
+
         color: $black;
         text-align: left;
-        max-width: 42rem;
+        
 
         h1{
             margin-bottom: -.5rem;
@@ -239,29 +243,8 @@
        
     }
 
-    .AboutMe__Profile{
-        position: relative;
-        max-width: 60%;
-        grid-row: 1/2;
-        
 
-        @include breakpoint(md,min){
-            max-width: 95%;
-            grid-column: 2/3;
-        }
-    }
-
-    @include breakpoint(md, min){
-        grid-template-rows: 1fr;
-        grid-template-columns: 50% 50%;
-        gap: 50px;
-    }
-
-    @include breakpoint(lg, min){
-        grid-template-rows: 1fr;
-        grid-template-columns: 50% 40%;
-        gap: 50px;
-    }
+    
 }
 
 .Home__RelevantSkills{

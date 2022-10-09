@@ -17,10 +17,6 @@ const About = () => {
                 <p>You can learn more about me in the About Page or via my <a href="https://docs.google.com/document/d/1xrzYRh88AQ7zkuq3CKKo8Dp9O2yU8l3QRcS3nuU0lyI/edit?usp=sharing" target="_blank">resume</a>.</p>
             </section>
         </article>
-        
-        <div className={styles.AboutMe__Profile}>
-            <Image src={'/ProfilePicture.png'} width='800px' height='800px'/>
-        </div>
     </div>
   )
 }
