@@ -1,5 +1,5 @@
 ## Recent Update
-- Updated Hero Section
+- Migrated remaining files to typescript
 
 # Personal Portfolio Site
 
@@ -24,4 +24,4 @@ This is my personal portfolio that showcases my skills and features my built pro
 - Add previous Employment after Relevant Skills
 - Add Featured Projects to Home
 - Introduce API Routes into NextJS Project for data
-- Migrate from Javascript to Typescript
+[x] Migrate from Javascript to Typescript
