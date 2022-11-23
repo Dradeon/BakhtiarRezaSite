@@ -4,10 +4,11 @@ import Header from "../Components/Header/Header"
 import Navigation from "../Components/Navigation/Navigation"
 import Footer from "../Components/Footer/Footer"
 import styles from "../styles/About.module.scss"
+import { FC } from 'react'
 
 
 
-const AboutPage = () => {
+const AboutPage : FC = () => {
     return (
         <div>
             <Header title = "Bakhtiar Reza | About" description = "Learn More About Me!" index = "noindex, nofollow" />
@@ -41,7 +42,7 @@ const AboutPage = () => {
 
                 
             </div>
-            <Footer className = {styles.FooterContainer}/>
+            <Footer/>
         </div>
     )
 }

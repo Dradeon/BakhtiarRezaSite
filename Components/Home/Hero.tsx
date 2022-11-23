@@ -1,12 +1,13 @@
-import Image from 'next/image'
+import {FC} from 'react';
 
+import Image from 'next/image'
 import Navigation from "../Navigation/Navigation"
 import styles from '../../styles/Home.module.scss'
 
-const Hero = () => {
+const Hero : FC = () => {
   return (
     <div className = {styles.Home__HeroSection}>
-            <Navigation/>
+            <Navigation dark={false}/>
             
             <div className = {styles.HeroSection__Hero}>
 

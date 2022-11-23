@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import {motion, useAnimation} from 'framer-motion';
 import {useInView} from 'react-intersection-observer';
-
+import  {FC} from 'react';
 import styles from '../../styles/Home.module.scss';
 import SkillItem from '../SkillItem/SkillItem';
 
-const Features = () => {
+const Features : FC = () => {
   const animation1 = useAnimation();
 
   const {ref,inView} = useInView(

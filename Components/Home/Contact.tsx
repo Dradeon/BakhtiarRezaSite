@@ -3,14 +3,15 @@
 import {FaLinkedinIn,FaGithub} from 'react-icons/fa'
 import {AiFillMail} from 'react-icons/ai'
 import { IconContext } from 'react-icons/lib'
+import { FC, MouseEventHandler, ReactEventHandler, SyntheticEvent } from 'react';
 
 
-const sendEmail = (e)=>{
+const sendEmail:any = (e: MouseEvent)=>{
     e.preventDefault();
     window.open('mailto:reza.bakhtiar.m@gmail.com');
 }
 
-const Contact = () => {
+const Contact: FC = () => {
     return (
         <div>
             <div className = "ContactInfoWrapper">

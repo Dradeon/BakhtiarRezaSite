@@ -6,8 +6,9 @@ import Features from '../Components/Home/Features'
 import Contact from '../Components/Home/Contact'
 import Footer from '../Components/Footer/Footer'
 import FeaturedProjects from '../Components/Home/FeaturedProjects'
+import { FC } from 'react'
 
-const Home = () => {
+const Home: FC = () => {
 
     return (
         <>

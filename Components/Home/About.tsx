@@ -1,8 +1,9 @@
 import Image from "next/image"
+import { FC } from "react"
 
 import styles from '../../styles/Home.module.scss'
 
-const About = () => {
+const About: FC = () => {
   return (
     <div className = {styles.Home__AboutMe}>
         <article className = {styles.AboutMe__ArticleSection}>

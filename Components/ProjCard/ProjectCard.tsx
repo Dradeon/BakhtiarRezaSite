@@ -9,9 +9,9 @@ type ProjectCardProps = {
   name: string,
   date: string,
   desc: string,
-  thumbnail: string,
+  thumbnail: string | null,
   github: string | null,
-  link: string | null,
+  link ?: string | null,
   id: number
 }
 
@@ -21,7 +21,7 @@ export const ProjectCard : FC<ProjectCardProps> = ({name,date,desc,thumbnail, gi
   return (
         <div className={styles.CardProject} onClick={() => {router.push(`/project/${id}`)}}>
           <div className={styles.ProjectThumbnail}>
-            <img src = {thumbnail} ></img>
+            <img src = {thumbnail ? thumbnail : ""} ></img>
           </div>
           <div className={styles.ProjectInfo}>
               <h2 className={styles.ProjectName}>{name}</h2>

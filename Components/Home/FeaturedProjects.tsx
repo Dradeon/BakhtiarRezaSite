@@ -2,11 +2,19 @@ import Image from 'next/image'
 
 import styles from '../../styles/Home.module.scss'
 import projectInfo from '../../Data/ProjectData'
+import { projectDataType } from '../../Data/Types/ProjectType'
 import { ProjectCard } from '../ProjCard/ProjectCard'
+import { FC } from 'react'
 
 
-const FeaturedProjects = ({ids}) => {
-    const featuredProjects = projectInfo.Projects.filter((project) => {
+
+
+type FeatureProjectsProps = {
+    ids: number[]
+}
+
+const FeaturedProjects : FC<FeatureProjectsProps> = ({ids}) => {
+    const featuredProjects: projectDataType[] = projectInfo.Projects.filter((project) => {
         for(let i = 0; i < 3; i++){
             if (ids[i] == project.id){
                 return true;
