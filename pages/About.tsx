@@ -42,7 +42,7 @@ const AboutPage : FC = () => {
 
                 
             </div>
-            <Footer/>
+            <Footer dark={false}/>
         </div>
     )
 }

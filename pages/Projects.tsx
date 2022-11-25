@@ -23,7 +23,7 @@ const Projects = () => {
                     {projectList.map(project => {return (<ProjectCard name = {project['Name']} date={project['Date']} desc={project['ShortDesc']} thumbnail={project['Thumbnail'] ? project['Thumbnail'] : '/project_thumbnails/DefaultImage.png'} github = {project.Github} link = {project.LivePreview} id = {project.id} key = {project.id}/>)})}
                 </div>
             </div>
-            <Footer/>
+            <Footer dark={false}/>
         </>
     )
 }
