@@ -20,13 +20,13 @@ const Navigation : FC<navProps> = ({dark}:navProps) => {
                     <Link href = '/'>
                         <a>Home</a>
                     </Link>
-                    <Link href = '/About'>
+                    <Link href="/#About">
                         <a>About</a>
                     </Link>
                     <Link href = '/#Experience'>
                         <a>Experience</a>
                     </Link>
-                    <Link href = '/Projects'>
+                    <Link href = '/#Projects'>
                         <a>Projects</a>
                     </Link>
                 </div>

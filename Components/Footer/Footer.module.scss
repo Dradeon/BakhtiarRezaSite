@@ -27,3 +27,32 @@
         }
     }  
 }
+
+.FooterWrapper_Dark{
+
+    position: relative;
+    width: 100%;
+    
+    bottom: 0;
+    overflow: auto;
+    background: #003a7f;
+    
+    .FooterBar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 4rem;
+
+        
+        
+        .FooterContainer{
+            p{
+                color: white;
+                font-weight: bold;
+                text-align: center;
+                font-size: 1rem;
+            }
+        }
+    }  
+}

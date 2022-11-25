@@ -7,18 +7,18 @@ import Contact from '../Components/Home/Contact'
 import Footer from '../Components/Footer/Footer'
 import FeaturedProjects from '../Components/Home/FeaturedProjects'
 import { FC } from 'react'
+import Navigation from '../Components/Navigation/Navigation'
 
 const Home: FC = () => {
 
     return (
         <>
+            
             <Header title = "Bakhtiar Reza | Home" description = "Home for Bakhtiar Reza Website" index = "index, follow"/>
             
             <Hero/>
             
             <About/>
-
-            <Features/>
 
             <SkillsAndExperience/>
             
@@ -26,7 +26,7 @@ const Home: FC = () => {
 
             <Contact/>
 
-            <Footer/>
+            <Footer dark={true}/>
 
         </>
         

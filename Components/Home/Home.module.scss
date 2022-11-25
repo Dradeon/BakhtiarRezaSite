@@ -1,5 +1,5 @@
-@import 'colorscheme';
-@import 'mixins';
+@import '../../styles/colorscheme';
+@import '../../styles/mixins';
 
 .Home__HeroSection{
     display: flex;
@@ -12,7 +12,7 @@
        
     gap: 0rem;
 
-    background: url('../public/Background.svg');
+    background: url('../../public/Background.svg');
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -246,13 +246,13 @@
 
 .Home__RelevantSkills{
     width: 90%;
-    max-width: 80rem;
+    max-width: 72rem;
     margin: 3rem auto;
 
     h1{
         font-size: 2.75rem;
         color: $light-blue;
-        text-align: center;
+        text-align: left;
     }
 
     .RelevantSkills__SkillsGrid{
@@ -338,13 +338,13 @@
     flex-flow: column nowrap;
 
     margin: 0 auto;
-    width: 95%;
-    max-width: 80rem;
+    width: 90%;
+    max-width: 72rem;
 
     h1{
         color: $light-blue;
         font-size: 2.75rem;
-        text-align: center;
+        text-align: left;
 
         @include breakpoint(sm,max){
             font-size: 2rem;
@@ -391,83 +391,7 @@
     
         gap: 25px;
 
-        .Card{
-            width: 400px;
-            height: 225px;
-            position: relative;
-
-            box-shadow: 0 0 .8rem 0rem rgba(0,0,0,.4);
-            
-            .Overlay{
-                display: flex;
-                flex-flow: column nowrap;
-                justify-content: center;
-                align-items: center;
-
-
-                opacity: 0;
-                width: inherit;
-                height: inherit;
-                position: absolute;
-                top: 0%;
-                left: 0%;
-                background-color: $card-background-overlay;
-            
-                .Desc{
-                    margin: 0 1rem;
-                    height: inherit;
-
-                    display: flex;
-                    flex-flow: column nowrap;
-
-                    justify-content: center;
-                    align-content: center;
-                    text-align: center;
-
-                    color: white;
-
-                    h2{
-                        margin: 0;
-                    }
-                }
-
-                .Buttons{
-                    width: fit-content;
-                    margin: 0 auto;
-
-                    display: flex;
-                    flex-flow: row nowrap;
-                    justify-content: space-evenly;
-                    gap: 1rem;
-                    
-                    a{
-                        width: 100px;
-
-                        padding: 5px 3px;
-
-                        text-align: center;
-
-                        margin: 5px 8px;
-                        border: 1px solid white;
-
-                        color: white;
-
-                        &:hover{
-                            background-color: white;
-                            color: $light-blue;
-                        }
-                    }
-                    
-                    color: white;
-                }
-
-                transition: opacity .3s ease-in-out;
-                    
-                &:hover{
-                    opacity: 1;
-                }
-            }   
-        }     
+         
     }
 }
 
@@ -593,6 +517,143 @@
     } 
 }
 
+.ContactInfoWrapper{
+    margin: 6rem 0 0 0;
+    padding: 1rem 4rem;
+    text-align: center;
+
+    width: 100%;    
+    background: linear-gradient(0deg, rgba(0,58,127,1) 0%, rgba(9,132,227,1) 100%);
+    
+    
+
+    h1{
+        font-size: 2.75rem;
+        color: white;
+        margin-bottom: .5rem;
+
+        @include breakpoint(sm,max){
+            font-size: 2rem;
+        }
+        
+        @include breakpoint(sm,min){
+            font-size: 2rem;
+        }
+
+        @include breakpoint(md,min){
+            font-size: 2.75rem;
+        }
+    }
+
+    h2{
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin-bottom: 0rem;
+        color: white;
+    }
+
+    p{
+        margin: 0 auto;
+        font-size: 1rem;
+        max-width: 640px;
+        font-weight: 600;
+
+        color: white;
+
+        @include breakpoint(sm,max){
+            margin: 0 1rem;
+            font-size: .75rem;
+        }
+        
+        @include breakpoint(sm,min){
+            margin: 0 1rem;
+            font-size: .75rem;
+        }
+
+        @include breakpoint(md,min){
+            margin: 0 auto;
+            font-size: 1rem;
+        }
+
+       
+        
+    }
+
+    .ContactInfo{
+        display: flex;
+        flex-direction: column;
+        p{
+            max-width: none;
+            font-size: 1rem;
+            font-weight: 400;
+            margin: .25rem 0rem .25rem 0rem;
+        }
+    }
+
+    .Socials{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+
+        
+        a{
+            display: flex;
+            place-items: center;
+            
+            margin: 1rem;
+            padding: 1rem;
+
+            
+            border-radius: 50%;
+            
+            border: none;
+
+            transition: all .5s;
+
+            .icon{
+                margin-top: 1rem;
+               height: auto;
+
+               @include breakpoint(sm,max){
+                    max-width: 20px;
+                }
+            
+                @include breakpoint(sm,min){
+                    max-width: 20px;
+                }
+    
+                @include breakpoint(md,min){
+                    max-width: 40px;
+                }
+            }
+
+            p{
+                margin: 0 0 0 .5rem;
+                text-align: center;
+                align-self: center;
+                color: white;
+            }
+
+
+            &:hover{
+                cursor: pointer;
+                animation: .5s ease-out bounce;
+            }
+
+            @keyframes bounce {
+                0% {scale: 1}
+                25% {scale: 1.25}
+                50% {scale: 1.37}
+                75% {scale: 1.25}
+                100% {scale: 1}
+            }
+
+        }
+
+
+    }
+}
 
 
 

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import styles from '../../styles/Home.module.scss'
+import styles from './Home.module.scss'
 import projectInfo from '../../Data/ProjectData'
 import { projectDataType } from '../../Data/Types/ProjectType'
 import { ProjectCard } from '../ProjCard/ProjectCard'
@@ -24,7 +24,7 @@ const FeaturedProjects : FC<FeatureProjectsProps> = ({ids}) => {
     })
     
   return (
-    <div className={styles.FeaturedProjects}>
+    <div className={styles.FeaturedProjects} id = "Projects">
         <h1>Featured Projects</h1>
         <div className={styles.projectGrid}>
             {
