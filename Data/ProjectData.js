@@ -19,7 +19,7 @@ var projectData =
         {
             'id': 1,
             'Name':'Personal Website',
-            'ShortDesc': 'My Personal Website built using NextJS and SASS.',
+            'ShortDesc': 'My Personal Website built using NextJs, TypeScript, and SASS. It showcases my projects and information about myself along with a way to contact me about career opportunities.',
             'Desc': 'This is the website that you\'re viewing right now! The website is built using NextJS web framework for the front-end. And you can navigate throughout my site to checkout what I made. This is the first live website I made after practicing learning HTML,CSS, and Javascript over the 2021 Summer. I learned many things from creating practice websites using React. I hope to improve this site from what it currently is as I get better at web development.',
             'Date': 'August 2021 - Present',
             'Skills': ['React','NextJS','HTML','Sass'],
@@ -31,7 +31,7 @@ var projectData =
         {
             'id': 2,
             'Name': 'Easybank Landing Page',
-            'ShortDesc': 'This site was built using React and TailwindCSS.',
+            'ShortDesc': 'A challenge via frontendmentor.io, I was tasked in recreating this landing via any method I wish to use. I utilized React and TailwindCSS to recreate this landing page.',
             'Desc': 'A landing page which was a challenge from frontendmentor.io. This site was built using React and TailwindCSS.',
             'Date': 'June 2022',
             'Skills':['React','TailwindCSS'],
@@ -55,7 +55,7 @@ var projectData =
         {
             'id': 4,
             'Name': 'IP Tracker',
-            'ShortDesc': 'Built using NextJS, TailwindCSS, TypeScript, and LeafletJS.',
+            'ShortDesc': 'This is a NextJs application where the user can view where the location of certain IP Address originated from.    Built using NextJS, TailwindCSS, TypeScript, and LeafletJS.',
             'Desc': 'Built using NextJS, TailwindCSS, TypeScript, and LeafletJS.',
             'Date': 'June 2022',
             'Skills': [],
@@ -70,7 +70,7 @@ var projectData =
             'Desc':'A Java Application that schedule courses for students. It stores information about courses, students, and the students\' schedule in a local database. An Admin can add a new course, student, and semester while a student can schedule for these courses, see their schedule, and courses currently available to schedule.',
             'Date':'November 2021',
             'Skills': ['Java','SQL','Objected Oriented Programming'],
-            'Thumbnail':null,
+            'Thumbnail':'/project_thumbnails/CourseSchedulerApplication.png',
             'GIF' : null,
             'Github': null
         },
@@ -81,22 +81,10 @@ var projectData =
             'Desc':'NodeJS Application that can take a user and then log them in via session token.',
             'Date': 'January 2022',
             'Skills': ['Javascript','NodeJS','Express'],
-            'Thumbnail': null,
+            'Thumbnail': '/project_thumbnails/LoginApplication.png',
             'GIF':'http://g.recordit.co/FQbkOtquum.gif',
             'Github':'https://github.com/Dradeon/JavascriptAuthentication'
         },
-        {
-            'id': 7,
-            'Name':'Cryptocurrency Desktop Notifier',
-            'ShortDesc': 'Built using python',
-            'Desc': 'A Simple Python program that fetches the latest prices on Bitcoin, Ethereum, and DogeCoin via a REST API.',
-            'Date': 'January 2021',
-            'Skills':['Python'],
-            'Thumbnail':null,
-            'GIF' : null,
-            'Github':null
-        }
-
     ]
 }
 

@@ -22,7 +22,7 @@ const Home: FC = () => {
 
             <SkillsAndExperience/>
             
-            <FeaturedProjects ids = {[1,2,3]}/>
+            <FeaturedProjects ids = {[1,2,4]}/>
 
             <Contact/>
 
