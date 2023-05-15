@@ -12,7 +12,7 @@ const Footer : FC<FooterProps> = ({dark}) => {
         <div className = {style}>
             <div className = {styles.FooterBar}>
                 <div className = {styles.FooterContainer}>
-                    <p>© 2021, Bakhtiar Reza</p>
+                    <p>© 2023, Bakhtiar Reza</p>
                 </div>
             </div>
             
