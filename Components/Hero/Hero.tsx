@@ -2,7 +2,7 @@ import {FC} from 'react';
 
 import Image from 'next/image'
 import Navigation from "../Navigation/Navigation"
-import styles from './Home.module.scss'
+import styles from '../Home/Home.module.scss'
 
 const Hero : FC = () => {
   return (
@@ -21,7 +21,7 @@ const Hero : FC = () => {
                 </div>
 
                 <div className={styles.Hero__HeroImage}>
-                    <Image src = '/HeroPicture.svg' layout = 'responsive' width={'800px'} height={'800px'} alt = "Man drawing on Computer"></Image>
+                    <Image src = '/HeroPicture.svg' width={800} height={800} alt = "Man drawing on Computer" style={{'width':'100%','margin':'0rem'}}></Image>
                 </div>
 
             </div>

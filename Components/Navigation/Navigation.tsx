@@ -18,16 +18,16 @@ const Navigation : FC<navProps> = ({dark}:navProps) => {
                 </Link>
                 <div className={darkModeLink}>
                     <Link href = '/'>
-                        <a>Home</a>
+                        Home
                     </Link>
                     <Link href="/#About">
-                        <a>About</a>
+                        About
                     </Link>
                     <Link href = '/#Experience'>
-                        <a>Experience</a>
+                        Experience
                     </Link>
                     <Link href = '/#Projects'>
-                        <a>Projects</a>
+                        Projects
                     </Link>
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="22"><g fill={darkHamburger} fillRule="evenodd"><path d="M0 0h24v1H0zM0 5h24v1H0zM0 10h24v1H0z"/></g></svg>

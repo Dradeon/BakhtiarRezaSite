@@ -1,7 +1,6 @@
-import Image from "next/image"
 import { FC } from "react"
 
-import styles from './Home.module.scss'
+import styles from '../Home/Home.module.scss'
 
 const About: FC = () => {
   return (
