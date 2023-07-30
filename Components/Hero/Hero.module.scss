@@ -1,0 +1,194 @@
+@import '../../styles/colorscheme';
+@import '../../styles/mixins';
+
+.Home__HeroSection{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    
+    margin: 0;
+    gap: 0rem;
+    
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .HeroSection__Hero{
+        width: 100%;
+        max-width: 84rem;
+        height: inherit;
+
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+
+        margin: 0 auto;
+        color: $light-blue;
+        
+        .Hero__HeroText{  
+            margin: 0 3rem;
+            text-align: center;
+            align-self: center;
+            z-index: 10;
+
+            height: fit-content;
+            
+            h1{
+                font-size: 1rem;
+                margin: 0;
+                font-weight: 700;
+            }
+
+            p{
+                font-weight: 300;
+                font-size: .8rem;
+                margin: .5rem 0 1.5rem 0;
+            }
+           
+            .HeroText__HeroButtons{
+
+               a{
+                border: none;
+                border-radius: 50vw;
+    
+                
+                color: white;
+                
+                font-weight: 600;
+                font-size: 1rem;
+    
+                padding: .5rem 1rem;
+    
+    
+               }
+    
+                :first-child{
+                    background-color: $light-blue;
+                }
+                :last-child{
+                    border: 3px solid $light-blue;
+                    margin-left: 1rem;
+                    
+                    color: $light-blue  
+                }
+
+                @include breakpoint(md,min){
+                    grid-row: 1/2;
+                }
+            }
+
+            @include breakpoint(md,min){
+                h1{
+                    font-size: 2rem;
+                }
+                p{
+                    font-size: 1.75rem;
+                    margin: 1rem 0 3rem 0;
+                }
+
+                .HeroText__HeroButtons{
+                    a{
+                        font-size: 1rem;
+                        padding: .75rem 1.25rem;
+                    }
+                    :last-child{
+                        border: 3px solid white;
+                        color: white
+                    }
+                }
+            }
+
+            @include breakpoint(md,min){
+                align-self: center;
+                text-align: left;
+                grid-row: 1/2;
+
+                h1{
+                    color: white;
+                    font-size: 2rem;
+                }
+                p{
+                    color: white;
+                    font-size: 1.75rem;
+                    margin: 1rem 0 3rem 0;
+                }
+
+                .HeroButtons{
+                    a{
+                        font-size: 1rem;
+                        padding: 1rem 2rem;
+                    }
+
+                    :last-child{
+                        a{
+                            
+                        }
+                    }
+                }
+            }
+        }
+
+        .Hero__HeroImage{
+            display: block;
+            width: 90%;
+            
+            margin: 3rem 0;
+
+            @include breakpoint(md,min){
+                max-width: 100%;
+            }
+            
+        }
+
+        @include breakpoint(md,min){
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 50% auto;
+            grid-auto-columns: auto;
+
+        }
+
+        @include breakpoint(lg,min){
+            grid-template-columns: 640px auto;
+        }
+    }
+
+    .background{
+        width: 100vw;
+        height: 750px;
+        position: absolute;
+        z-index: -1;
+        background: url('../../public/Background.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        
+    }
+
+    @include breakpoint(md,min){
+        height: 750px;
+    }
+
+    @include breakpoint(md,max){
+        .background{
+            height: max-content;
+            top:5rem;
+        }
+    }
+    
+
+
+    
+      
+
+}
+
+/**
+
+ display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr .9fr;
+        grid-auto-rows: auto;
+**/

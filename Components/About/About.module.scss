@@ -1,0 +1,116 @@
+@import '../../styles/colorscheme';
+@import '../../styles/mixins';
+
+.Home__AboutMe{
+    position: relative;
+    
+
+    margin: 0 auto;
+    width: 90%;
+    max-width: 80rem;    
+
+
+    h1{
+        text-align: center;
+        font-weight: 700;
+        margin: 4.5rem 0 1.5rem 0;
+        color: $light-blue;
+
+        @include breakpoint(sm,max){
+            
+            font-size: 2rem;
+        }
+
+        @include breakpoint(sm,min){
+            font-size: 2.5rem;
+        }
+
+        @include breakpoint(md,min){
+            
+            font-size: 3rem;
+        }
+
+        @include breakpoint(lg,min){
+            font-size: 3.5rem;
+        }
+
+    }
+    
+
+   
+    .AboutMe__ArticleSection{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+
+        width: 90%;
+        margin: 0 auto;
+
+        color: $black;
+        text-align: left;
+        
+        
+
+        h2{
+            margin-bottom: -.5rem;
+            color: $light-blue;
+
+            @include breakpoint(sm,max){
+                
+                font-size: 1rem;
+            }
+
+            @include breakpoint(sm,min){
+                font-size: 1.5rem;
+            }
+
+            @include breakpoint(md,min){
+                
+                font-size: 2rem;
+            }
+
+            @include breakpoint(lg,min){
+                font-size: 2.25rem;
+            }
+            
+
+        }
+
+
+        p{
+            
+            font-weight: 400;
+            font-size: 1.25rem;
+            line-height: 2.4;
+
+            @include breakpoint(sm,max){
+                font-size: .75rem;
+            }
+
+            @include breakpoint(sm,min){
+                font-size: .75rem;
+            }
+
+            @include breakpoint(md,min){
+                font-size: 1rem;
+            }
+
+            @include breakpoint(lg,min){
+                font-size: 1.1rem;
+            }
+            
+
+            a{
+                cursor: pointer;
+            }
+
+            
+        }
+
+       
+    }
+
+
+    
+}

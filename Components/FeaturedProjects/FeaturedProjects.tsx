@@ -1,6 +1,4 @@
-import Image from 'next/image'
-
-import styles from '../Home/Home.module.scss'
+import styles from './FeaturedProjects.module.scss'
 import projectInfo from '../../Data/ProjectData'
 import { projectDataType } from '../../Data/Types/ProjectType'
 import { ProjectCard } from '../ProjCard/ProjectCard'

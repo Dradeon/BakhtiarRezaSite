@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import styles from '../Home/Home.module.scss'
+import styles from './Skills_Experience.module.scss'
 
 import projData from '../../Data/SkillData'
 import expData from '../../Data/ExperienceData'
@@ -24,26 +24,7 @@ const SkillsAndExperience = () => {
         </div>
 
         <div className={styles.Home__SkillsAndExperience}>
-            {/**<h1 id ="Experience">Experience:</h1>
-             <div className={styles.Home__Experience}>
-                {experiences.length > 0 ? experiences.map(job => {
-                    return <div className="JobCard" key = {job.Company}>
-                    <div className="JobCard-Content">
-                        <h2>{job.Company}</h2>
-                        <div className="JobCard-Content-TitleDate">
-                        <h3 className="JobCard-Content-TitleDate-Title">{job.Position}</h3>
-                        <h4 className="JobCard-Content-TitleDate-Date">{job.Date}</h4>
-                        </div>
-                        <ul>
-                        {job.Tasks.length > 0 ? job.Tasks.map(task => {
-                            return <li key={id}>{task}</li>
-                        }):<></>}
-                        </ul>
-                    </div>
-                    <hr></hr>
-                    </div>
-                }) : <></>}
-            </div>**/}
+            
         </div>
     </>
     

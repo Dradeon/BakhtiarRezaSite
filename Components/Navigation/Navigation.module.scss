@@ -15,7 +15,7 @@
         
         
         width: inherit;
-        max-width: 90rem;
+        max-width: 80rem;
 
         margin: 3rem 1rem;
         
@@ -88,6 +88,9 @@
     .navbar{
         .navContainer{
             .links{
+                display: none;
+            }
+            .links__dark{
                 display: none;
             }
         }

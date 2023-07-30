@@ -1,6 +1,6 @@
 import { FC } from "react"
 
-import styles from '../Home/Home.module.scss'
+import styles from './About.module.scss'
 
 const About: FC = () => {
   return (

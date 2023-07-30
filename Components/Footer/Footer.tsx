@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import { FC } from 'react'
 import styles from './Footer.module.scss'
 
@@ -12,7 +13,8 @@ const Footer : FC<FooterProps> = ({dark}) => {
         <div className = {style}>
             <div className = {styles.FooterBar}>
                 <div className = {styles.FooterContainer}>
-                    <p>© 2023, Bakhtiar Reza</p>
+                    <p>© {new Date().getFullYear()}, Bakhtiar Reza</p>
+                    <Link href = '/changelog'>Changelog</Link>
                 </div>
             </div>
             
