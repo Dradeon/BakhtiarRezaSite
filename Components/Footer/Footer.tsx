@@ -13,8 +13,7 @@ const Footer : FC<FooterProps> = ({dark}) => {
         <div className = {style}>
             <div className = {styles.FooterBar}>
                 <div className = {styles.FooterContainer}>
-                    <p>© {new Date().getFullYear()}, Bakhtiar Reza</p>
-                    <Link href = '/changelog'>Changelog</Link>
+                    <p><span>© {new Date().getFullYear()}, Bakhtiar Reza</span>{/**<Link href = '/changelog'>Changelog</Link>**/}</p>
                 </div>
             </div>
             
