@@ -21,7 +21,6 @@ const Home: FC = () => {
             
             <FeaturedProjects ids = {[1,2,4]}/>
 
-            <Footer dark={false}/>
 
         </>
         

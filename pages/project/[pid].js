@@ -1,8 +1,6 @@
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import Header from '../../Components/Header/Header'
-import Navigation from '../../Components/Navigation/Navigation'
-import Footer from '../../Components/Footer/Footer'
 import styles from '../../styles/ProjectDetails.module.scss'
 import placeholder from '../../public/project_thumbnails/DefaultImage.png'
 import projectData from '../../Data/ProjectData'
@@ -29,13 +27,12 @@ const icons = {
 
 const Post = ({Project}) => {
   return <>
-    <Header/>
-    <Navigation dark={true}/>
+    <Header />
     <main className = {styles.ProjMain}>
       {
       Project ?
       <div className = {styles.ProjWrapper}>
-          {Project['Thumbnail'] ? <Image className = {styles.Thumbnail} src = {Project['Thumbnail']} width='1920' height ='1080'/>: <Image className = {styles.Thumbnail} src = {placeholder} width='1920' height ='1080'/>}
+          {Project['Thumbnail'] ? <Image className = {styles.Thumbnail} src = {Project['Thumbnail']} width={1920} height={1080}/>: <Image className = {styles.Thumbnail} src = {placeholder} width='1920' height ='1080'/>}
           <hr className = {styles.divider}/>
           <div className = {styles.ProjectInfo}>
               <h1 className = {styles.ProjName}>{Project.Name}</h1>
@@ -65,7 +62,6 @@ const Post = ({Project}) => {
           <p>Oops! This page doesn't exist!</p>
         </div>}
     </main>
-    <Footer/>
   </>
 }
 

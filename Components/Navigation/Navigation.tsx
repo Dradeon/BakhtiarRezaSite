@@ -2,9 +2,9 @@ import Link from 'next/link'
 import { FC } from 'react';
 import styles from './Navigation.module.scss'
 
-type navProps = {
-    dark : boolean,
-};
+interface navProps {
+    dark : boolean
+}
 
 const Navigation : FC<navProps> = ({dark}:navProps) => {
     const darkModeHome = dark ? styles.home__dark : styles.home;

@@ -1,6 +1,12 @@
 import Head from 'next/head'
 
-const Header = ({title,description,index}) => {
+interface HeaderProps {
+    title: string
+    description: string
+    index: string
+}
+
+const Header = ({title,description,index}: HeaderProps) => {
     return (
         <Head>
             <title>{title}</title>

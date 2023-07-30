@@ -3,11 +3,13 @@
 
 
 .ProjMain{
+    
     margin: 1rem auto;
     display: flex;
     flex-flow: row wrap;
 
     max-width: 1440px;
+    min-height: 100vh;
 
     .ProjWrapper{
         display: flex;
@@ -17,7 +19,9 @@
         justify-content: center;
 
         .Thumbnail{
-            box-shadow: 0px 8px 20px darkgreen;
+            width: 95%;
+            height: auto;
+            box-shadow: 0px 8px 20px black;
         }
 
         .divider{
