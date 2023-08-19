@@ -2,7 +2,7 @@
 @import '../../styles/mixins';
 
 
-.Home__RelevantSkills{
+.RelevantSkills{
     width: 90%;
     max-width: 72rem;
     margin: 3rem auto;
@@ -11,6 +11,24 @@
         font-size: 2.75rem;
         color: $light-blue;
         text-align: left;
+
+        @include breakpoint(lg,min){
+            font-size: 3.5rem;
+        }
+
+        @include breakpoint(md,min){
+            
+            font-size: 3rem;
+        }
+
+        @include breakpoint(sm,max){
+            
+            font-size: 2rem;
+        }
+
+        @include breakpoint(sm,min){
+            font-size: 2.5rem;
+        }
     }
 
     .RelevantSkills__SkillsGrid{
@@ -42,123 +60,128 @@
     }
 }
 
-.Home__SkillsAndExperience{
-
-    max-width: 80rem;
-    margin: 0 auto;
+.Experience{
+    width: 90%;
+    max-width: 72rem;
+    margin: 3rem auto;
 
     h1{
-        font-size: 3rem;
+        font-size: 2.75rem;
         color: $light-blue;
+        text-align: left;
+
+        @include breakpoint(lg,min){
+            font-size: 3.5rem;
+        }
+
+        @include breakpoint(md,min){
+            
+            font-size: 3rem;
+        }
+
+        @include breakpoint(sm,max){
+            
+            font-size: 2rem;
+        }
+
+        @include breakpoint(sm,min){
+            font-size: 2.5rem;
+        }
     }
 
-    .Home__Experiences{
-        display: flex;
-        flex-flow: column nowrap;
-        place-content: center;
-    
-        max-width: 100%;
-        max-height: min-content;
-    
-        .JobCard{
-            display: flex;
-            flex-flow: column nowrap;
-            place-items: flex-start;
-            gap: 50px;
-    
-            margin-top: -1rem;
-        
-            .JobCard-Divider{
-                min-height: fit-content;
-    
-                .JobCard-Divider-VertLine{
-                    margin-top: -1.65rem;
-                    max-width: 1px;
-                    min-height: 100px;
-                    background-color: $black;
-                }
-            }
-        
-            .JobCard-Content{
-                min-width: 100%;
+    .ExperienceItem{
+
+        margin: 3rem 0;
+
+        .Header{
+            
+            .Title{
                 display: flex;
-                flex-flow: column nowrap;
-                place-items: flex-start;
-        
-                .JobCard-Content-TitleDate{
-                    min-width: inherit;
-                    display: flex;
-                    flex-flow: row nowrap;
-                    justify-content: space-between;
-                    align-items: center;
-        
-                    .JobCard-Content-TitleDate-Title{
-                        font-size: 2rem;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                margin: -2rem 0;
+
+                h3{
+                    color: $light-blue;
+                    font-size: 1.5rem;
+                    
+                    @include breakpoint(lg,min){
+                        font-size: 1.25rem;
                     }
     
-                    .JobCard-Content-TitleDate-Date{
-                        font-weight: 400;
-                    }
-    
-                    @include breakpoint(sm,max){
-                        flex-flow: column nowrap;
-                        align-items: flex-start;
-                        justify-content:center;
-    
-                        .JobCard-Content-TitleDate-Date{
-                            margin-top: -2rem;
-                        }
-                    }
-            
-                    @include breakpoint(sm,min){
-                        flex-flow: column nowrap;
-                        align-items: flex-start;
-                        justify-content: center;
-    
-                        .JobCard-Content-TitleDate-Date{
-                            margin-top: -2rem;
-                        }
-                    }
-            
                     @include breakpoint(md,min){
-                        flex-flow: row nowrap;
-                        justify-content: space-between;
-                        align-items: center;
-    
-                        .JobCard-Content-TitleDate-Date{
-                            margin-top: 0rem;
-                        }
+                        font-size: 1rem;
                     }
-            
+
+                    @include breakpoint(sm,max){
+                        font-size: 1rem;
+                    }
     
+    
+                    
+
                 }
-    
-                .JobCard-Content-Desc{
-                    margin-top: -1rem;
-                    font-size: 1.25rem;
-    
-                    @include breakpoint(sm,max){
-                        margin-top: 0rem;
+                .Date{
+                    color: $light-blue;
+                    font-weight: 600;
+                    text-align: right;
+                    @include breakpoint(lg,min){
+                        font-size: .9rem;
                     }
-            
-                    @include breakpoint(sm,min){
-                        margin-top: 0rem;
-                    }
-            
+    
                     @include breakpoint(md,min){
-                        margin-top: -1rem;
+                        font-size: .85rem;
+                    }
+
+                    @include breakpoint(sm,max){
+                        font-size: .75rem;
                     }
                 }
-                
             }
-    
-            hr{
-                margin-top: -2rem;
-                margin-bottom: 2rem;
-                width: 100%;
-                border: 2px solid $black;
+            h4{
+                color: $light-blue;
+                font-size: 1rem;
+                @include breakpoint(lg,min){
+                    font-size: .9rem;
+                }
+
+                @include breakpoint(md,min){
+                    font-size: .85rem;
+                }
+
+                @include breakpoint(sm,max){
+                    font-size: .75rem;
+                }
+            }
+            
+        }
+        ul {
+            max-width: 80%;
+            li{
+                font-weight: 400;
+                font-size: 1.25rem;
+                line-height: 2.4;
+
+                @include breakpoint(sm,max){
+                    font-size: .75rem;
+                }
+
+                @include breakpoint(sm,min){
+                    font-size: .75rem;
+                }
+
+                @include breakpoint(md,min){
+                    font-size: 1rem;
+                }
+
+                @include breakpoint(lg,min){
+                    font-size: 1.1rem;
+                }
                 
             }
         }
-    } 
+    }
+
 }

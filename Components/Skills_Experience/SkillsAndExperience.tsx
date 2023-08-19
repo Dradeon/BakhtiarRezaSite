@@ -5,13 +5,13 @@ import styles from './Skills_Experience.module.scss'
 import projData from '../../Data/SkillData'
 import expData from '../../Data/ExperienceData'
 
-const experiences = expData.values;
+const experiences = expData;
 const skills = projData.values;
 
 const SkillsAndExperience = () => {
   return (
     <>
-        <div className={styles.Home__RelevantSkills} id="Experience">
+        <div className={styles.RelevantSkills} >
             <h1>Relevant Skills</h1>
             <div className={styles.RelevantSkills__SkillsGrid}>
                 {skills.length > 0 ? skills.map(skill =>{
@@ -23,8 +23,26 @@ const SkillsAndExperience = () => {
             </div>
         </div>
 
-        <div className={styles.Home__SkillsAndExperience}>
-            
+        <div className={styles.Experience} id="Experience">
+            <h1>Experience</h1>
+            {experiences.map((experience) => {
+                return <div key={experience.Date} className={styles.ExperienceItem}>
+                    <div>
+                        <div className={styles.Header}>
+                            <div className={styles.Title}>
+                                <h3>{experience.Company}</h3>
+                                <div className={styles.Date}>{experience.Date}</div>
+                            </div>
+                            <h4>{experience.Position}</h4>
+                        </div>
+                        <ul>
+                            {experience.Tasks.map((task) => {
+                                return <li>{task}</li>
+                            })}
+                        </ul>
+                    </div>
+                </div>
+            })}
         </div>
     </>
     

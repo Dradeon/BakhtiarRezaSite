@@ -12,5 +12,10 @@ export const changelogList: Array<changeLogListItem> = [
         date: new Date(23, 7, 29),
         title: 'Upgrade site to Next 13',
         description: "I haven't worked on the site for a while due to my internship so doing some upgrades would be a good to get back into the swing of things. I also rearranged some of the components so that it makes more sense to me when doing developement."
+    },
+    {
+        date: new Date(23, 8, 6),
+        title: 'Reorganizations',
+        description: 'Reorganization to layout so I can improve my productivity while developing new features.'
     }
 ]
