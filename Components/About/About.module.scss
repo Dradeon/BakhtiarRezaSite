@@ -16,6 +16,15 @@
         margin: 4.5rem 0 1.5rem 0;
         color: $light-blue;
 
+        @include breakpoint(lg,min){
+            font-size: 3.5rem;
+        }
+
+        @include breakpoint(md,min){
+            
+            font-size: 3rem;
+        }
+
         @include breakpoint(sm,max){
             
             font-size: 2rem;
@@ -25,14 +34,9 @@
             font-size: 2.5rem;
         }
 
-        @include breakpoint(md,min){
-            
-            font-size: 3rem;
-        }
+        
 
-        @include breakpoint(lg,min){
-            font-size: 3.5rem;
-        }
+        
 
     }
     
