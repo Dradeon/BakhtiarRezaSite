@@ -19,7 +19,7 @@ const Home: FC = () => {
 
             <SkillsAndExperience/>
             
-            <FeaturedProjects ids = {[1,2,4]}/>
+            <FeaturedProjects ids = {[7,8,4]}/>
 
 
         </>

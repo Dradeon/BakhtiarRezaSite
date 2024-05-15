@@ -4,7 +4,7 @@
 
 .ProjMain{
     
-    margin: 1rem auto;
+    margin: 5rem auto;
     display: flex;
     flex-flow: row wrap;
 
@@ -13,15 +13,16 @@
 
     .ProjWrapper{
         display: flex;
-        flex-flow: column wrap;
-
-        padding: 3rem;
         justify-content: center;
+        flex-flow: column;
+
+        width: 100%;
+        padding: 3rem;
 
         .Thumbnail{
             width: 95%;
             height: auto;
-            box-shadow: 0px 8px 20px black;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
         }
 
         .divider{
@@ -33,6 +34,7 @@
         .ProjectInfo{
             display: flex;
             flex-flow: column nowrap;
+            width: 100%;
 
             h1{
                 font-size: 2.5rem;
@@ -52,18 +54,18 @@
             }
 
         }
+
         .Skills{
             display: flex;
             flex-flow: row wrap;
+
             .Skill{
                 display: flex;
-                flex-flow: row nowrap;
+                flex-flow: row;
 
                 justify-content: center;
                 align-items: center;
                 gap: .5rem;
-
-                width: auto;
 
                 background: $light-blue;
                 margin: 0 1rem;
@@ -71,9 +73,12 @@
                 border-radius: 3rem;
 
                 color: white;
-                font-size: 1.25rem;
-                font-weight: 500;
-                text-align: center;
+                
+                p {
+                    font-size: 1.25rem;
+                    font-weight: 500;
+                    text-align: center;
+                }
             }
 
         }
@@ -132,10 +137,11 @@
         @media(min-width: 720px){
             text-align: left;
             .Skills{
-                flex-flow: row nowrap;
-                gap: 0rem;
+                display: flex;
+                flex-flow: row wrap;
+                gap: .5rem;
                 .Skill{
-                    width: max-content;
+                    width:fit-content;
                 }
             }
         }

@@ -9,6 +9,25 @@ type Experience = {
 
 const experienceData: Array<Experience> = [
     {
+        Company:"Pennsylvania State University: College of IST",
+        Position:"Learning Assistant",
+        Date:"January 2024 - May 2024",
+        Tasks:[
+            'Meet with the instructor in and outside of class, as determined by the instructor.',
+            'Communicate effectively with supervising instructor, any additional teaching staff, and enrolled students.',
+            'Prepare for specific teaching and learning related assignments.'
+        ]
+    },
+    {
+        Company:"Pennsylvania State University: Residence Life",
+        Position:"Residential Assistant",
+        Date:"August 2023 - May 2024",
+        Tasks:[
+            'Serve as a resource for students living in the residence halls, enforcing rules and regulations from the Housing Office and link between administrator and students.',
+            'Support students with any issues they might have (i.e academic, roommate, etc) and provide solutions or references.'
+        ]
+    },
+    {
         Company: "Toast Inc",
         Position: "Software Engineer Intern",
         "Date": "June 2023 - August 2023",

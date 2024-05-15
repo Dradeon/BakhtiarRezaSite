@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router'
 import Image from 'next/image'
 import Header from '../../Components/Header/Header'
 import styles from '../../styles/ProjectDetails.module.scss'
