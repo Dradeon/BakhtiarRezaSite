@@ -5,24 +5,23 @@
 .RelevantSkills{
     width: 90%;
     max-width: 72rem;
-    margin: 3rem auto;
+    margin: 0 auto;
 
     h1{
         font-size: 2.75rem;
         color: $light-blue;
-        text-align: left;
+        text-align: center;
 
         @include breakpoint(lg,min){
             font-size: 3.5rem;
         }
 
         @include breakpoint(md,min){
-            
+            text-align: left;
             font-size: 3rem;
         }
 
         @include breakpoint(sm,max){
-            
             font-size: 2rem;
         }
 
@@ -36,7 +35,7 @@
         flex-flow: row wrap;
         gap: 75px;
         
-        margin: 5rem 0;
+        margin-top: 5rem;
 
         justify-content: center;
         align-items: center;
@@ -62,27 +61,27 @@
 
 .Experience{
     width: 90%;
+    padding-top: 7rem;
     max-width: 72rem;
     margin: 3rem auto;
 
     h1{
         font-size: 2.75rem;
         color: $light-blue;
-        text-align: left;
+        text-align: center;
 
         @include breakpoint(lg,min){
             font-size: 3.5rem;
         }
 
         @include breakpoint(md,min){
-            
+            text-align: left;
             font-size: 3rem;
         }
 
         @include breakpoint(sm,max){
-            
             font-size: 2rem;
-        }
+        }   
 
         @include breakpoint(sm,min){
             font-size: 2.5rem;
