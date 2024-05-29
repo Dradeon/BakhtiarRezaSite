@@ -3,26 +3,16 @@ import { FC, useState } from 'react';
 import { FaTimes, FaBars } from 'react-icons/fa';
 import styles from './Navigation.module.scss'
 
-interface navProps {
-    dark : boolean
-}
-
-const Navigation : FC<navProps> = ({dark}:navProps) => {
+const Navigation : FC = () => {
     const [nav, setNav] = useState<boolean>(false);
-    const darkModeHome = dark ? styles.home__dark : styles.home;
-    const darkModeLink = dark ? styles.links__dark : styles.links;
-    const darkHamburger = dark ? "#0984e3" : "white"
     return (
         <>
             <div className={styles.navbar}>
                 <nav className = {styles.navContainer}>
                     <Link href = '/'>
-                        <h2 className = {darkModeHome}>Bakhtiar Reza</h2>
+                        <h2 className = {styles.home}>Bakhtiar Reza</h2>
                     </Link>
-                    <div className={darkModeLink}>
-                        <Link href = '/'>
-                            Home
-                        </Link>
+                    <div className={styles.links}>
                         <Link href="/#About">
                             About
                         </Link>
@@ -41,9 +31,6 @@ const Navigation : FC<navProps> = ({dark}:navProps) => {
             {
                 nav && 
                 <div className={styles.fullNav}>
-                    <Link href = '/' onClick={() => setNav(!nav)}>
-                        Home
-                    </Link>
                     <Link href="/#About" onClick={() => setNav(!nav)}>
                         About
                     </Link>

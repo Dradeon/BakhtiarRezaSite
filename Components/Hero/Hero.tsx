@@ -16,12 +16,9 @@ const Hero : FC = () => {
                     <h1>Alongside a Reliable Backend.</h1>
                     <p>With Me, Bakhtiar Reza</p>
                     <div className={styles.HeroText__HeroButtons}>
-                        <a href='#'>My Projects</a>
-                        <a href='#'>Contact Me</a>
+                        <a target='_blank' href='https://drive.google.com/file/d/14nVL9h3in3-TTXEK89fVkMB_4sGuYpd-/view?usp=sharing'>My Resume</a>
                     </div>
                 </div>
-
-                <div className={styles.background}></div>
             </div>
         </div>
   )

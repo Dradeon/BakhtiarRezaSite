@@ -10,9 +10,9 @@ interface LayoutProps {
 const Layout: FC<LayoutProps> = ({children}: LayoutProps) => {
   return (
     <div className={style.container}>
-        <Navigation dark={true}/>
+        <Navigation/>
         <main>{children}</main>
-        <Footer dark={false}/>
+        <Footer/>
     </div>
   )
 }

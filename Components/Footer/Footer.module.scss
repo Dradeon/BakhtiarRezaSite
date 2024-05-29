@@ -1,5 +1,7 @@
 @use '../../styles/colorscheme';
 
+
+
 .FooterWrapper{
 
     position: relative;
@@ -13,42 +15,13 @@
         justify-content: center;
         align-items: center;
 
-        height: 4rem;
+        height: 8rem;
 
         
         
         .FooterContainer{
             p{
                 color: colorscheme.$light-blue;
-                font-weight: bold;
-                text-align: center;
-                font-size: 1rem;
-            }
-        }
-    }  
-}
-
-.FooterWrapper_Dark{
-
-    position: relative;
-    width: 100%;
-    
-    bottom: 0;
-    overflow: auto;
-    background: #0984e3;
-    
-    .FooterBar{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        height: 4rem;
-
-        
-        
-        .FooterContainer{
-            p{
-                color: white;
                 font-weight: bold;
                 text-align: center;
                 font-size: 1rem;
